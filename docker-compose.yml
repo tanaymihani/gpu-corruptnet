@@ -1,0 +1,25 @@
+# Local PostgreSQL (SQL metadata) + MongoDB (NoSQL annotations) for M2.
+#   docker compose up -d
+#   train:  python scripts/train_classifier.py --db-url postgresql+psycopg2://corruptnet:corruptnet@localhost/gpu_corruptnet
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: corruptnet
+      POSTGRES_PASSWORD: corruptnet
+      POSTGRES_DB: gpu_corruptnet
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+
+volumes:
+  pgdata:
+  mongodata:

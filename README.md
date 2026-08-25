@@ -31,7 +31,7 @@ Actively building. Honest state — nothing here claims a metric it hasn't measu
 |---|---|---|
 | **M0** | Repo scaffold, config, tests, CI | ✅ done |
 | **M1** | Glitchify-2 generator: 10 artifact classes ✅ · ImageNet-C wrapper ⬜ | 🚧 10/10 injectors done |
-| **M2** | On-the-fly corruption dataset + seen/unseen *content* splits ✅ · Postgres/Mongo ⬜ | 🚧 pipeline done |
+| **M2** | Corruption dataset + seen/unseen splits + PostgreSQL/MongoDB stores | ✅ done |
 | **M3** | ResNet-50 / EfficientNet-B4 multi-label classifier + metrics | 🚧 code done, awaiting full run |
 | **M4** | Unsupervised anomaly head (EfficientAD / PatchCore) | ⬜ |
 | **M5** | Temperature scaling + ECE + split-conformal label sets | 🚧 code done, awaiting full run |
@@ -115,6 +115,21 @@ python scripts/benchmark.py --arch resnet50 --img-size 224
 Latency depends on the architecture + input size, not trained weights, so these numbers are
 meaningful before training finishes. Writes `runs/bench_*.json`.
 
+## Metadata stores — PostgreSQL + MongoDB (M2)
+
+Structured run/metric records go to **PostgreSQL** (SQLAlchemy; portable to SQLite for dev);
+flexible per-image artifact annotations + model-version docs go to **MongoDB** (pymongo).
+Both are optional and import-light — the core pipeline never requires a database.
+
+```bash
+docker compose up -d          # start Postgres + Mongo locally
+
+# log a training run's metrics to Postgres:
+python scripts/train_classifier.py --db-url postgresql+psycopg2://corruptnet:corruptnet@localhost/gpu_corruptnet
+```
+
+Tests run against in-memory SQLite + `mongomock`, so no servers are needed for CI.
+
 ## Drift / OOD monitor (M9)
 
 "Fixing deployed AI": when production frames drift from the training distribution, quality
@@ -148,8 +163,10 @@ src/gpu_corruptnet/
   calibration.py # temperature scaling, ECE, split-conformal label sets (M5)
   bench.py       # latency/throughput harness (warmup + synced timing) (M7)
   drift.py       # PSI distribution drift + Mahalanobis OOD monitor (M9)
+  db/            # PostgreSQL (SQLAlchemy) + MongoDB (pymongo) metadata stores (M2)
   train.py       # training loop + seen/unseen eval, writes runs/metrics_*.json + preds_*.npz
 scripts/         # make_sanity_grid.py, train_classifier.py, calibrate.py, benchmark.py, drift_demo.py
+docker-compose.yml  # local Postgres + Mongo
 notebooks/       # train_colab.ipynb (free-T4 run)
 tests/           # generator unit tests
 configs/         # default.yaml (seeds, frame size, class vocab)

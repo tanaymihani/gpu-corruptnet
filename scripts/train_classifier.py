@@ -25,6 +25,7 @@ def main() -> None:
     ap.add_argument("--no-freeze", action="store_true", help="fine-tune the whole backbone")
     ap.add_argument("--data-root", default="data")
     ap.add_argument("--out-dir", default="runs")
+    ap.add_argument("--db-url", default=None, help="optional SQLAlchemy URL to log run + metrics")
     ap.add_argument("--seed", type=int, default=1337)
     ap.add_argument("--smoke", action="store_true", help="tiny fast run to validate the pipeline")
     args = ap.parse_args()
@@ -41,6 +42,7 @@ def main() -> None:
         freeze_backbone=not args.no_freeze,
         data_root=args.data_root,
         out_dir=args.out_dir,
+        db_url=args.db_url,
         seed=args.seed,
     )
     if args.smoke:

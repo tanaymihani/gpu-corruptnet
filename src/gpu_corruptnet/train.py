@@ -39,6 +39,7 @@ class TrainConfig:
     num_workers: int = 0
     data_root: str = "data"
     out_dir: str = "runs"
+    db_url: str | None = None  # e.g. postgresql+psycopg2://user:pw@host/db (optional)
 
 
 def pick_device() -> torch.device:
@@ -167,4 +168,16 @@ def run(cfg: TrainConfig) -> dict:
         )
     print(f"wrote {path}")
     print(f"wrote {preds_path}  (run: python scripts/calibrate.py {preds_path})")
+
+    if cfg.db_url:  # optional: persist run + metrics to PostgreSQL (M2)
+        from sqlalchemy.orm import Session
+
+        from gpu_corruptnet.db.sql import get_engine, init_db, log_run
+
+        engine = get_engine(cfg.db_url)
+        init_db(engine)
+        with Session(engine) as s:
+            run_id = log_run(s, results)
+        print(f"logged run {run_id} to {cfg.db_url}")
+
     return results
