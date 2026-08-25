@@ -36,7 +36,7 @@ Actively building. Honest state — nothing here claims a metric it hasn't measu
 | **M4** | Unsupervised anomaly head (EfficientAD / PatchCore) | ⬜ |
 | **M5** | Temperature scaling + ECE + split-conformal label sets | 🚧 code done, awaiting full run |
 | **M6** | C++/libtorch inference path (+ optional HIP kernel) | ⬜ |
-| **M7** | Latency/throughput benchmark harness ✅ · ONNX/FP16 export ⬜ | 🚧 harness done |
+| **M7** | Latency harness + ONNX export + ORT speedup ✅ · FP16/TensorRT on GPU | ✅ core done |
 | **M8** | AWS deploy (S3 + EC2-Spot) + FastAPI demo | ⬜ |
 | **M9** | Drift (PSI) + OOD (Mahalanobis) monitor | ✅ done |
 | **M10** | Upload-a-frame dashboard demo | ⬜ |
@@ -115,6 +115,14 @@ python scripts/benchmark.py --arch resnet50 --img-size 224
 Latency depends on the architecture + input size, not trained weights, so these numbers are
 meaningful before training finishes. Writes `runs/bench_*.json`.
 
+**ONNX export + optimized inference** (`pip install -e ".[export]"`): export to ONNX and compare
+PyTorch eager vs ONNX Runtime, which uses whatever execution providers the machine offers
+(CoreML on Apple; CUDA/TensorRT + FP16/INT8 on NVIDIA — the bigger win):
+
+```bash
+python scripts/export_benchmark.py --arch resnet50 --img-size 224
+```
+
 ## Metadata stores — PostgreSQL + MongoDB (M2)
 
 Structured run/metric records go to **PostgreSQL** (SQLAlchemy; portable to SQLite for dev);
@@ -162,10 +170,11 @@ src/gpu_corruptnet/
   metrics.py     # multi-label F1 / recall, derived binary corrupted-vs-clean
   calibration.py # temperature scaling, ECE, split-conformal label sets (M5)
   bench.py       # latency/throughput harness (warmup + synced timing) (M7)
+  export.py      # ONNX export + ONNX Runtime speedup benchmark (M7b)
   drift.py       # PSI distribution drift + Mahalanobis OOD monitor (M9)
   db/            # PostgreSQL (SQLAlchemy) + MongoDB (pymongo) metadata stores (M2)
   train.py       # training loop + seen/unseen eval, writes runs/metrics_*.json + preds_*.npz
-scripts/         # make_sanity_grid.py, train_classifier.py, calibrate.py, benchmark.py, drift_demo.py
+scripts/         # sanity grid, train, calibrate, benchmark, export_benchmark, drift_demo
 docker-compose.yml  # local Postgres + Mongo
 notebooks/       # train_colab.ipynb (free-T4 run)
 tests/           # generator unit tests
