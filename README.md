@@ -31,8 +31,8 @@ Actively building. Honest state — nothing here claims a metric it hasn't measu
 |---|---|---|
 | **M0** | Repo scaffold, config, tests, CI | ✅ done |
 | **M1** | Glitchify-2 generator: 10 artifact classes ✅ · ImageNet-C wrapper ⬜ | 🚧 10/10 injectors done |
-| **M2** | Data pipeline + PostgreSQL/MongoDB metadata stores | ⬜ next |
-| **M3** | ResNet-50 / EfficientNet-B4 classifiers + per-class metrics | ⬜ |
+| **M2** | On-the-fly corruption dataset + seen/unseen *content* splits ✅ · Postgres/Mongo ⬜ | 🚧 pipeline done |
+| **M3** | ResNet-50 / EfficientNet-B4 multi-label classifier + metrics | 🚧 code done, awaiting full run |
 | **M4** | Unsupervised anomaly head (EfficientAD / PatchCore) | ⬜ |
 | **M5** | Calibration (temperature scaling, ECE) + conformal sets (MAPIE) | ⬜ |
 | **M6** | C++/libtorch inference path (+ optional HIP kernel) | ⬜ |
@@ -68,6 +68,24 @@ print(available())                             # implemented injectors
 glitched = apply("screen_tearing", frame, severity=4, rng=0)
 ```
 
+## Training the classifier (M3)
+
+The classifier learns to predict *which* corruption(s) are present (multi-label) on clean
+frames corrupted on-the-fly by Glitchify-2. Clean substrate is **STL-10**, with whole object
+classes (ship/truck) held out as **unseen content** so the reported unseen-test macro-F1 is an
+honest generalization number.
+
+```bash
+pip install -e ".[cv,train]"
+
+python scripts/train_classifier.py --smoke                       # fast local sanity run
+python scripts/train_classifier.py --arch resnet50 --epochs 10 --img-size 224
+```
+
+> First run downloads STL-10 (~2.6 GB, one-time cache). For the real run, use a free GPU:
+> open [`notebooks/train_colab.ipynb`](notebooks/train_colab.ipynb) in Google Colab (Runtime →
+> T4). Metrics for each run are written to `runs/metrics_*.json`.
+
 ## Design notes
 
 - **Images** are `(H, W, 3)` `uint8` RGB throughout. **Severity** is `1..5`.
@@ -81,9 +99,13 @@ glitched = apply("screen_tearing", frame, severity=4, rng=0)
 ```
 src/gpu_corruptnet/
   corruptions/   # base types, registry, injectors (the Glitchify-2 generator)
-  data/          # procedural demo frame (real frames land in M2)
+  data/          # clean-frame sources (STL-10) + on-the-fly corruption dataset
+  models/        # ResNet-50 / EfficientNet-B4 multi-label classifier
   utils/         # seeding / reproducibility
-scripts/         # make_sanity_grid.py
+  metrics.py     # multi-label F1 / recall, derived binary corrupted-vs-clean
+  train.py       # training loop + seen/unseen eval, writes runs/metrics_*.json
+scripts/         # make_sanity_grid.py, train_classifier.py
+notebooks/       # train_colab.ipynb (free-T4 run)
 tests/           # generator unit tests
 configs/         # default.yaml (seeds, frame size, class vocab)
 ```
