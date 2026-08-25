@@ -34,7 +34,7 @@ Actively building. Honest state — nothing here claims a metric it hasn't measu
 | **M2** | On-the-fly corruption dataset + seen/unseen *content* splits ✅ · Postgres/Mongo ⬜ | 🚧 pipeline done |
 | **M3** | ResNet-50 / EfficientNet-B4 multi-label classifier + metrics | 🚧 code done, awaiting full run |
 | **M4** | Unsupervised anomaly head (EfficientAD / PatchCore) | ⬜ |
-| **M5** | Calibration (temperature scaling, ECE) + conformal sets (MAPIE) | ⬜ |
+| **M5** | Temperature scaling + ECE + split-conformal label sets | 🚧 code done, awaiting full run |
 | **M6** | C++/libtorch inference path (+ optional HIP kernel) | ⬜ |
 | **M7** | ONNX / FP16 export + latency-throughput benchmark harness | ⬜ |
 | **M8** | AWS deploy (S3 + EC2-Spot) + FastAPI demo | ⬜ |
@@ -86,6 +86,22 @@ python scripts/train_classifier.py --arch resnet50 --epochs 10 --img-size 224
 > open [`notebooks/train_colab.ipynb`](notebooks/train_colab.ipynb) in Google Colab (Runtime →
 > T4). Metrics for each run are written to `runs/metrics_*.json`.
 
+## Calibration & conformal prediction (M5)
+
+Training writes raw logits for a **disjoint calibration split** and the test splits to
+`runs/preds_*.npz`. `calibrate.py` then fits **temperature scaling** and a **split-conformal
+threshold** on the calibration split and reports, on the test splits, ECE before/after and the
+conformal set's empirical coverage vs. its target:
+
+```bash
+python scripts/calibrate.py runs/preds_resnet50_<stamp>.npz --alpha 0.1
+```
+
+The conformal procedure emits, per frame, a coverage-guaranteed *set* of candidate artifact
+types: `P(true artifacts ⊆ predicted set) ≥ 1 − α`. (APS/RAPS are single-label multiclass
+methods; corruption detection is multi-label, so a full-inclusion split-conformal construction
+is used instead — see [`calibration.py`](src/gpu_corruptnet/calibration.py).)
+
 ## Design notes
 
 - **Images** are `(H, W, 3)` `uint8` RGB throughout. **Severity** is `1..5`.
@@ -103,8 +119,9 @@ src/gpu_corruptnet/
   models/        # ResNet-50 / EfficientNet-B4 multi-label classifier
   utils/         # seeding / reproducibility
   metrics.py     # multi-label F1 / recall, derived binary corrupted-vs-clean
-  train.py       # training loop + seen/unseen eval, writes runs/metrics_*.json
-scripts/         # make_sanity_grid.py, train_classifier.py
+  calibration.py # temperature scaling, ECE, split-conformal label sets (M5)
+  train.py       # training loop + seen/unseen eval, writes runs/metrics_*.json + preds_*.npz
+scripts/         # make_sanity_grid.py, train_classifier.py, calibrate.py
 notebooks/       # train_colab.ipynb (free-T4 run)
 tests/           # generator unit tests
 configs/         # default.yaml (seeds, frame size, class vocab)

@@ -50,16 +50,22 @@ def pick_device() -> torch.device:
 
 
 @torch.no_grad()
-def evaluate(net: torch.nn.Module, loader: DataLoader, device: torch.device) -> dict:
+def collect_logits(
+    net: torch.nn.Module, loader: DataLoader, device: torch.device
+) -> tuple[np.ndarray, np.ndarray]:
+    """Return raw (logits, labels) for a split — feeds both metrics and M5 calibration."""
     net.eval()
-    probs, trues = [], []
+    logits, labels = [], []
     for x, y in loader:
-        logits = net(x.to(device))
-        probs.append(torch.sigmoid(logits).float().cpu().numpy())
-        trues.append(y.numpy())
-    return multilabel_metrics(
-        np.concatenate(trues), np.concatenate(probs), list(ARTIFACT_CLASSES)
-    )
+        logits.append(net(x.to(device)).float().cpu().numpy())
+        labels.append(y.numpy())
+    return np.concatenate(logits), np.concatenate(labels)
+
+
+def evaluate(net: torch.nn.Module, loader: DataLoader, device: torch.device) -> dict:
+    logits, labels = collect_logits(net, loader, device)
+    probs = 1.0 / (1.0 + np.exp(-np.clip(logits, -60, 60)))
+    return multilabel_metrics(labels, probs, list(ARTIFACT_CLASSES))
 
 
 def run(cfg: TrainConfig) -> dict:
@@ -89,6 +95,7 @@ def run(cfg: TrainConfig) -> dict:
     val_dl = loader(make(splits.val, 2, False), False)
     seen_dl = loader(make(splits.seen_test, 3, False), False)
     unseen_dl = loader(make(splits.unseen_test, 4, False), False)
+    cal_dl = loader(make(splits.cal, 5, False), False)
 
     net = build_classifier(
         cfg.arch, num_classes=len(ARTIFACT_CLASSES), freeze_backbone=cfg.freeze_backbone
@@ -117,20 +124,39 @@ def run(cfg: TrainConfig) -> dict:
             f"val_macroF1={val_m['macro_f1']:.3f}  ({time.time() - t0:.1f}s)"
         )
 
+    # Collect raw logits once per split: drives both metrics and the M5 calibration step.
+    preds = {
+        "cal": collect_logits(net, cal_dl, device),
+        "seen_test": collect_logits(net, seen_dl, device),
+        "unseen_test": collect_logits(net, unseen_dl, device),
+    }
+
+    def metrics_from(name: str) -> dict:
+        logits, labels = preds[name]
+        probs = 1.0 / (1.0 + np.exp(-np.clip(logits, -60, 60)))
+        return multilabel_metrics(labels, probs, list(ARTIFACT_CLASSES))
+
     results = {
         "config": asdict(cfg),
         "device": str(device),
         "clean_split": splits.summary(),
         "history": history,
         "val": val_m,
-        "seen_test": evaluate(net, seen_dl, device),
-        "unseen_test": evaluate(net, unseen_dl, device),
+        "seen_test": metrics_from("seen_test"),
+        "unseen_test": metrics_from("unseen_test"),
     }
     out = Path(cfg.out_dir)
     out.mkdir(parents=True, exist_ok=True)
     stamp = time.strftime("%Y%m%d-%H%M%S")
     path = out / f"metrics_{cfg.arch}_{stamp}.json"
     path.write_text(json.dumps(results, indent=2))
+
+    preds_path = out / f"preds_{cfg.arch}_{stamp}.npz"
+    np.savez(
+        preds_path,
+        **{f"{split}_logits": lg for split, (lg, _) in preds.items()},
+        **{f"{split}_labels": lb for split, (_, lb) in preds.items()},
+    )
 
     print("\n=== RESULTS ===")
     for split in ("seen_test", "unseen_test"):
@@ -140,4 +166,5 @@ def run(cfg: TrainConfig) -> dict:
             f"binaryF1={m['binary_f1']:.3f}  binaryRecall={m['binary_recall']:.3f}"
         )
     print(f"wrote {path}")
+    print(f"wrote {preds_path}  (run: python scripts/calibrate.py {preds_path})")
     return results

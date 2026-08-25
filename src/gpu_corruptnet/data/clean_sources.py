@@ -20,12 +20,13 @@ UNSEEN_CONTENT_CLASSES = (8, 9)  # ship, truck -> never seen during training
 class CleanSplits:
     train: np.ndarray
     val: np.ndarray
+    cal: np.ndarray  # disjoint calibration split for temperature scaling + conformal
     seen_test: np.ndarray
     unseen_test: np.ndarray
 
     def summary(self) -> str:
         return (
-            f"train={len(self.train)} val={len(self.val)} "
+            f"train={len(self.train)} val={len(self.val)} cal={len(self.cal)} "
             f"seen_test={len(self.seen_test)} unseen_test={len(self.unseen_test)}"
         )
 
@@ -44,10 +45,11 @@ def load_clean_splits(
     n_seen: int | None = None,
     n_unseen: int | None = None,
     val_frac: float = 0.15,
+    cal_frac: float = 0.15,
     test_frac: float = 0.15,
     seed: int = 1337,
 ) -> CleanSplits:
-    """Build train/val/seen_test/unseen_test arrays of clean uint8 frames."""
+    """Build train/val/cal/seen_test/unseen_test arrays of clean uint8 frames."""
     rng = np.random.default_rng(seed)
     imgs, labels = _stl10_arrays(root, "train")
     imgs2, labels2 = _stl10_arrays(root, "test")
@@ -67,8 +69,12 @@ def load_clean_splits(
 
     n = len(seen_imgs)
     n_val = int(n * val_frac)
+    n_cal = int(n * cal_frac)
     n_test = int(n * test_frac)
     val = seen_imgs[:n_val]
-    seen_test = seen_imgs[n_val : n_val + n_test]
-    train = seen_imgs[n_val + n_test :]
-    return CleanSplits(train=train, val=val, seen_test=seen_test, unseen_test=unseen_imgs)
+    cal = seen_imgs[n_val : n_val + n_cal]
+    seen_test = seen_imgs[n_val + n_cal : n_val + n_cal + n_test]
+    train = seen_imgs[n_val + n_cal + n_test :]
+    return CleanSplits(
+        train=train, val=val, cal=cal, seen_test=seen_test, unseen_test=unseen_imgs
+    )
