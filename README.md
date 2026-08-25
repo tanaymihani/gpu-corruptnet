@@ -36,7 +36,7 @@ Actively building. Honest state — nothing here claims a metric it hasn't measu
 | **M4** | Unsupervised anomaly head (EfficientAD / PatchCore) | ⬜ |
 | **M5** | Temperature scaling + ECE + split-conformal label sets | 🚧 code done, awaiting full run |
 | **M6** | C++/libtorch inference path (+ optional HIP kernel) | ⬜ |
-| **M7** | ONNX / FP16 export + latency-throughput benchmark harness | ⬜ |
+| **M7** | Latency/throughput benchmark harness ✅ · ONNX/FP16 export ⬜ | 🚧 harness done |
 | **M8** | AWS deploy (S3 + EC2-Spot) + FastAPI demo | ⬜ |
 | **M9** | Drift / OOD monitor ("fixing deployed AI") | ⬜ |
 | **M10** | Upload-a-frame dashboard demo | ⬜ |
@@ -102,6 +102,19 @@ types: `P(true artifacts ⊆ predicted set) ≥ 1 − α`. (APS/RAPS are single-
 methods; corruption detection is multi-label, so a full-inclusion split-conformal construction
 is used instead — see [`calibration.py`](src/gpu_corruptnet/calibration.py).)
 
+## Latency & throughput benchmark (M7)
+
+Measures inference latency the right way — mandatory warmup, then device-appropriate
+synchronized timing (**CUDA events** on GPU; `synchronize` + `perf_counter` on MPS/CPU) —
+reported as p50/p95/p99 and throughput (img/s) across a batch-size sweep:
+
+```bash
+python scripts/benchmark.py --arch resnet50 --img-size 224
+```
+
+Latency depends on the architecture + input size, not trained weights, so these numbers are
+meaningful before training finishes. Writes `runs/bench_*.json`.
+
 ## Design notes
 
 - **Images** are `(H, W, 3)` `uint8` RGB throughout. **Severity** is `1..5`.
@@ -120,8 +133,9 @@ src/gpu_corruptnet/
   utils/         # seeding / reproducibility
   metrics.py     # multi-label F1 / recall, derived binary corrupted-vs-clean
   calibration.py # temperature scaling, ECE, split-conformal label sets (M5)
+  bench.py       # latency/throughput harness (warmup + synced timing) (M7)
   train.py       # training loop + seen/unseen eval, writes runs/metrics_*.json + preds_*.npz
-scripts/         # make_sanity_grid.py, train_classifier.py, calibrate.py
+scripts/         # make_sanity_grid.py, train_classifier.py, calibrate.py, benchmark.py
 notebooks/       # train_colab.ipynb (free-T4 run)
 tests/           # generator unit tests
 configs/         # default.yaml (seeds, frame size, class vocab)
