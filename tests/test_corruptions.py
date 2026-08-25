@@ -19,6 +19,11 @@ def test_all_registered_names_are_valid_classes():
     assert set(available()).issubset(set(ARTIFACT_CLASSES))
 
 
+def test_all_ten_classes_registered_when_opencv_present():
+    pytest.importorskip("cv2")
+    assert set(available()) == set(ARTIFACT_CLASSES)
+
+
 @pytest.mark.parametrize("name", available())
 @pytest.mark.parametrize("severity", [1, 3, 5])
 def test_injector_preserves_shape_and_dtype(frame, name, severity):

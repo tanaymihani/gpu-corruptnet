@@ -30,7 +30,7 @@ Actively building. Honest state — nothing here claims a metric it hasn't measu
 | Milestone | Scope | State |
 |---|---|---|
 | **M0** | Repo scaffold, config, tests, CI | ✅ done |
-| **M1** | Glitchify-2 generator (10 artifact classes) + ImageNet-C wrapper | 🚧 6/10 injectors done |
+| **M1** | Glitchify-2 generator: 10 artifact classes ✅ · ImageNet-C wrapper ⬜ | 🚧 10/10 injectors done |
 | **M2** | Data pipeline + PostgreSQL/MongoDB metadata stores | ⬜ next |
 | **M3** | ResNet-50 / EfficientNet-B4 classifiers + per-class metrics | ⬜ |
 | **M4** | Unsupervised anomaly head (EfficientAD / PatchCore) | ⬜ |
@@ -41,10 +41,10 @@ Actively building. Honest state — nothing here claims a metric it hasn't measu
 | **M9** | Drift / OOD monitor ("fixing deployed AI") | ⬜ |
 | **M10** | Upload-a-frame dashboard demo | ⬜ |
 
-**Implemented injectors:** `screen_tearing`, `screen_stuttering`, `morse_code`, `discoloration`,
-`parallel_lines`, `dotted_lines`.
-**Remaining (need polygon rasterization, OpenCV batch):** `shader`, `shapes`, `triangulation`,
-`line_pixelation`.
+**All 10 injectors implemented.** Pure NumPy: `screen_tearing`, `screen_stuttering`, `morse_code`,
+`discoloration`, `parallel_lines`, `dotted_lines`. OpenCV batch (`pip install -e ".[cv]"`):
+`shader`, `shapes`, `triangulation`, `line_pixelation`. The OpenCV set registers only when
+OpenCV is present, so `available()` always reflects what's actually importable.
 
 ## Quickstart
 
