@@ -32,14 +32,30 @@ Actively building. Honest state — nothing here claims a metric it hasn't measu
 | **M0** | Repo scaffold, config, tests, CI | ✅ done |
 | **M1** | Glitchify-2 generator: 10 artifact classes ✅ · ImageNet-C wrapper ⬜ | 🚧 10/10 injectors done |
 | **M2** | Corruption dataset + seen/unseen splits + PostgreSQL/MongoDB stores | ✅ done |
-| **M3** | ResNet-50 / EfficientNet-B4 multi-label classifier + metrics | 🚧 code done, awaiting full run |
+| **M3** | ResNet-50 multi-label classifier + metrics | ✅ done (see Results) |
 | **M4** | Unsupervised anomaly head (EfficientAD / PatchCore) | ⬜ |
-| **M5** | Temperature scaling + ECE + split-conformal label sets | 🚧 code done, awaiting full run |
+| **M5** | Temperature scaling + ECE + split-conformal label sets | ✅ done (see Results) |
 | **M6** | C++/libtorch inference path (+ optional HIP kernel) | ⬜ |
 | **M7** | Latency harness + ONNX export + ORT speedup ✅ · FP16/TensorRT on GPU | ✅ core done |
 | **M8** | AWS deploy (S3 + EC2-Spot) + FastAPI demo | ⬜ |
 | **M9** | Drift (PSI) + OOD (Mahalanobis) monitor | ✅ done |
 | **M10** | Upload-a-frame dashboard demo | ⬜ |
+
+## Results (measured)
+
+ResNet-50, fine-tuned 12 epochs @ 224px, on-the-fly Glitchify-2 corruptions on an STL-10 substrate
+(free Colab T4). Unseen-content = whole object classes held out of training.
+
+| Split | macro-F1 | binary F1 | binary recall | ECE → temp-scaled | conformal cov. @90% (avg set) |
+|---|---|---|---|---|---|
+| **seen content** | 0.909 | 0.990 | 0.984 | 1.14% → 0.32% | 0.932 (1.46) |
+| **unseen content** | 0.855 | 0.948 | 0.979 | 2.19% → 1.16% | 0.911 (1.97) |
+
+**Inference (ONNX Runtime):** single-frame latency **10.4 ms → 1.4 ms** (~7.6× via the CoreML EP vs
+PyTorch-eager), **642 img/s** batched throughput. Reproduce any of this with
+[`notebooks/train_colab.ipynb`](notebooks/train_colab.ipynb).
+
+## Generator
 
 **All 10 injectors implemented.** Pure NumPy: `screen_tearing`, `screen_stuttering`, `morse_code`,
 `discoloration`, `parallel_lines`, `dotted_lines`. OpenCV batch (`pip install -e ".[cv]"`):
