@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpu-corruptnet"
+version = "0.1.0"
+description = "Detect and classify GPU-rendered visual corruption in rendered frames."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Tanay Mihani", email = "mihani.t@northeastern.edu" }]
+dependencies = [
+    "numpy>=1.26",
+    "pillow>=10",
+    "pyyaml>=6",
+]
+
+[project.optional-dependencies]
+# Installed as milestones land, to keep the base install fast.
+dev = ["pytest>=8", "ruff>=0.5"]
+cv = ["opencv-python>=4.9"]            # M1: triangulation / shader / shapes injectors
+train = ["torch>=2.2", "torchvision>=0.17"]  # M3: classifiers
+common = ["imagenet-c"]               # M1b: ImageNet-C common-corruption wrapper
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

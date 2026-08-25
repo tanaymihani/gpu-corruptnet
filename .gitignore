@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Envs
+.venv/
+venv/
+env/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.idea/
+.vscode/
+
+# Data & model artifacts (kept out of git; only URIs/keys go in DBs later).
+# Anchored with a leading slash so the src/gpu_corruptnet/data package is NOT ignored.
+/data/
+/datasets/
+/runs/
+/outputs/
+*.pt
+*.pth
+*.onnx
+
+# Private planning / job-application strategy notes — never publish.
+compass_artifact_*.md
+
+# OS
+.DS_Store
+
+# NOTE: assets/ IS committed on purpose — it holds the visual sanity grid.

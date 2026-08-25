@@ -1,0 +1,26 @@
+# Global run config. Everything reproducible flows from here.
+seed: 1337
+
+paths:
+  data_root: data
+  assets: assets
+  runs: runs
+
+frame:
+  height: 270      # 16:9 "gameplay frame" default
+  width: 480
+
+corruption:
+  # Multi-label target vocabulary (the 10 Glitchify artifact classes).
+  classes:
+    - shader
+    - shapes
+    - discoloration
+    - morse_code
+    - dotted_lines
+    - parallel_lines
+    - triangulation
+    - line_pixelation
+    - screen_stuttering
+    - screen_tearing
+  default_severity: 3   # 1 (subtle) .. 5 (severe)
