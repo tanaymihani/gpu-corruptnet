@@ -38,7 +38,7 @@ Actively building. Honest state — nothing here claims a metric it hasn't measu
 | **M6** | C++/libtorch inference path (+ optional HIP kernel) | ⬜ |
 | **M7** | Latency/throughput benchmark harness ✅ · ONNX/FP16 export ⬜ | 🚧 harness done |
 | **M8** | AWS deploy (S3 + EC2-Spot) + FastAPI demo | ⬜ |
-| **M9** | Drift / OOD monitor ("fixing deployed AI") | ⬜ |
+| **M9** | Drift (PSI) + OOD (Mahalanobis) monitor | ✅ done |
 | **M10** | Upload-a-frame dashboard demo | ⬜ |
 
 **All 10 injectors implemented.** Pure NumPy: `screen_tearing`, `screen_stuttering`, `morse_code`,
@@ -115,6 +115,19 @@ python scripts/benchmark.py --arch resnet50 --img-size 224
 Latency depends on the architecture + input size, not trained weights, so these numbers are
 meaningful before training finishes. Writes `runs/bench_*.json`.
 
+## Drift / OOD monitor (M9)
+
+"Fixing deployed AI": when production frames drift from the training distribution, quality
+degrades silently. `DriftMonitor` flags it with per-feature **PSI** (distribution drift) and a
+**Mahalanobis** OOD score (per-frame novelty). Model-free by default (cheap image descriptors),
+or feed model embeddings once trained.
+
+```bash
+python scripts/drift_demo.py
+# clean (in-distribution)  -> max_psi=0.23  ood_rate=0%    (below the corruption signal)
+# corrupted (production)   -> max_psi=6.77  ood_rate=75%   significant_drift
+```
+
 ## Design notes
 
 - **Images** are `(H, W, 3)` `uint8` RGB throughout. **Severity** is `1..5`.
@@ -134,8 +147,9 @@ src/gpu_corruptnet/
   metrics.py     # multi-label F1 / recall, derived binary corrupted-vs-clean
   calibration.py # temperature scaling, ECE, split-conformal label sets (M5)
   bench.py       # latency/throughput harness (warmup + synced timing) (M7)
+  drift.py       # PSI distribution drift + Mahalanobis OOD monitor (M9)
   train.py       # training loop + seen/unseen eval, writes runs/metrics_*.json + preds_*.npz
-scripts/         # make_sanity_grid.py, train_classifier.py, calibrate.py, benchmark.py
+scripts/         # make_sanity_grid.py, train_classifier.py, calibrate.py, benchmark.py, drift_demo.py
 notebooks/       # train_colab.ipynb (free-T4 run)
 tests/           # generator unit tests
 configs/         # default.yaml (seeds, frame size, class vocab)
