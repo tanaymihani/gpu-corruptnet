@@ -166,8 +166,20 @@ def run(cfg: TrainConfig) -> dict:
             f"{split:12s}  macroF1={m['macro_f1']:.3f}  "
             f"binaryF1={m['binary_f1']:.3f}  binaryRecall={m['binary_recall']:.3f}"
         )
+    ckpt_path = out / f"model_{cfg.arch}_{stamp}.pt"
+    torch.save(
+        {
+            "arch": cfg.arch,
+            "num_classes": len(ARTIFACT_CLASSES),
+            "img_size": cfg.img_size,
+            "state_dict": net.state_dict(),
+        },
+        ckpt_path,
+    )
+
     print(f"wrote {path}")
     print(f"wrote {preds_path}  (run: python scripts/calibrate.py {preds_path})")
+    print(f"wrote {ckpt_path}  (trained weights, for serving/demo)")
 
     if cfg.db_url:  # optional: persist run + metrics to PostgreSQL (M2)
         from sqlalchemy.orm import Session

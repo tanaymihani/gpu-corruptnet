@@ -40,3 +40,16 @@ def build_classifier(
 def unfreeze(net: nn.Module) -> None:
     for p in net.parameters():
         p.requires_grad = True
+
+
+def load_classifier(ckpt_path: str, map_location: str = "cpu") -> tuple[nn.Module, dict]:
+    """Rebuild a classifier from a training checkpoint (saved by train.run)."""
+    import torch
+
+    ckpt = torch.load(ckpt_path, map_location=map_location, weights_only=False)
+    net = build_classifier(
+        ckpt["arch"], num_classes=ckpt["num_classes"], pretrained=False, freeze_backbone=False
+    )
+    net.load_state_dict(ckpt["state_dict"])
+    net.eval()
+    return net, ckpt
