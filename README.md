@@ -151,6 +151,9 @@ calibrated confidence, the conformal set, an OOD score, and inference latency. R
 generator + drift mode with no model; drop a trained `runs/model_*.pt` in for full detection
 (training saves one automatically).
 
+**Deploy it publicly** (free Hugging Face Space, clickable link):
+see [`deploy/hf_space/DEPLOY.md`](deploy/hf_space/DEPLOY.md).
+
 ## Metadata stores — PostgreSQL + MongoDB (M2)
 
 Structured run/metric records go to **PostgreSQL** (SQLAlchemy; portable to SQLite for dev);

@@ -1,0 +1,6 @@
+# HF Spaces installs these on top of the Streamlit SDK (CPU box).
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+opencv-python-headless
+git+https://github.com/tanaymihani/gpu-corruptnet.git
