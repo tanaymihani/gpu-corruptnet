@@ -151,8 +151,9 @@ calibrated confidence, the conformal set, an OOD score, and inference latency. R
 generator + drift mode with no model; drop a trained `runs/model_*.pt` in for full detection
 (training saves one automatically).
 
-**Deploy it publicly** (free Hugging Face Space, clickable link):
-see [`deploy/hf_space/DEPLOY.md`](deploy/hf_space/DEPLOY.md).
+**Live demo:** deploy free on [Streamlit Community Cloud](https://share.streamlit.io) — point it
+at this repo with main file `streamlit_app.py` (it pulls the trained model from the repo's GitHub
+Release at startup). No local setup needed.
 
 ## Metadata stores — PostgreSQL + MongoDB (M2)
 

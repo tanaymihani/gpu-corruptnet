@@ -1,0 +1,7 @@
+# For Streamlit Community Cloud (share.streamlit.io). Streamlit itself is provided
+# by the platform; these are the extra runtime deps. CPU torch wheels.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+opencv-python-headless
+.
