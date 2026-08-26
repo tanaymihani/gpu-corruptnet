@@ -31,6 +31,12 @@ env/
 # Private planning / job-application strategy notes — never publish.
 compass_artifact_*.md
 
+# Downloaded run artifacts that may land in the project root — never commit.
+/model_*.pt
+/calibration_*.json
+/metrics_*.json
+/preds_*.npz
+
 # OS
 .DS_Store
 
