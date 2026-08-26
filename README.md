@@ -1,5 +1,7 @@
 # GPU-CorruptNet
 
+🔗 **[Live demo](https://gpu-corruptnet-7asy5rnjkbnckvbzcuvoj8.streamlit.app)** — upload a frame, inject a corruption, see the detection + calibrated confidence live.
+
 **An end-to-end computer-vision pipeline that detects and classifies GPU-rendered visual corruption** —
 shader glitches, screen tearing, texture/block artifacts, discoloration, and stuck-memory
 "morse-code" patterns — in rendered frames.
