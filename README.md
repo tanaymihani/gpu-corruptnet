@@ -1,5 +1,10 @@
 # GPU-CorruptNet
 
+[![Live demo](https://img.shields.io/badge/live-demo-brightgreen)](https://gpu-corruptnet-7asy5rnjkbnckvbzcuvoj8.streamlit.app)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.11-blue.svg)
+![Tests](https://img.shields.io/badge/tests-81%20passing-brightgreen.svg)
+
 🔗 **[Live demo](https://gpu-corruptnet-7asy5rnjkbnckvbzcuvoj8.streamlit.app)** — upload a frame, inject a corruption, see the detection + calibrated confidence live.
 
 **An end-to-end computer-vision pipeline that detects and classifies GPU-rendered visual corruption** —
