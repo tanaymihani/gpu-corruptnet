@@ -48,8 +48,8 @@ ResNet-50, fine-tuned 12 epochs @ 224px, on-the-fly Glitchify-2 corruptions on a
 
 | Split | macro-F1 | binary F1 | binary recall | ECE → temp-scaled | conformal cov. @90% (avg set) |
 |---|---|---|---|---|---|
-| **seen content** | 0.909 | 0.990 | 0.984 | 1.14% → 0.32% | 0.932 (1.46) |
-| **unseen content** | 0.855 | 0.948 | 0.979 | 2.19% → 1.16% | 0.911 (1.97) |
+| **seen content** | 0.911 | 0.991 | 0.982 | 1.06% → 0.26% | 0.935 (1.43) |
+| **unseen content** | 0.876 | 0.971 | 0.971 | 1.42% → 0.17% | 0.927 (1.70) |
 
 **Inference (ONNX Runtime):** single-frame latency **10.4 ms → 1.4 ms** (~7.6× via the CoreML EP vs
 PyTorch-eager), **642 img/s** batched throughput. Reproduce any of this with
