@@ -40,13 +40,14 @@ Actively building. Honest state — nothing here claims a metric it hasn't measu
 | **M1** | Glitchify-2 generator: 10 artifact classes ✅ · ImageNet-C wrapper ⬜ | 🚧 10/10 injectors done |
 | **M2** | Corruption dataset + seen/unseen splits + PostgreSQL/MongoDB stores | ✅ done |
 | **M3** | ResNet-50 multi-label classifier + metrics | ✅ done (see Results) |
-| **M4** | Unsupervised anomaly head (EfficientAD / PatchCore) | ⬜ |
+| **M4** | Unsupervised anomaly head (feature-kNN / PatchCore-lite) — AUROC 0.83 | ✅ done |
 | **M5** | Temperature scaling + ECE + split-conformal label sets | ✅ done (see Results) |
 | **M6** | C++/libtorch inference path (+ optional HIP kernel) | ⬜ |
 | **M7** | Latency harness + ONNX export + ORT speedup ✅ · FP16/TensorRT on GPU | ✅ core done |
 | **M8** | AWS deploy (S3 + EC2-Spot) + FastAPI demo | ⬜ |
 | **M9** | Drift (PSI) + OOD (Mahalanobis) monitor | ✅ done |
 | **M10** | Streamlit upload-a-frame demo (detection + calibrated conf + drift + latency) | ✅ done |
+| **+** | Source-code analysis (AST static metrics) — the posting's other bullet | ✅ done |
 
 ## Results (measured)
 
@@ -201,6 +202,27 @@ python scripts/drift_demo.py
 # corrupted (production)   -> max_psi=6.77  ood_rate=75%   significant_drift
 ```
 
+## Unsupervised anomaly head (M4)
+
+Trained on **clean frames only** (no corruption labels), it flags novel corruption by kNN
+distance to a coreset of pretrained-backbone features — a lightweight image-level PatchCore.
+On held-out STL-10 it separates clean vs. corrupted at **AUROC 0.83**, catching corruption
+types the supervised head was never trained on.
+
+```bash
+python scripts/anomaly_eval.py
+```
+
+## Source-code analysis
+
+The posting's other bullet: a static analyzer that treats the project's own Python as data
+(AST cyclomatic complexity, docstring coverage, risk hotspots).
+
+```bash
+python scripts/code_report.py --json runs/code_report.json
+# 26 files · 1431 LOC · 94 functions · docstring coverage 28% · avg complexity 2.5
+```
+
 ## Design notes
 
 - **Images** are `(H, W, 3)` `uint8` RGB throughout. **Severity** is `1..5`.
@@ -222,10 +244,12 @@ src/gpu_corruptnet/
   bench.py       # latency/throughput harness (warmup + synced timing) (M7)
   export.py      # ONNX export + ONNX Runtime speedup benchmark (M7b)
   drift.py       # PSI distribution drift + Mahalanobis OOD monitor (M9)
+  anomaly.py     # unsupervised anomaly head: kNN on deep features (M4)
+  codeanalysis.py# AST static source-code analysis
   serve.py       # single-frame inference core: detection + calibration + OOD (M10)
   db/            # PostgreSQL (SQLAlchemy) + MongoDB (pymongo) metadata stores (M2)
   train.py       # training loop + seen/unseen eval, writes runs/metrics_*.json + preds_*.npz
-scripts/         # sanity grid, train, calibrate, benchmark, export_benchmark, drift_demo, demo_app
+scripts/         # sanity grid, train, calibrate, benchmark, anomaly_eval, code_report, figures, demo
 docker-compose.yml  # local Postgres + Mongo
 notebooks/       # train_colab.ipynb (free-T4 run)
 tests/           # generator unit tests
