@@ -62,6 +62,17 @@ ResNet-50, fine-tuned 12 epochs @ 224px, on-the-fly Glitchify-2 corruptions on a
 PyTorch-eager), **642 img/s** batched throughput. Reproduce any of this with
 [`notebooks/train_colab.ipynb`](notebooks/train_colab.ipynb).
 
+All three figures below are regenerated from the checkpoint alone
+(`python scripts/make_report_figures.py <model.pt>`):
+
+| Per-class F1 (seen vs unseen) | Calibration reliability |
+|---|---|
+| ![Per-class F1](assets/per_class_f1.png) | ![Reliability diagram](assets/reliability.png) |
+
+**Grad-CAM** — the model localizes *which region* triggered each corruption flag:
+
+![Grad-CAM saliency](assets/gradcam.png)
+
 ## Generator
 
 **All 10 injectors implemented.** Pure NumPy: `screen_tearing`, `screen_stuttering`, `morse_code`,
