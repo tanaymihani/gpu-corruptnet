@@ -42,7 +42,7 @@ Actively building. Honest state — nothing here claims a metric it hasn't measu
 | **M3** | ResNet-50 multi-label classifier + metrics | ✅ done (see Results) |
 | **M4** | Unsupervised anomaly head (feature-kNN / PatchCore-lite) — AUROC 0.83 | ✅ done |
 | **M5** | Temperature scaling + ECE + split-conformal label sets | ✅ done (see Results) |
-| **M6** | C++/libtorch inference path (+ optional HIP kernel) | ⬜ |
+| **M6** | C++/libtorch inference path (~1.4× vs Python) + ROCm/HIP notes | ✅ done |
 | **M7** | Latency harness + ONNX export + ORT speedup ✅ · FP16/TensorRT on GPU | ✅ core done |
 | **M8** | AWS deploy (S3 + EC2-Spot) + FastAPI demo | ⬜ |
 | **M9** | Drift (PSI) + OOD (Mahalanobis) monitor | ✅ done |
@@ -202,6 +202,14 @@ python scripts/drift_demo.py
 # corrupted (production)   -> max_psi=6.77  ood_rate=75%   significant_drift
 ```
 
+## C++ / libtorch inference path (M6)
+
+A native C++ serving path ([`cpp/`](cpp/)) that loads a TorchScript export and runs the
+classifier — **21.7 ms/frame vs 30.7 ms in Python (~1.4×)** on CPU, from dropping interpreter
+overhead. Links against the libtorch bundled in the installed PyTorch (exact ABI, no download).
+On AMD/ROCm the same code targets GPUs unchanged — `torch::kCUDA` maps to **HIP**. See
+[`cpp/README.md`](cpp/README.md).
+
 ## Unsupervised anomaly head (M4)
 
 Trained on **clean frames only** (no corruption labels), it flags novel corruption by kNN
@@ -250,6 +258,7 @@ src/gpu_corruptnet/
   db/            # PostgreSQL (SQLAlchemy) + MongoDB (pymongo) metadata stores (M2)
   train.py       # training loop + seen/unseen eval, writes runs/metrics_*.json + preds_*.npz
 scripts/         # sanity grid, train, calibrate, benchmark, anomaly_eval, code_report, figures, demo
+cpp/             # C++ / libtorch inference path + CMake (M6)
 docker-compose.yml  # local Postgres + Mongo
 notebooks/       # train_colab.ipynb (free-T4 run)
 tests/           # generator unit tests
