@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPU-CorruptNet demo</title>
+<meta name="description" content="Detect GPU rendering artifacts in a frame, in your browser: ResNet-50 via ONNX Runtime Web with calibrated probabilities, conformal label sets and an out-of-distribution check.">
+<style>
+  :root {
+    --bg: #f7f7f5; --panel: #ffffff; --ink: #1d1d1f; --muted: #5f6368; --line: #e3e3e0;
+    --accent: #2f6fdb; --bad: #c2410c; --good: #15803d; --warn: #a16207; --bar: #dfe7f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121314; --panel: #1b1c1e; --ink: #ececec; --muted: #a0a4a8; --line: #2c2e31;
+      --accent: #7aa7ff; --bad: #fb923c; --good: #4ade80; --warn: #facc15; --bar: #26324a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121314; --panel: #1b1c1e; --ink: #ececec; --muted: #a0a4a8; --line: #2c2e31;
+    --accent: #7aa7ff; --bad: #fb923c; --good: #4ade80; --warn: #facc15; --bar: #26324a;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px; }
+  @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+  .frame { width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 6px;
+           display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .frame img { max-width: 100%; max-height: 100%; }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; margin-top: 12px; }
+  .gallery button { padding: 0; border: 2px solid transparent; border-radius: 6px; background: none;
+                    cursor: pointer; overflow: hidden; }
+  .gallery button[aria-pressed="true"] { border-color: var(--accent); }
+  .gallery img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .gallery span { display: block; font-size: 11px; color: var(--muted); padding: 2px 0; text-align: center; }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 12px; }
+  label.upload { border: 1px dashed var(--muted); border-radius: 6px; padding: 8px 12px; cursor: pointer; }
+  label.upload input { display: none; }
+  .verdict { font-size: 1.25rem; font-weight: 600; margin: 0 0 4px; }
+  .verdict.bad { color: var(--bad); } .verdict.good { color: var(--good); }
+  .meta { color: var(--muted); font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  td { padding: 3px 0; vertical-align: middle; }
+  td.name { width: 38%; white-space: nowrap; }
+  td.val { width: 52px; text-align: right; font-variant-numeric: tabular-nums; }
+  .bar { position: relative; height: 10px; background: var(--bar); border-radius: 5px; overflow: hidden; }
+  .bar i { position: absolute; inset: 0 auto 0 0; background: var(--accent); }
+  .bar b { position: absolute; top: -2px; bottom: -2px; left: 50%; width: 1px; background: var(--muted); }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+  .chip { border: 1px solid var(--line); border-radius: 999px; padding: 1px 10px; font-size: 12px; }
+  .ood { margin-top: 14px; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); font-size: 13px; }
+  .ood.flag { border-color: var(--warn); color: var(--warn); }
+  h2 { font-size: 0.95rem; margin: 16px 0 0; }
+  footer { margin-top: 24px; color: var(--muted); font-size: 13px; }
+  a { color: var(--accent); }
+  #status { font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Did the GPU just glitch?</h1>
+  <p class="sub">GPU-CorruptNet flags 10 kinds of GPU rendering artifact in a frame. A ResNet-50
+    runs entirely in your browser (ONNX Runtime Web); your image never leaves this page.</p>
+  <div class="grid">
+    <section class="panel">
+      <div class="frame"><img id="preview" alt="Selected frame"></div>
+      <div class="gallery" id="gallery" aria-label="Sample frames"></div>
+      <div class="row">
+        <label class="upload">Upload a frame<input type="file" id="file" accept="image/*"></label>
+        <span id="status">Loading model (47 MB, cached after the first visit)…</span>
+      </div>
+    </section>
+    <section class="panel" aria-live="polite">
+      <p class="verdict" id="verdict">—</p>
+      <div class="meta" id="latency"></div>
+      <h2>Calibrated probability per artifact type</h2>
+      <table id="probs"></table>
+      <h2>Conformal set <span class="meta">(contains every true artifact ~90% of the time on corrupted test frames)</span></h2>
+      <div class="chips" id="conformal"></div>
+      <div class="ood" id="ood"></div>
+    </section>
+  </div>
+  <footer id="footer">
+    Trained on procedurally corrupted frames (Glitchify taxonomy). Probabilities are
+    temperature-scaled; the out-of-distribution check uses the model's own embedding.
+    Samples are free-licence screenshots from Wikimedia Commons (credits in
+    <a href="samples/credits.json">samples/credits.json</a>).
+    Source, numbers and limits: <a href="https://github.com/tanaymihani/gpu-corruptnet">github.com/tanaymihani/gpu-corruptnet</a>.
+  </footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+name: Pages demo
+
+# Always-on in-browser demo (ONNX Runtime Web). The weights stay out of git: this job pulls
+# the checkpoint from the GitHub Release, exports it with scripts/export_web.py (parity
+# checked against PyTorch) and publishes web/ to GitHub Pages.
+on:
+  push:
+    branches: [main]
+    paths: ["web/**", "scripts/export_web.py", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  MODEL_TAG: demo-model
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install
+        run: |
+          pip install -q torch==2.13.0 torchvision==0.28.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q -e ".[train,export]"
+      - name: Export model for the browser
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download "$MODEL_TAG" -p model.pt -R ${{ github.repository }}
+          python scripts/export_web.py model.pt --out web/model.onnx
+          cat web/parity.json
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

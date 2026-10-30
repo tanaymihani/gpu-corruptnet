@@ -1,0 +1,64 @@
+{
+  "classes": [
+    "shader",
+    "shapes",
+    "discoloration",
+    "morse_code",
+    "dotted_lines",
+    "parallel_lines",
+    "triangulation",
+    "line_pixelation",
+    "screen_stuttering",
+    "screen_tearing"
+  ],
+  "temperature": 1.5646949856130867,
+  "conformal_tau": 0.04931242763996124,
+  "img_size": 224,
+  "samples": [
+    {
+      "file": "supertuxkart_clean.jpg",
+      "caption": "SuperTuxKart: clean",
+      "artifact": null
+    },
+    {
+      "file": "0ad_clean.jpg",
+      "caption": "0 A.D.: clean",
+      "artifact": null
+    },
+    {
+      "file": "flightgear_clean.jpg",
+      "caption": "FlightGear: clean",
+      "artifact": null
+    },
+    {
+      "file": "supertuxkart_screen_tearing.jpg",
+      "caption": "SuperTuxKart: screen tearing",
+      "artifact": "screen_tearing"
+    },
+    {
+      "file": "supertuxkart_discoloration.jpg",
+      "caption": "SuperTuxKart: discoloration",
+      "artifact": "discoloration"
+    },
+    {
+      "file": "0ad_triangulation.jpg",
+      "caption": "0 A.D.: triangulation",
+      "artifact": "triangulation"
+    },
+    {
+      "file": "0ad_morse_code.jpg",
+      "caption": "0 A.D.: morse code",
+      "artifact": "morse_code"
+    },
+    {
+      "file": "flightgear_parallel_lines.jpg",
+      "caption": "FlightGear: parallel lines",
+      "artifact": "parallel_lines"
+    },
+    {
+      "file": "flightgear_shader.jpg",
+      "caption": "FlightGear: shader",
+      "artifact": "shader"
+    }
+  ]
+}

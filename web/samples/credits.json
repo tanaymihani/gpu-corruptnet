@@ -1,0 +1,26 @@
+{
+  "note": "Frames from Wikimedia Commons under the licences listed; artifacts were added by the GPU-CorruptNet generator.",
+  "frames": [
+    {
+      "title": "SuperTuxKart",
+      "license": "CC BY 3.0",
+      "artist": "STK dev team",
+      "commons_file": "Supertuxkart-0.9-screenshot-7.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Supertuxkart-0.9-screenshot-7.jpg"
+    },
+    {
+      "title": "0 A.D.",
+      "license": "CC BY-SA 4.0",
+      "artist": "PantheraLeo1359531/Wildfire Games",
+      "commons_file": "0 A. D. Perser Alpha 23 (Ken Wood).png",
+      "source_page": "https://commons.wikimedia.org/wiki/File:0_A._D._Perser_Alpha_23_(Ken_Wood).png"
+    },
+    {
+      "title": "FlightGear",
+      "license": "GPL",
+      "artist": "w:FlightGear",
+      "commons_file": "Airbus A320 FlightGear 3.7.png",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Airbus_A320_FlightGear_3.7.png"
+    }
+  ]
+}
