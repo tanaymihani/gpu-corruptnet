@@ -1,0 +1,31 @@
+{
+  "preds": "/content/drive/MyDrive/corruptnet_runs/preds_resnet50_20260826-012704.npz",
+  "temperature": 1.5646949856130867,
+  "alpha": 0.1,
+  "splits": {
+    "seen_test": {
+      "ece_before": 0.010607884732889946,
+      "ece_after": 0.0025949723988723675,
+      "conformal": {
+        "alpha": 0.1,
+        "target_coverage": 0.9,
+        "empirical_coverage": 0.9352564102564103,
+        "avg_set_size": 1.4288461538461539,
+        "tau": 0.04931242763996124,
+        "n_samples": 1560
+      }
+    },
+    "unseen_test": {
+      "ece_before": 0.014152388756799222,
+      "ece_after": 0.0017375832599444462,
+      "conformal": {
+        "alpha": 0.1,
+        "target_coverage": 0.9,
+        "empirical_coverage": 0.9265384615384615,
+        "avg_set_size": 1.6953846153846155,
+        "tau": 0.04931242763996124,
+        "n_samples": 2600
+      }
+    }
+  }
+}

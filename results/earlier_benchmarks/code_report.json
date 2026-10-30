@@ -1,0 +1,53 @@
+{
+  "files": 26,
+  "total_loc": 1431,
+  "functions": 94,
+  "docstring_coverage": 0.2765957446808511,
+  "avg_complexity": 2.4893617021276597,
+  "high_risk_functions": [
+    {
+      "path": "src/gpu_corruptnet/codeanalysis.py",
+      "name": "summarize",
+      "line": 82,
+      "complexity": 10
+    },
+    {
+      "path": "src/gpu_corruptnet/corruptions/glitch_cv.py",
+      "name": "triangulation",
+      "line": 18,
+      "complexity": 10
+    }
+  ],
+  "riskiest": [
+    {
+      "path": "src/gpu_corruptnet/codeanalysis.py",
+      "name": "summarize",
+      "line": 82,
+      "complexity": 10
+    },
+    {
+      "path": "src/gpu_corruptnet/corruptions/glitch_cv.py",
+      "name": "triangulation",
+      "line": 18,
+      "complexity": 10
+    },
+    {
+      "path": "src/gpu_corruptnet/codeanalysis.py",
+      "name": "analyze_source",
+      "line": 50,
+      "complexity": 8
+    },
+    {
+      "path": "src/gpu_corruptnet/db/sql.py",
+      "name": "log_run",
+      "line": 56,
+      "complexity": 8
+    },
+    {
+      "path": "src/gpu_corruptnet/models/classifier.py",
+      "name": "build_classifier",
+      "line": 14,
+      "complexity": 8
+    }
+  ]
+}

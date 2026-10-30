@@ -1,0 +1,7 @@
+{
+  "checkpoint": "GitHub Release demo-model/model.pt (run 20260826-012704)",
+  "temperature": 1.5646949856130867,
+  "conformal_tau": 0.04931242763996124,
+  "alpha": 0.1,
+  "fitted_on": "disjoint calibration split (1560 frames)"
+}

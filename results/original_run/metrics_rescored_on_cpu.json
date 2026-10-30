@@ -1,0 +1,71 @@
+{
+  "ckpt": "model.pt",
+  "clean_split": "train=5720 val=1560 cal=1560 seen_test=1560 unseen_test=2600",
+  "substrate": "stl10",
+  "cal": {
+    "macro_f1": 0.9137154040415381,
+    "micro_f1": 0.9167489305692662,
+    "macro_precision": 0.9747833328704344,
+    "macro_recall": 0.8648122181501868,
+    "binary_f1": 0.9877819548872181,
+    "binary_precision": 0.9971537001897534,
+    "binary_recall": 0.978584729981378,
+    "per_class_f1": {
+      "shader": 0.9,
+      "shapes": 0.8642857142857143,
+      "discoloration": 0.8701754385964913,
+      "morse_code": 0.9426751592356688,
+      "dotted_lines": 0.9742120343839542,
+      "parallel_lines": 0.9866666666666667,
+      "triangulation": 0.9647887323943662,
+      "line_pixelation": 0.9853372434017595,
+      "screen_stuttering": 0.8818897637795275,
+      "screen_tearing": 0.7671232876712328
+    },
+    "n_samples": 1560
+  },
+  "seen_test": {
+    "macro_f1": 0.9112095296476417,
+    "micro_f1": 0.9136954348550483,
+    "macro_precision": 0.9744177848280817,
+    "macro_recall": 0.861561222155353,
+    "binary_f1": 0.9909652876842606,
+    "binary_precision": 1.0,
+    "binary_recall": 0.9820923656927427,
+    "per_class_f1": {
+      "shader": 0.8838709677419355,
+      "shapes": 0.8398576512455516,
+      "discoloration": 0.8085106382978723,
+      "morse_code": 0.9427609427609428,
+      "dotted_lines": 0.9644970414201184,
+      "parallel_lines": 1.0,
+      "triangulation": 0.9781931464174455,
+      "line_pixelation": 0.9894736842105263,
+      "screen_stuttering": 0.9022556390977443,
+      "screen_tearing": 0.802675585284281
+    },
+    "n_samples": 1560
+  },
+  "unseen_test": {
+    "macro_f1": 0.8755638695667075,
+    "micro_f1": 0.8834970152127865,
+    "macro_precision": 0.9443901077568573,
+    "macro_recall": 0.8268237953555289,
+    "binary_f1": 0.9714599341383096,
+    "binary_precision": 0.9714599341383096,
+    "binary_recall": 0.9714599341383096,
+    "per_class_f1": {
+      "shader": 0.9304029304029304,
+      "shapes": 0.7494145199063232,
+      "discoloration": 0.8,
+      "morse_code": 0.9395711500974658,
+      "dotted_lines": 0.9709090909090909,
+      "parallel_lines": 0.9837837837837838,
+      "triangulation": 0.9555555555555556,
+      "line_pixelation": 0.9875222816399287,
+      "screen_stuttering": 0.8123924268502581,
+      "screen_tearing": 0.6260869565217392
+    },
+    "n_samples": 2600
+  }
+}

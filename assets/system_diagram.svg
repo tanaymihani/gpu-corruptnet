@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <title>GPU-CorruptNet system: generator, classifier, calibration, conformal sets, OOD monitor, serving</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+    <style>
+      .box { fill: #ffffff; stroke: #9ca3af; stroke-width: 1.5; }
+      .hot { fill: #eef4ff; stroke: #2f6fdb; stroke-width: 1.8; }
+      .t { font-size: 15px; font-weight: 600; fill: #111827; }
+      .s { font-size: 12.5px; fill: #374151; }
+      .lab { font-size: 12px; fill: #6b7280; }
+      .ln { stroke: #4b5563; stroke-width: 1.6; fill: none; marker-end: url(#a); }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="1200" height="360" rx="14" fill="#f6f7f9"/>
+
+  <!-- data -->
+  <rect class="box" x="24" y="40" width="200" height="86" rx="10"/>
+  <text class="t" x="40" y="68">Clean frames</text>
+  <text class="s" x="40" y="90">STL-10 photos (96 px)</text>
+  <text class="s" x="40" y="108">326 game screenshots (≤1080p)</text>
+
+  <rect class="box" x="24" y="160" width="200" height="86" rx="10"/>
+  <text class="t" x="40" y="188">Glitchify-2 generator</text>
+  <text class="s" x="40" y="210">10 artifact injectors,</text>
+  <text class="s" x="40" y="228">applied at native resolution</text>
+  <path class="ln" d="M124,126 L124,158"/>
+
+  <!-- model -->
+  <rect class="hot" x="276" y="100" width="190" height="96" rx="10"/>
+  <text class="t" x="292" y="130">ResNet-50</text>
+  <text class="s" x="292" y="152">multi-label head (10 × sigmoid)</text>
+  <text class="s" x="292" y="170">fine-tuned, BCE</text>
+  <text class="s" x="292" y="188">2048-d embedding →</text>
+  <path class="ln" d="M224,203 L274,160"/>
+
+  <!-- calibration -->
+  <rect class="box" x="518" y="40" width="200" height="86" rx="10"/>
+  <text class="t" x="534" y="68">Temperature scaling</text>
+  <text class="s" x="534" y="90">one T fitted on a disjoint</text>
+  <text class="s" x="534" y="108">calibration split</text>
+  <path class="ln" d="M466,130 L516,90"/>
+  <text class="lab" x="474" y="98">logits</text>
+
+  <rect class="box" x="770" y="40" width="200" height="86" rx="10"/>
+  <text class="t" x="786" y="68">Conformal label set</text>
+  <text class="s" x="786" y="90">marginal + Mondrian (per class)</text>
+  <text class="s" x="786" y="108">target 90% coverage</text>
+  <path class="ln" d="M718,83 L768,83"/>
+
+  <!-- ood -->
+  <rect class="box" x="518" y="200" width="200" height="86" rx="10"/>
+  <text class="t" x="534" y="228">OOD monitor</text>
+  <text class="s" x="534" y="250">PCA-64 Mahalanobis on the</text>
+  <text class="s" x="534" y="268">embedding; PSI drift on batches</text>
+  <path class="ln" d="M466,176 L516,226"/>
+
+  <rect class="box" x="770" y="200" width="200" height="86" rx="10"/>
+  <text class="t" x="786" y="228">Anomaly head</text>
+  <text class="s" x="786" y="250">kNN on clean features</text>
+  <text class="s" x="786" y="268">(no corruption labels)</text>
+
+  <!-- serving -->
+  <rect class="hot" x="1018" y="100" width="160" height="150" rx="10"/>
+  <text class="t" x="1034" y="130">Serving</text>
+  <text class="s" x="1034" y="154">ONNX Runtime Web</text>
+  <text class="s" x="1034" y="172">(GitHub Pages)</text>
+  <text class="s" x="1034" y="196">ORT CoreML · CPU</text>
+  <text class="s" x="1034" y="214">C++ libtorch</text>
+  <text class="s" x="1034" y="232">Streamlit</text>
+  <path class="ln" d="M970,90 L1016,130"/>
+  <path class="ln" d="M618,286 L618,308 L1098,308 L1098,252"/>
+  <path class="ln" d="M970,243 L1016,232"/>
+
+  <text class="lab" x="24" y="336">Per frame the app returns: artifact probabilities (calibrated), a set of plausible artifact types, and an in/out-of-distribution flag.</text>
+</svg>

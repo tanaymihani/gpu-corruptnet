@@ -1,0 +1,53 @@
+{
+  "checkpoint": "model_resnet50_20260826-012704.pt",
+  "batch_size": 1,
+  "input": "224x224 real game frames",
+  "machine": "macOS-27.0.1-arm64-arm-64bit",
+  "processor": "arm",
+  "torch": "2.13.0",
+  "onnxruntime": "1.29.0",
+  "threads": 4,
+  "load_average_before_after": [
+    [
+      11.9853515625,
+      5.6572265625,
+      4.77294921875
+    ],
+    [
+      9.81103515625,
+      5.56640625,
+      4.759765625
+    ]
+  ],
+  "backends": {
+    "pytorch_cpu": {
+      "p50_ms": 33.168417001434136,
+      "p95_ms": 56.343181250667826,
+      "mean_ms": 37.945131983360625,
+      "max_abs_logit_diff": 0.0,
+      "label_set_agreement": 1.0
+    },
+    "pytorch_mps": {
+      "p50_ms": 18.226812500870437,
+      "p95_ms": 22.833284800799444,
+      "mean_ms": 19.329151266659512,
+      "max_abs_logit_diff": 6.103515625e-05,
+      "label_set_agreement": 1.0
+    },
+    "onnxruntime_cpu": {
+      "p50_ms": 40.487499500159174,
+      "p95_ms": 52.25556940313254,
+      "mean_ms": 41.52217845021369,
+      "max_abs_logit_diff": 4.673004150390625e-05,
+      "label_set_agreement": 1.0
+    },
+    "onnxruntime_coreml": {
+      "p50_ms": 1.8354370004090015,
+      "p95_ms": 1.9289148989628302,
+      "mean_ms": 1.7869979333530257,
+      "max_abs_logit_diff": 0.09032011032104492,
+      "label_set_agreement": 1.0
+    }
+  },
+  "note": "One run, one machine; parity vs PyTorch-CPU logits on the same frames."
+}

@@ -1,0 +1,17 @@
+{
+  "auroc": 0.8349876725838266,
+  "n_test": 1560,
+  "k": 3,
+  "per_type_auroc": {
+    "discoloration": 0.6577553829717291,
+    "dotted_lines": 0.9887261669953978,
+    "line_pixelation": 0.9348368671926365,
+    "morse_code": 0.9111049474030245,
+    "parallel_lines": 0.9898586456278763,
+    "screen_stuttering": 0.9170019723865878,
+    "screen_tearing": 0.7013646449704143,
+    "shader": 0.7472234549638397,
+    "shapes": 0.5711711045364891,
+    "triangulation": 0.9968474687705456
+  }
+}
