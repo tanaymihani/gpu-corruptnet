@@ -19,11 +19,11 @@ TRAIN = "python scripts/train_classifier.py"
 # The authoritative recipe (notebooks/train_colab.ipynb): fine-tune 12 epochs at 224 px.
 FT = (
     f"{TRAIN} --arch resnet50 --epochs 12 --img-size 224 --batch-size 64 --lr 1e-4 "
-    "--no-freeze --num-workers 2 --max-train-minutes 320"
+    "--no-freeze --num-workers 2 --max-train-minutes 200"
 )
 REAL = (
     f"{TRAIN} --substrate real --arch resnet50 --epochs 8 --img-size 224 --batch-size 32 "
-    "--lr 5e-5 --no-freeze --num-workers 3 --init-ckpt model.pt --max-train-minutes 300"
+    "--lr 5e-5 --no-freeze --num-workers 3 --init-ckpt model.pt --max-train-minutes 150"
 )
 
 
@@ -50,7 +50,7 @@ def suite(name: str) -> list[dict]:
                     "--lr 1e-3 --num-workers 2 --tag smallcnn"},
             {"name": "effb4", "keep_model": False,
              "cmd": f"{TRAIN} --arch efficientnet_b4 --epochs 12 --img-size 224 --batch-size 32 "
-                    "--lr 1e-4 --no-freeze --num-workers 2 --max-train-minutes 320 --tag effb4"},
+                    "--lr 1e-4 --no-freeze --num-workers 2 --max-train-minutes 200 --tag effb4"},
             {"name": "classical", "keep_model": False,
              "cmd": "python scripts/baseline_classical.py"},
             {"name": "deployed-eval", "keep_model": False,
@@ -59,7 +59,7 @@ def suite(name: str) -> list[dict]:
              "cmd": "python scripts/anomaly_eval.py --per-type --out runs/anomaly_per_type.json"},
         ]
     if name == "loto":
-        ep6 = FT.replace("--epochs 12", "--epochs 6")
+        ep6 = FT.replace("--epochs 12", "--epochs 6").replace("minutes 200", "minutes 140")
         return [
             {"name": f"loto-{c}", "keep_model": False,
              "cmd": f"{ep6} --exclude {c} --tag loto-{c}"}

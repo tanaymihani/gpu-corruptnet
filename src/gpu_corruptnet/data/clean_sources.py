@@ -127,7 +127,7 @@ def load_real_frames(
     manifest: str | Path = "realdata/clean_frames.csv",
     root: str | Path = "data/real_frames",
     unseen_titles: tuple[str, ...] | None = None,
-    val_frac: float = 0.15,
+    val_frac: float = 0.1,
     cal_frac: float = 0.15,
     test_frac: float = 0.2,
     seed: int = 1337,

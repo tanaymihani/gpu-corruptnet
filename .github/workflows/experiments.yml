@@ -38,16 +38,18 @@ jobs:
         with:
           path: data/stl10_binary
           key: stl10-labelled-v1
-      - name: Download STL-10 (labelled splits only)
+      - uses: actions/checkout@v4
+        if: steps.stl.outputs.cache-hit != 'true'
+      - uses: actions/setup-python@v5
+        if: steps.stl.outputs.cache-hit != 'true'
+        with:
+          python-version: "3.11"
+      - name: Rebuild STL-10 labelled splits (md5-verified)
         if: steps.stl.outputs.cache-hit != 'true'
         run: |
-          mkdir -p data && cd data
-          curl -sSfL --retry 5 -o stl10_binary.tar.gz \
-            http://ai.stanford.edu/~acoates/stl10/stl10_binary.tar.gz
-          echo "91f7769df0f17e558f3565bffb0c7dfb  stl10_binary.tar.gz" | md5sum -c
-          tar xzf stl10_binary.tar.gz --exclude='stl10_binary/unlabeled_X.bin'
-          rm stl10_binary.tar.gz
-          ls -la stl10_binary
+          pip install -q numpy pillow pyarrow
+          python scripts/fetch_stl10.py data
+          ls -la data/stl10_binary
 
   run:
     needs: [plan, data]
