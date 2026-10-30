@@ -1,0 +1,98 @@
+name: Experiments
+
+# Manually dispatched training / evaluation suites on free CPU runners. Each matrix entry
+# uploads its runs/ directory (metrics JSON, logits + labels .npz) as an artifact;
+# scripts/aggregate_results.py turns those into results/.
+on:
+  workflow_dispatch:
+    inputs:
+      suite:
+        description: "smoke | core | loto | real"
+        required: true
+        default: smoke
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - id: m
+        run: |
+          pip install -q numpy pillow pyyaml
+          pip install -q -e . --no-deps
+          echo "matrix=$(python scripts/experiment_matrix.py ${{ inputs.suite }})" >> "$GITHUB_OUTPUT"
+
+  data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/cache@v4
+        id: stl
+        with:
+          path: data/stl10_binary
+          key: stl10-labelled-v1
+      - name: Download STL-10 (labelled splits only)
+        if: steps.stl.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p data && cd data
+          curl -sSfL --retry 5 -o stl10_binary.tar.gz \
+            http://ai.stanford.edu/~acoates/stl10/stl10_binary.tar.gz
+          echo "91f7769df0f17e558f3565bffb0c7dfb  stl10_binary.tar.gz" | md5sum -c
+          tar xzf stl10_binary.tar.gz --exclude='stl10_binary/unlabeled_X.bin'
+          rm stl10_binary.tar.gz
+          ls -la stl10_binary
+
+  run:
+    needs: [plan, data]
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    name: ${{ matrix.name }}
+    env:
+      OMP_NUM_THREADS: "4"
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install (CPU torch)
+        run: |
+          pip install -q torch==2.13.0 torchvision==0.28.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q -e ".[cv,train]"
+      - uses: actions/cache/restore@v4
+        with:
+          path: data/stl10_binary
+          key: stl10-labelled-v1
+          fail-on-cache-miss: true
+      - name: Fetch real game frames
+        if: inputs.suite == 'real'
+        run: python realdata/fetch.py realdata/clean_frames.csv data/real_frames
+      - name: Fetch deployed model
+        if: contains(matrix.cmd, 'model.pt')
+        run: gh release download demo-model -p model.pt -R ${{ github.repository }}
+      - name: Run
+        run: |
+          nproc; python -c "import torch; print('torch', torch.__version__, 'threads', torch.get_num_threads())"
+          ${{ matrix.cmd }}
+      - name: Drop checkpoints not needed downstream
+        if: ${{ !matrix.keep_model }}
+        run: rm -f runs/*.pt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ${{ matrix.name }}
+          path: runs/
+          retention-days: 30
+          if-no-files-found: warn
