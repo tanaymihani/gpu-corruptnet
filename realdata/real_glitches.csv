@@ -1,0 +1,500 @@
+file,label,classes,description,repo,issue,url
+g0000.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/1115,https://user-images.githubusercontent.com/3086017/171996508-9fe8a34c-af0b-47a0-a0d9-3a3cd9930aa3.jpg
+g0001.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2762,https://github.com/user-attachments/assets/3a12f13c-13f0-4e7b-846b-a52c11cd4897
+g0002.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2138,https://github.com/user-attachments/assets/20e6b5ac-e420-4413-ab0d-b4905e886ca1
+g0003.png,glitch,screen_tearing,title band displaced horizontally,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/1256,https://user-images.githubusercontent.com/39629883/194080234-eeab5f40-28c3-4122-af43-d4e18b431c21.png
+g0004.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2498,https://github.com/user-attachments/assets/d0efe0b4-108f-45d2-944f-c6c077074bd4
+g0006.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/611,https://user-images.githubusercontent.com/761853/114227557-25256b80-9943-11eb-8b9f-993b4f521e98.png
+g0007.png,glitch,parallel_lines,horizontal scanline pattern over whole frame,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2522,https://github.com/user-attachments/assets/038784c1-4a29-46e2-868e-78a9b4231f2d
+g0008.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2498,https://github.com/user-attachments/assets/2e4fc01d-f1d1-4dc2-98c6-6a3e69fd9982
+g0009.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2232,https://github.com/user-attachments/assets/62cfa239-9af5-41fa-9361-dd09fcda19f1
+g0013.png,glitch,shader,large black region with blocky garbage texture,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/409,https://user-images.githubusercontent.com/26201033/99571169-380ac400-29d3-11eb-8646-dfe9df71a081.png
+g0016.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/3147,https://github.com/user-attachments/assets/c06a95f8-666f-486c-94bb-6f5db6312a9d
+g0018.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2232,https://github.com/user-attachments/assets/b4931744-c179-4c64-a67f-3863b447e402
+g0019.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2138,https://github.com/user-attachments/assets/a4a5b0a5-023d-4e36-8a8f-14ce02492692
+g0021.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/952,https://user-images.githubusercontent.com/5248232/147888007-c09620ab-bab3-4f62-a090-205d3cde88d6.png
+g0022.png,glitch,shapes,black stair-stepped missing-render region,KhronosGroup/MoltenVK,https://github.com/KhronosGroup/MoltenVK/issues/2588,https://github.com/user-attachments/assets/bda4fabc-a198-4945-b3f1-d9184be869dd
+g0024.png,glitch,line_pixelation,green stair-stepped line artifacts across frame,KhronosGroup/MoltenVK,https://github.com/KhronosGroup/MoltenVK/issues/2697,https://github.com/user-attachments/assets/1d2b4be1-34a2-4987-9288-2fd54fd84fc1
+g0025.png,glitch,morse_code,rows of multicoloured garbage pixels,KhronosGroup/MoltenVK,https://github.com/KhronosGroup/MoltenVK/issues/2475,https://github.com/user-attachments/assets/d84c2fbf-f4ac-4d20-99a3-b43dc13100b0
+g0029.png,glitch,shader,rainbow mip-debug textures on geometry,KhronosGroup/MoltenVK,https://github.com/KhronosGroup/MoltenVK/issues/445,https://user-images.githubusercontent.com/46504684/50862612-1584da00-136a-11e9-85dc-441af2082f5f.png
+g0030.png,clean,,,KhronosGroup/MoltenVK,https://github.com/KhronosGroup/MoltenVK/issues/2697,https://github.com/user-attachments/assets/c1325031-f574-4fda-9ec8-44f252bb2b9b
+g0035.png,clean,,,KhronosGroup/MoltenVK,https://github.com/KhronosGroup/MoltenVK/issues/1883,https://user-images.githubusercontent.com/42140194/235795460-92745b54-7ae8-4176-b8c1-522900eb239a.png
+g0036.png,clean,,,KhronosGroup/MoltenVK,https://github.com/KhronosGroup/MoltenVK/issues/2475,https://github.com/user-attachments/assets/9789fda6-2418-4b94-8854-29b1f4f3ee8e
+g0037.png,clean,,,KhronosGroup/MoltenVK,https://github.com/KhronosGroup/MoltenVK/issues/2588,https://github.com/user-attachments/assets/df2c3616-fe41-44aa-a71b-5731bb0c2c10
+g0039.png,glitch,shader,rainbow mip-debug textures on geometry,KhronosGroup/MoltenVK,https://github.com/KhronosGroup/MoltenVK/issues/445,https://user-images.githubusercontent.com/46504684/50862595-056cfa80-136a-11e9-904a-0e12369f399c.png
+g0043.png,clean,,,KhronosGroup/MoltenVK,https://github.com/KhronosGroup/MoltenVK/issues/1441,https://user-images.githubusercontent.com/1409522/134787266-22967e31-3ae7-427c-9e63-8b52d01096c0.jpg
+g0044.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/13796,https://github.com/user-attachments/assets/a526a0b6-89b4-4e0d-b58c-027d2a1cac40
+g0045.png,glitch,parallel_lines,horizontal line pattern over frame,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/12510,https://github.com/user-attachments/assets/8306c5aa-6c77-47ac-9bdc-40dd37f951a9
+g0046.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/13586,https://github.com/user-attachments/assets/8d1ea7ce-d611-40f4-97a1-0387c968f98c
+g0047.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/2393,https://user-images.githubusercontent.com/30066566/39061315-32dd26fe-44c4-11e8-8770-2ac85f77e094.png
+g0048.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/7995,https://user-images.githubusercontent.com/121824800/215340589-42cdc22e-aea7-4318-924d-ad27119c31e8.png
+g0049.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/14761,https://github.com/user-attachments/assets/ec90c9b1-aee9-4eee-a40e-92a4f6f78e5e
+g0050.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/13520,https://github.com/user-attachments/assets/db915dd3-635f-4686-b9df-4df99e3d5205
+g0051.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/14157,https://github.com/user-attachments/assets/68e1fdb1-5167-4666-bc8e-d752411f9282
+g0052.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/14832,https://github.com/user-attachments/assets/e29b8d2a-d284-4564-88fd-7fa5f08b2697
+g0053.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/1982,https://user-images.githubusercontent.com/3447089/27517275-17dd81a4-59ca-11e7-9507-8fcc9325b1b4.png
+g0054.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/5008,https://user-images.githubusercontent.com/90222976/141297780-9e94ac10-759a-4e03-accc-406cffb67816.png
+g0055.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/5814,https://user-images.githubusercontent.com/5641681/161446392-55d1d972-bb3b-4ef6-887b-17a61a2985a2.png
+g0057.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/13065,https://github.com/user-attachments/assets/4fe539e1-a69e-4fab-8b5b-707b2086a647
+g0059.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/14388,https://github.com/user-attachments/assets/4a315c69-d4e7-4c56-b833-6fae0437b245
+g0060.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/13031,https://github.com/user-attachments/assets/865f2784-9ab0-490f-91e5-a7fdd483cfeb
+g0063.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/4251,https://user-images.githubusercontent.com/11493450/109047135-86e78a00-76a3-11eb-8305-85077c350356.jpg
+g0065.png,glitch,morse_code,band of multicoloured noise pixels over top half,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/13044,https://github.com/user-attachments/assets/16699f50-bb22-4242-b46b-cdccb6eca6ed
+g0066.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18193,https://github.com/user-attachments/assets/671e8ba4-0398-4ed0-9ea3-0917f0f83a02
+g0067.png,glitch,discoloration,large solid yellow wrong-colour fill,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/13273,https://user-images.githubusercontent.com/71127352/213895717-a7d33f0f-8fec-4a3d-8dea-d6951d8959ea.png
+g0068.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/13749,https://user-images.githubusercontent.com/71127352/234026110-5dcbf8d1-d0bd-4e3d-a51d-7747157e3667.png
+g0069.png,glitch,shapes,solid black rectangle of missing geometry,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/17499,https://github.com/user-attachments/assets/05e46d2c-d8db-4dc5-bbcd-afd4ca18897a
+g0071.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/6270,https://user-images.githubusercontent.com/29802222/61991375-7696a580-b04f-11e9-9da8-8ed923a1049c.png
+g0073.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/17865,https://github.com/user-attachments/assets/2f83abe8-b176-4b1a-8861-b1de4361a42e
+g0074.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/19687,https://github.com/user-attachments/assets/c86914e4-394a-45e4-8780-c090644253c5
+g0076.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/13808,https://user-images.githubusercontent.com/125112932/236493000-aa2af2d5-e320-4b06-b972-a3b8671a96e9.PNG
+g0077.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/12567,https://user-images.githubusercontent.com/61447828/187039558-92a6be97-5558-4279-b23f-4727e21d563b.png
+g0078.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/13164,https://user-images.githubusercontent.com/71127352/210655193-39a2b44e-f026-418d-aed9-972c877311ce.png
+g0079.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18037,https://github.com/user-attachments/assets/34a88461-f28d-414e-a2fd-f9b8d09f8bf0
+g0080.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/11828,https://user-images.githubusercontent.com/73563223/163726358-4b8ccea7-5a6a-4f68-9c61-a9ae2e1fde5c.png
+g0081.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18037,https://github.com/user-attachments/assets/32952128-c5d9-4925-b244-b041d65687ff
+g0082.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18295,https://github.com/user-attachments/assets/4eda906a-d60a-41df-9aa4-baa7fe29e028
+g0083.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18193,https://github.com/user-attachments/assets/6e2a394e-e033-408e-8448-c04f0ed49652
+g0084.png,glitch,discoloration,blown-out yellow/white wash over most of frame,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18096,https://github.com/user-attachments/assets/ef691d9f-cfa8-4013-a643-e48367100741
+g0085.png,glitch,shapes;discoloration,green/magenta/white blocky corrupt regions,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/13356,https://user-images.githubusercontent.com/71127352/216790413-3e450b62-2326-4466-a9de-bf76b2327769.png
+g0086.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/13688,https://user-images.githubusercontent.com/71127352/232593722-53402880-4b3b-48f7-912f-d48f01a89da2.png
+g0088.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/9077,https://github.com/user-attachments/assets/6a696a7a-9b18-42e9-9321-208f205fb09a
+g0089.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/10198,https://github.com/user-attachments/assets/b2c7d36d-c206-48b5-ae4f-a1d8de653d0a
+g0090.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/3708,https://user-images.githubusercontent.com/9532105/78044108-cf6cc980-73a6-11ea-81be-039fdc61bc69.png
+g0091.png,glitch,parallel_lines,whole frame replaced by vertical line pattern,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/5920,https://user-images.githubusercontent.com/45927311/174450321-9e776ebf-6769-475d-9e1f-b92b58c24b9f.png
+g0093.png,glitch,discoloration,magenta/blue colour blobs on wall,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/2391,https://user-images.githubusercontent.com/40699625/54072077-bd852980-426d-11e9-9ea5-7166532e3059.png
+g0095.png,glitch,shader,sparkle artifacts across face,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/6279,https://user-images.githubusercontent.com/200750/198898315-3a1265cb-4ba3-4978-bdc3-6b43ec0da250.png
+g0097.png,glitch,shapes,checkerboard tile blocks along bottom,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/7907,https://github.com/user-attachments/assets/6e2d3cdd-4b90-4dac-8534-f4a7525bd0b9
+g0099.png,glitch,shapes,"only a small top-left region rendered, rest black",ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/3150,https://user-images.githubusercontent.com/51302074/66787838-8938b200-eebb-11e9-8a47-71c4f2824dc3.png
+g0100.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/197,https://user-images.githubusercontent.com/3198362/44498177-4e533980-a67d-11e8-8315-049681830d02.png
+g0101.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/764,https://user-images.githubusercontent.com/18506134/44675695-8a95e980-aa31-11e8-9936-e03cc2ec8e59.png
+g0102.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/8890,https://github.com/user-attachments/assets/856c5b80-74bf-4104-b4d8-ea8816edb9aa
+g0106.png,glitch,triangulation,"smeared, stretched geometry",ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/8935,https://github.com/user-attachments/assets/525bf3f5-b914-4c54-b1f8-8d69e90f9b40
+g0107.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/791,https://user-images.githubusercontent.com/34918129/59373799-b416cc00-8d4a-11e9-884e-595beb7461d5.png
+g0108.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/6028,https://user-images.githubusercontent.com/79141/180969039-8de4c290-9b56-4707-9f78-699bba2c0635.jpg
+g0120.png,glitch,triangulation,dark triangular holes/shards across terrain mesh,bevyengine/bevy,https://github.com/bevyengine/bevy/issues/17643,https://github.com/user-attachments/assets/043db314-4416-4a6a-8f7f-cdf0b8190f57
+g0132.png,glitch,shapes,dark diagonal polygon across sky,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2029,https://user-images.githubusercontent.com/65482005/115136208-af925d00-a01e-11eb-9644-22930c836f04.jpg
+g0133.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2069,https://user-images.githubusercontent.com/4979638/119254650-2394c780-bbc0-11eb-8c97-85c374445836.png
+g0134.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/5732,https://github.com/user-attachments/assets/76c8a883-4c86-417d-8bfb-7c16163aff2e
+g0135.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/578,https://user-images.githubusercontent.com/11148529/44303027-127a4600-a304-11e8-9c84-f0348cd7e799.png
+g0136.png,glitch,shapes,black blocky missing-texture regions,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4483,https://github.com/user-attachments/assets/56558bab-dac3-420d-bad3-5df69c86a9d9
+g0137.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4214,https://github.com/user-attachments/assets/3ded696d-34fc-403d-b1b0-1798a6dd1e9b
+g0139.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2626,https://user-images.githubusercontent.com/8014546/164345212-c524f085-4cb5-40b8-b687-72fe81544e84.png
+g0140.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4514,https://github.com/user-attachments/assets/7e7a26b1-a6ea-4de2-8556-57d350eddd8c
+g0141.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/781,https://user-images.githubusercontent.com/45315930/48971072-8750d080-f015-11e8-97d6-b9c12d4f9344.png
+g0142.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1492,https://user-images.githubusercontent.com/4312414/75740560-cd9be180-5ce6-11ea-94dc-7b9545d1daff.png
+g0143.png,glitch,shapes,black dithered blocks over scene,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1943,https://user-images.githubusercontent.com/32738446/109228044-93fa9b00-77c1-11eb-90e4-41339a8c5cb0.png
+g0144.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/885,https://user-images.githubusercontent.com/1589747/51718375-071b0b80-2056-11e9-8d0b-3f5afe58321b.jpg
+g0146.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/5172,https://github.com/user-attachments/assets/77d13022-3120-486e-9fbd-1658ca5a2f94
+g0147.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1586,https://user-images.githubusercontent.com/6306593/79900264-a9bb6900-8416-11ea-8a3f-19525a42d272.jpg
+g0148.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2626,https://user-images.githubusercontent.com/8014546/164345292-0a8ebb83-a827-464b-9b22-578ddb9bbe5b.png
+g0149.png,glitch,morse_code;line_pixelation,title screen buried in multicoloured garbage pixels,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1961,https://user-images.githubusercontent.com/1674229/109859919-cd1d8a00-7c5d-11eb-9a19-f90cfbae0647.jpg
+g0150.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1868,https://user-images.githubusercontent.com/76689666/103216440-fb08ea00-490d-11eb-8ecf-42e23b681283.jpg
+g0151.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1603,https://user-images.githubusercontent.com/6306593/80999541-84cee900-8e4d-11ea-9b2a-1b6d8e207b04.png
+g0152.png,glitch,discoloration,blown-out white blobs with black dashes,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2468,https://user-images.githubusercontent.com/39300993/151672217-ae53a1bb-55fe-46a2-868d-299ce9eaa87e.png
+g0153.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1415,https://user-images.githubusercontent.com/6306593/74033981-02569a80-49c0-11ea-8a6d-fc093f6a85d1.jpg
+g0155.png,glitch,shapes;morse_code,window filled with garbage memory blocks,gfx-rs/wgpu,https://github.com/gfx-rs/wgpu/issues/1699,https://user-images.githubusercontent.com/134893/126466695-3344752d-47f5-4ca5-8fa5-573f61e7100d.png
+g0158.png,clean,,,godotengine/godot,https://github.com/godotengine/godot/issues/108525,https://github.com/user-attachments/assets/f65c3104-baec-4a59-a4a7-068011da5f8b
+g0171.png,glitch,shader,multicoloured garbage texture on mesh,godotengine/godot,https://github.com/godotengine/godot/issues/43844,https://user-images.githubusercontent.com/28612272/100196234-3868fa80-2ebe-11eb-87f1-b2c108b0dc17.png
+g0179.png,glitch,shader;discoloration,neon rainbow edge colouring over whole scene,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13782,https://user-images.githubusercontent.com/26355472/102460873-2ff97f00-407a-11eb-81ba-ae1e0e0f0eb5.jpg
+g0181.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/12831,https://user-images.githubusercontent.com/63867248/79589994-99ce1d00-80d6-11ea-9035-f1b1f0d89371.png
+g0184.png,glitch,discoloration;shapes,magenta wash with garbled blocks,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/12949,https://user-images.githubusercontent.com/26355472/82667454-1b7b1280-9c62-11ea-85f9-774722b2384d.png
+g0186.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/12487,https://user-images.githubusercontent.com/778851/68807103-80c4ca00-0667-11ea-8cdd-41370bbc85e2.png
+g0187.png,glitch,discoloration,washed-out overexposed frame,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13103,https://user-images.githubusercontent.com/37603562/86767109-14775a80-c07e-11ea-8bac-0bb7303747e6.png
+g0189.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/15887,https://user-images.githubusercontent.com/28152150/185899720-a10a606a-d418-49c6-ba68-d5bf800601b9.PNG
+g0190.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/11601,https://user-images.githubusercontent.com/37603562/49021924-9d809d00-f18b-11e8-8fca-db06b848103c.png
+g0192.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13975,https://user-images.githubusercontent.com/37503397/105686285-07468e00-5f32-11eb-9de0-64137d71321b.jpg
+g0194.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13950,https://user-images.githubusercontent.com/48179091/105178685-b7e81280-5b6b-11eb-8a48-fcb8c3f7d09f.png
+g0196.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/14167,https://user-images.githubusercontent.com/48179091/108165427-e7bc1300-7135-11eb-9f00-bd1e0d268900.jpg
+g0197.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13749,https://user-images.githubusercontent.com/48179091/101361499-6567d500-38e2-11eb-870f-dc8c931be940.png
+g0199.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/11931,https://user-images.githubusercontent.com/26355472/54883829-95680e00-4e9c-11e9-8b23-288d30450283.jpg
+g0200.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/11980,https://user-images.githubusercontent.com/16115820/56281570-35bef480-6122-11e9-9fde-1f074e24d1f1.png
+g0203.png,clean,,,luanti-org/luanti,https://github.com/luanti-org/luanti/issues/15361,https://github.com/user-attachments/assets/efaf4e84-cf86-491e-90d3-fb4042b6c1f5
+g0211.png,glitch,triangulation,blocks rendered as spiky pyramids,luanti-org/luanti,https://github.com/luanti-org/luanti/issues/16896,https://github.com/user-attachments/assets/c58e9034-d330-4163-b45d-08a6ea951b82
+g0213.png,clean,,,luanti-org/luanti,https://github.com/luanti-org/luanti/issues/11635,https://user-images.githubusercontent.com/3390973/133720827-d48f30a1-998a-4437-adc0-287c43299a05.png
+g0214.png,glitch,shapes,black squares where foliage alpha should be,luanti-org/luanti,https://github.com/luanti-org/luanti/issues/16825,https://github.com/user-attachments/assets/15471041-bbca-4855-8070-614a2b1d721d
+g0215.png,clean,,,luanti-org/luanti,https://github.com/luanti-org/luanti/issues/17506,https://github.com/user-attachments/assets/4ed1d848-74da-4b1c-8aeb-fc60d511e041
+g0216.png,clean,,,luanti-org/luanti,https://github.com/luanti-org/luanti/issues/17227,https://github.com/user-attachments/assets/aed542be-3a88-4b12-8e6f-1277e2bc83da
+g0217.png,glitch,shapes,large white wedge where sky/geometry is missing,luanti-org/luanti,https://github.com/luanti-org/luanti/issues/16955,https://github.com/user-attachments/assets/89785846-4881-49a8-8b2c-1b32eea059e0
+g0218.png,clean,,,luanti-org/luanti,https://github.com/luanti-org/luanti/issues/15384,https://github.com/user-attachments/assets/d0c24c8d-48bd-4187-ba00-0c86382caf86
+g0221.png,clean,,,luanti-org/luanti,https://github.com/luanti-org/luanti/issues/6976,https://user-images.githubusercontent.com/3192173/35473747-d02a57b4-0384-11e8-8e27-2e3531bcd1b2.png
+g0225.png,clean,,,supertuxkart/stk-code,https://github.com/supertuxkart/stk-code/issues/5218,https://github.com/user-attachments/assets/f068588e-260e-4eee-8fee-c5a0ccafe79f
+g0226.png,clean,,,supertuxkart/stk-code,https://github.com/supertuxkart/stk-code/issues/3189,https://user-images.githubusercontent.com/37777369/38767547-717aa1e8-401e-11e8-9960-ae3f86abb585.PNG
+g0227.png,clean,,,supertuxkart/stk-code,https://github.com/supertuxkart/stk-code/issues/4291,https://user-images.githubusercontent.com/25492070/82291021-0306b180-995d-11ea-8e89-7b6689996788.png
+g0228.png,clean,,,supertuxkart/stk-code,https://github.com/supertuxkart/stk-code/issues/3189,https://user-images.githubusercontent.com/37777369/38767548-71b88f4e-401e-11e8-8430-de2282a6f010.PNG
+g0229.png,clean,,,supertuxkart/stk-code,https://github.com/supertuxkart/stk-code/issues/3614,https://user-images.githubusercontent.com/33566379/48963231-93457f80-ef8e-11e8-8737-82159d9904ef.png
+g0231.png,clean,,,supertuxkart/stk-code,https://github.com/supertuxkart/stk-code/issues/5650,https://github.com/user-attachments/assets/0794497a-2fdf-4fb7-bb3e-86e0b7d8e8ed
+g0232.png,clean,,,supertuxkart/stk-code,https://github.com/supertuxkart/stk-code/issues/5650,https://github.com/user-attachments/assets/72e1be38-f162-4a32-a587-809c0a4c80d6
+g0233.png,clean,,,supertuxkart/stk-code,https://github.com/supertuxkart/stk-code/issues/5239,https://github.com/user-attachments/assets/4f725e1e-21c0-4b98-857a-65b1cf5bcb6c
+g0237.png,glitch,shader,karts and props rendered as flat untextured silhouettes,supertuxkart/stk-code,https://github.com/supertuxkart/stk-code/issues/3083,https://user-images.githubusercontent.com/32958359/34364310-c990af02-ea84-11e7-8bbe-1661807e225a.png
+g0242.png,clean,,,supertuxkart/stk-code,https://github.com/supertuxkart/stk-code/issues/5465,https://github.com/user-attachments/assets/02b6ac0e-6d02-490e-a12f-6f4933ce6b87
+g0243.png,clean,,,supertuxkart/stk-code,https://github.com/supertuxkart/stk-code/issues/5322,https://github.com/user-attachments/assets/c56eed68-d2c9-4871-b57a-e0c767b334ab
+g0245.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1708,https://github.com/user-attachments/assets/5a0284f7-b268-4134-886a-ab5a915b5b5f
+g0246.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/961,https://user-images.githubusercontent.com/8210/169980953-45e6c3d2-5c92-4060-9f53-563652a1e4b3.png
+g0247.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/951,https://user-images.githubusercontent.com/103341098/169674067-c3f5824b-1d93-4807-b6da-04fc3db4482d.png
+g0248.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2383,https://github.com/user-attachments/assets/c244715e-01f6-46ce-af5f-bac4196ed91c
+g0250.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1212,https://user-images.githubusercontent.com/33853101/181913742-ab90f7b6-b08a-4c93-9ba3-abe12cf71d5e.png
+g0251.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2179,https://github.com/user-attachments/assets/77d2e48f-fa55-49a8-9577-bc18288e2499
+g0253.png,glitch,discoloration,yellow colour bleed around frame edges,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2019,https://github.com/user-attachments/assets/00785fdf-7591-476b-bda8-975bb50678b0
+g0254.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1161,https://user-images.githubusercontent.com/71127352/177054145-e304b1df-a985-4158-9029-c3cc143a18ef.png
+g0256.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/951,https://user-images.githubusercontent.com/103341098/169673947-bb05282c-90fe-4822-808b-54d6bc06ce04.png
+g0257.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2025,https://user-images.githubusercontent.com/71127352/170720850-70e0e94d-016a-4965-b8d2-af3641e06fbc.png
+g0259.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/984,https://user-images.githubusercontent.com/44263219/170713985-308bd25c-5144-448d-8574-2bd9962f3732.png
+g0261.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1071,https://user-images.githubusercontent.com/85488991/174214579-3e19f069-cd91-4ace-99f3-4004e788910d.png
+g0262.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2438,https://user-images.githubusercontent.com/71127352/175796250-148efc79-d93c-4294-8712-92ca9dc4387d.png
+g0263.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2018,https://github.com/user-attachments/assets/6ccc3c26-e4ad-457e-a5e0-320134985873
+g0265.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/980,https://user-images.githubusercontent.com/28496334/170594900-1a7aa410-c49a-432d-8ac0-6beae0dba653.png
+h0000.png,glitch,shapes,large translucent brown polygon across sky,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/3147,https://github.com/user-attachments/assets/f01a6dde-f27c-4f4a-9806-bccb6ce8b885
+h0002.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/3097,https://github.com/user-attachments/assets/ed15a10f-3baa-4bdf-8edd-e59cf450f7c1
+h0003.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/3022,https://github.com/user-attachments/assets/ac49bf1a-a618-4c4e-955a-066c8d11d79b
+h0005.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/1191,https://user-images.githubusercontent.com/1131720/184500726-41943c7d-4f8f-4532-9543-a49056d72274.jpg
+h0006.png,glitch,shapes;discoloration,bright green blocky shapes over frame,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2345,https://github.com/user-attachments/assets/4f238462-b1f4-4f25-8008-bbda33b895a0
+h0008.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/611,https://user-images.githubusercontent.com/761853/114227733-5bfb8180-9943-11eb-9ff8-04d6f4271fac.png
+h0009.png,glitch,morse_code,multicoloured noise speckle over frame,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/247,https://user-images.githubusercontent.com/9790221/89742314-0eb7cf00-da99-11ea-89a3-9d5f677c5498.png
+h0010.png,glitch,shapes,black square particles scattered over scene,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/1502,https://user-images.githubusercontent.com/40663462/229312435-f44e9b71-1e3c-421f-8815-8637e4a016dc.png
+h0011.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/855,https://user-images.githubusercontent.com/13510490/137207244-7d8e771c-ad55-47fc-bcc4-48bce40873cf.png
+h0012.png,glitch,discoloration;shapes,greyscale buffer with black holes instead of scene,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2223,https://github.com/user-attachments/assets/a11821ab-9a33-4a79-9e73-c915589bd710
+h0014.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/3097,https://github.com/user-attachments/assets/f8453de7-1122-4388-b1c9-11f27f11ba81
+h0016.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/1115,https://user-images.githubusercontent.com/3086017/171996495-6a18e7d3-ebd0-4999-bf5a-6abbbb92f648.jpg
+h0017.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2859,https://github.com/user-attachments/assets/7677e7ea-d4ff-439e-a747-658646b4bcec
+h0019.png,glitch,discoloration,whole frame posterised to red and white,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2223,https://github.com/user-attachments/assets/a7e2c69a-95fa-4e04-a40d-8d56da7da7ea
+h0021.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/1086,https://user-images.githubusercontent.com/43041463/165142323-72d0b043-b8a1-49df-a9c4-f87b3a16ee15.png
+h0023.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/3022,https://github.com/user-attachments/assets/dc63b630-737b-4105-a7e7-724d430c2792
+h0025.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/1191,https://user-images.githubusercontent.com/1131720/184500736-54598bfe-71a2-4d6a-b8b0-572b745abc5c.jpg
+h0026.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/1198,https://user-images.githubusercontent.com/70438825/186165695-e489d907-50a9-4b91-9147-aec9bca1279e.png
+h0027.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/855,https://user-images.githubusercontent.com/13510490/137207239-8b4fddcf-cd17-4080-91b2-31ffda6f41e9.png
+h0029.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/1086,https://user-images.githubusercontent.com/43041463/165139410-c9f18b0b-3e69-4048-a2a7-46961a362f8c.png
+h0034.png,glitch,triangulation,"smeared, stretched geometry streak",PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/7611,https://user-images.githubusercontent.com/112952233/208298463-801a335c-22f8-4af9-8e9f-98d3529658cc.png
+h0035.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/2279,https://user-images.githubusercontent.com/3447089/35471434-837bc96c-035b-11e8-9ffa-a7f816472d8f.png
+h0036.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/14241,https://github.com/user-attachments/assets/a32d0025-f324-447c-b9fc-382201ab725a
+h0038.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/13058,https://github.com/user-attachments/assets/6c48ebac-ef52-4d43-be84-e10504e80bd7
+h0039.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/11573,https://github.com/user-attachments/assets/cbe6bf06-ad96-48cc-b6b8-2cc7f144bb1a
+h0040.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/11573,https://github.com/user-attachments/assets/df7d54fc-0f6b-4e19-a34d-1824a3c585ae
+h0041.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/12840,https://github.com/user-attachments/assets/59613a4c-d351-4f4f-a691-d3b0dd15c1c1
+h0042.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/2279,https://user-images.githubusercontent.com/3447089/35471430-64b432a8-035b-11e8-84ba-a067a889ab54.png
+h0044.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/5008,https://user-images.githubusercontent.com/90222976/141297794-9718f9df-e63f-4513-bfd8-07bda01790a5.png
+h0045.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/12840,https://github.com/user-attachments/assets/ad06c100-55d0-4c47-97fc-6bcb19145daa
+h0047.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/15098,https://github.com/user-attachments/assets/68b9b672-69d6-47eb-a7a7-76a818ef2d14
+h0049.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/2393,https://user-images.githubusercontent.com/30066566/39062444-cbbe4468-44c7-11e8-987e-aa9026ba33ef.png
+h0050.png,glitch,triangulation,large vertical white smeared streak,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/7611,https://user-images.githubusercontent.com/112952233/208298039-19c298c5-f6bd-41fb-ba1f-e52f0220a1bc.png
+h0051.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/13058,https://github.com/user-attachments/assets/1fcbc844-1677-4492-a481-905b3e69f9e7
+h0052.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/14129,https://github.com/user-attachments/assets/b8e80c15-1f37-432d-bc4d-193be697c4ff
+h0053.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/12135,https://github.com/user-attachments/assets/43acd472-311e-4182-b159-0c78e579564f
+h0054.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/14514,https://github.com/user-attachments/assets/0553e7aa-f9e8-4865-9664-c0a3142b5ad0
+h0058.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/13992,https://github.com/user-attachments/assets/1c2806cd-3345-4280-868e-3ea19ed4d5a4
+h0061.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/13520,https://github.com/user-attachments/assets/d1765e78-cb37-4303-bc65-6a3b5afa88ed
+h0062.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/14832,https://github.com/user-attachments/assets/b32e1e5a-0fef-4905-8369-ac4643983c2e
+h0063.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/14129,https://github.com/user-attachments/assets/0abd6e7f-438a-4655-a143-136024f8676d
+h0066.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/12135,https://github.com/user-attachments/assets/17bd9472-0a57-4324-9e98-48fe62dd0175
+h0067.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/15098,https://github.com/user-attachments/assets/dcd3fdd9-f914-4a71-b616-7d09a09da8cb
+h0068.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/14514,https://github.com/user-attachments/assets/5996bbcc-0aa4-43bc-bd27-9adfca0e7c58
+h0072.png,glitch,shapes;morse_code,black frame with scattered garbage colour blocks,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/6991,https://user-images.githubusercontent.com/96800307/188298627-9387d22b-da65-4cb7-acd3-fef6012ca7b7.PNG
+h0075.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/12172,https://github.com/user-attachments/assets/2c252bf8-a618-456e-af7e-62b4988f63e8
+h0076.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/12172,https://github.com/user-attachments/assets/da32468b-5ec7-4b31-be5e-e6fe64e17219
+h0077.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/14241,https://github.com/user-attachments/assets/5d3a2e4a-9bb9-45e3-9532-3908bf810040
+h0078.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18684,https://github.com/user-attachments/assets/ef6e9c66-d146-430d-8810-819d5f3771ed
+h0079.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/17083,https://github.com/user-attachments/assets/1ef5b707-47b1-4e4b-8bd5-df642db79cbd
+h0080.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/9105,https://user-images.githubusercontent.com/59713551/96608912-89823f00-12bf-11eb-99a5-5a6b84bc3a05.png
+h0081.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/19716,https://github.com/user-attachments/assets/af741d40-182c-40da-a9bd-db3dad4c9972
+h0082.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18273,https://github.com/user-attachments/assets/3d14f979-e104-42cf-aac8-2eb5cff7154a
+h0083.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/11828,https://user-images.githubusercontent.com/73563223/163725274-618ccfbe-1bb4-471c-bf17-6adb4317cb53.png
+h0084.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18048,https://github.com/user-attachments/assets/5c70901f-ee84-4cda-bc9c-e0cca6ce968e
+h0085.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/6863,https://user-images.githubusercontent.com/20690384/67616562-d5002b00-f7da-11e9-8d07-5ef03c73233e.png
+h0086.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/17117,https://github.com/user-attachments/assets/39997e33-d93d-4609-ac1c-be7472713c79
+h0088.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/13808,https://user-images.githubusercontent.com/125112932/236492925-13181cf5-2500-4363-b6f2-2aa5fa1f15f3.PNG
+h0091.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18738,https://github.com/user-attachments/assets/ec91bdeb-e35e-437e-950f-19308585b600
+h0093.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/9105,https://user-images.githubusercontent.com/59713551/96608909-88511200-12bf-11eb-870b-c90e08efd0f6.png
+h0094.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18684,https://github.com/user-attachments/assets/81d5e11b-a892-49e8-ad28-fcd3d152afe3
+h0095.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18273,https://github.com/user-attachments/assets/00a45bb8-5685-4af5-8f16-24561544096a
+h0097.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18048,https://github.com/user-attachments/assets/e876ed0a-7fb4-4172-9b4a-a3ad7502a25f
+h0098.png,glitch,shapes,white/green blocky tiles on walls,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/17117,https://github.com/user-attachments/assets/fa665c6c-2e40-4664-b4f1-a5fde4af356d
+h0099.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/6863,https://user-images.githubusercontent.com/20690384/67616576-f82ada80-f7da-11e9-829d-1f6ceb911e44.png
+h0100.png,glitch,shapes;discoloration,solid blue rectangles covering scene,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/19352,https://github.com/user-attachments/assets/25a47905-239d-4c5d-8c8a-9bc0eb62c2f7
+h0102.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/17267,https://github.com/user-attachments/assets/95716bde-79ab-4787-a987-a4966731bd20
+h0103.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/17267,https://github.com/user-attachments/assets/a759f85a-8ecc-464a-a41d-ebfefdb0528f
+h0104.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/17083,https://github.com/user-attachments/assets/72f2675c-639f-4735-ae65-edd7cd48c38d
+h0105.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/19716,https://github.com/user-attachments/assets/158f66ea-f695-4ca2-994c-538881c697e7
+h0107.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/8003,https://github.com/user-attachments/assets/cf7b3832-f473-45c1-820d-54bf17deef23
+h0110.png,glitch,triangulation,spurious black line geometry across scene,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/1050,https://user-images.githubusercontent.com/1420313/44892183-5cbed800-acb1-11e8-9c69-bc59fc0e9886.png
+h0112.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/4468,https://user-images.githubusercontent.com/63475999/102021372-96aa3000-3d3c-11eb-9361-4fe73ee47287.png
+h0114.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2468,https://user-images.githubusercontent.com/39300993/151672613-a64a63e1-27b5-465f-9cae-211143d2f2ec.png
+h0115.png,glitch,triangulation,orange/yellow smeared streaks along road,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/3168,https://user-images.githubusercontent.com/47954800/210842431-0fc04570-9ce9-4c9c-b90c-d52ea9e7b15a.png
+h0116.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1492,https://user-images.githubusercontent.com/4312414/75740589-ddb3c100-5ce6-11ea-9daa-6d145096196c.png
+h0117.png,glitch,discoloration;shader,psychedelic rainbow false colours over scene,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4896,https://github.com/user-attachments/assets/a4198ed6-d2d8-4ceb-ba7c-b4fe89bc3a40
+h0118.png,glitch,shapes;morse_code,garbage texture tiles on both sides,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1481,https://user-images.githubusercontent.com/761853/75557631-5f1d0200-5a0e-11ea-84d8-6f7038805251.png
+h0120.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1856,https://user-images.githubusercontent.com/11244092/102144998-c8b7b100-3e66-11eb-8aec-11a068005ce5.png
+h0122.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/319,https://user-images.githubusercontent.com/10283761/39157152-7b84c986-4751-11e8-86ac-47f84a692e63.png
+h0124.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4461,https://github.com/user-attachments/assets/e821b2a2-fa76-4853-bca9-4f8ef9a8c847
+h0125.png,glitch,shapes,"large black unrendered region, white band below",doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4868,https://github.com/user-attachments/assets/e71d22d6-9fe8-4999-9be1-1db52fe161ce
+h0126.png,glitch,shapes,black floating blobs over terrain,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1558,https://user-images.githubusercontent.com/6632595/78608617-e8bfbb00-7869-11ea-864f-f1f2c78a4916.jpg
+h0127.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/606,https://user-images.githubusercontent.com/28961115/44632048-a7201c00-a974-11e8-9575-3cc957afe130.png
+h0128.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4572,https://github.com/user-attachments/assets/044fe1d0-f45c-41d1-96db-162113d7070c
+h0129.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1666,https://user-images.githubusercontent.com/13510490/84596270-f3e02a00-ae5c-11ea-9ea8-863fbd99f328.png
+h0130.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2069,https://user-images.githubusercontent.com/4979638/119254655-28597b80-bbc0-11eb-977a-c9e8fbfde04a.png
+h0131.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4550,https://github.com/user-attachments/assets/8f73a2ba-dad4-4533-b315-bbd907180acc
+h0132.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1856,https://user-images.githubusercontent.com/11244092/102144949-b2a9f080-3e66-11eb-93f3-cc9bdb5c0ee0.png
+h0133.png,glitch,triangulation;shapes,white/yellow/black streaked geometry garbage,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2819,https://user-images.githubusercontent.com/70454800/184450422-e996e7d2-4045-4df8-af3f-ae8f9dfcbd24.png
+h0135.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1660,https://user-images.githubusercontent.com/5220286/84227150-367ccc00-ab16-11ea-8da4-b2e708d90203.jpg
+h0137.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1674,https://user-images.githubusercontent.com/13510490/85587658-4500d280-b642-11ea-89d2-94ceb386b9bf.png
+h0138.png,glitch,dotted_lines,dithered dot pattern on surfaces,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/5587,https://github.com/user-attachments/assets/ff43bd03-f787-412f-b49c-91d79796e74b
+h0142.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2935,https://user-images.githubusercontent.com/47954800/190862276-0d0175f2-e1bc-4b51-99fc-fa0257d2105b.png
+h0143.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/5568,https://github.com/user-attachments/assets/4d194ef9-ad14-4378-9d96-2673186b93ad
+h0144.png,glitch,shapes,dark diagonal polygon across scene,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2029,https://user-images.githubusercontent.com/65482005/115136211-b15c2080-a01e-11eb-9fbd-f6b6da7099c5.jpg
+h0149.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4713,https://github.com/user-attachments/assets/1027e4f5-6520-4156-8747-fefc07bc689c
+h0150.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1687,https://user-images.githubusercontent.com/2613247/87413192-8e6a8f00-c5fc-11ea-8dda-706ac99d39cc.png
+h0151.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/319,https://user-images.githubusercontent.com/10283761/39157118-447d3856-4751-11e8-94ee-77d44632d8ba.png
+h0152.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4580,https://github.com/user-attachments/assets/d71b65d6-5c37-4acc-9069-ff55ad434e45
+h0153.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/5571,https://github.com/user-attachments/assets/8ea2d38a-f77a-4760-8fc6-98c764a11459
+h0158.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4790,https://github.com/user-attachments/assets/288e2aa8-8a1e-41f1-af71-c0748aa7c252
+h0159.png,glitch,discoloration,map regions in wrong purple/gold colours,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/5356,https://github.com/user-attachments/assets/76cefa4d-170a-4e50-b999-d209d24fabb2
+h0160.png,glitch,shader;morse_code,rainbow noise texture on tree mesh,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1957,https://user-images.githubusercontent.com/69059862/109726274-670f0500-7b80-11eb-9837-d8e2fbe010cc.png
+h0161.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/5610,https://github.com/user-attachments/assets/6f7a2b59-ca34-4da2-be6e-1857f9a328af
+h0162.png,glitch,shapes;discoloration,blue-tinted frame with black wedge,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/160,https://user-images.githubusercontent.com/27377883/37353769-edeff8a0-26d7-11e8-80d3-445a66f57c16.png
+h0164.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1832,https://user-images.githubusercontent.com/7722833/100095953-4b7dbb00-2e29-11eb-9466-ead6fd72b0b3.jpeg
+h0165.png,glitch,discoloration;shader,whole frame in psychedelic false-colour noise,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2744,https://user-images.githubusercontent.com/109824205/180514036-9e351ca3-69f6-40d6-a06a-ffc38fa5541d.jpg
+h0166.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1972,https://user-images.githubusercontent.com/40669977/110570955-b63fd180-814e-11eb-8f9d-8dd45c0e8ab5.png
+h0167.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2380,https://user-images.githubusercontent.com/47954800/142056272-324a7845-e084-42e4-b0b0-ed3b2b7b4a7e.png
+h0168.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/5509,https://github.com/user-attachments/assets/0f118035-0309-4956-92c1-40d9541bea55
+h0169.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1415,https://user-images.githubusercontent.com/6306593/74033969-fcf95000-49bf-11ea-841e-879d64e71eb5.jpg
+h0170.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2863,https://user-images.githubusercontent.com/13510490/186005958-ad69e7d8-4a61-4137-bf55-d8efc5276c47.png
+h0171.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2380,https://user-images.githubusercontent.com/47954800/142056255-d58e84dd-44af-4537-b3bf-e1e9281f22d6.png
+h0172.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4580,https://github.com/user-attachments/assets/9bb5f0ba-b267-4671-809f-a7a8b32c6b18
+h0173.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2863,https://user-images.githubusercontent.com/13510490/186005863-4056b32f-8d0d-42d1-9acb-e0f983396747.png
+h0175.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1868,https://user-images.githubusercontent.com/76689666/103216443-fba18080-490d-11eb-865a-3c0d3bb70d4c.jpg
+h0177.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/160,https://user-images.githubusercontent.com/27377883/37353757-ea892ff6-26d7-11e8-92c2-d2c2569b8089.png
+h0178.png,glitch,parallel_lines,dark grid lines over whole frame,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1393,https://user-images.githubusercontent.com/204286/73598368-ca6ed380-4537-11ea-997e-d0f88ceb3a6f.png
+h0179.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/5389,https://github.com/user-attachments/assets/ddefed5e-65bb-46b5-b51f-a3ccda4766de
+h0180.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1972,https://user-images.githubusercontent.com/40669977/110570882-901a3180-814e-11eb-820f-04c32d7a039a.png
+h0181.png,glitch,shapes;discoloration,huge flat yellow/green/purple polygons cover scene,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2614,https://user-images.githubusercontent.com/47954800/163715149-7bcaa5d3-fd9b-4a50-b2e7-3c448342512d.png
+h0182.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2418,https://user-images.githubusercontent.com/7722833/147494136-46e5514e-8aaa-4d6d-87a5-9c85474ff4c2.jpg
+h0183.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4790,https://github.com/user-attachments/assets/2931ab00-1538-4c7e-b215-80988878688c
+h0185.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4550,https://github.com/user-attachments/assets/1a3ce5a6-f82e-4f50-ab00-723cbbd11606
+h0186.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2614,https://user-images.githubusercontent.com/47954800/163715141-9fe153d1-1fbb-494f-a77c-116212cd55e6.png
+h0187.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/5606,https://github.com/user-attachments/assets/2f3d20d9-7428-4d6e-bc34-45cb211e08b9
+h0189.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/781,https://user-images.githubusercontent.com/45315930/48971071-8750d080-f015-11e8-8033-3639c8772c88.png
+h0191.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/5389,https://github.com/user-attachments/assets/49078e00-aa12-49b6-9cef-d14ebab4d6fe
+h0193.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1660,https://user-images.githubusercontent.com/5220286/84227115-282eb000-ab16-11ea-9ddb-5f59d3733c6b.jpg
+h0194.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/1832,https://user-images.githubusercontent.com/7722833/100095943-4882ca80-2e29-11eb-8e67-f2e42acc94c3.jpeg
+h0195.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4572,https://github.com/user-attachments/assets/871be333-6382-4a6f-9ada-128418bb9082
+h0196.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/2100,https://user-images.githubusercontent.com/13851877/121905618-c82fa280-cd43-11eb-81c3-2a9097f04893.jpg
+h0198.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4214,https://github.com/user-attachments/assets/999bd8f9-1f45-40b5-a9e4-d20ea2613cc3
+h0199.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/4461,https://github.com/user-attachments/assets/ec20b719-cae6-4dd2-a162-172bd300bbe6
+h0202.png,glitch,morse_code;line_pixelation,rows of coloured noise garbage,godotengine/godot,https://github.com/godotengine/godot/issues/40551,https://user-images.githubusercontent.com/49388568/87986612-35827700-ca92-11ea-86d1-b4c65ce8ac53.png
+h0213.png,glitch,discoloration;shapes,posterised black/white frame with black speckle,godotengine/godot,https://github.com/godotengine/godot/issues/118772,https://github.com/user-attachments/assets/721cf610-b4d0-4dfc-b01b-0f4f5c0e249d
+h0219.png,clean,,,godotengine/godot,https://github.com/godotengine/godot/issues/102308,https://github.com/user-attachments/assets/db4895d0-b89f-4b12-9c07-92ec7e0ecf9a
+h0221.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/12188,https://user-images.githubusercontent.com/6118529/61591622-60d83a80-ab8e-11e9-8f26-96f0226d2eb2.png
+h0222.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13559,https://user-images.githubusercontent.com/37503397/96393125-d8ad6e80-11f0-11eb-8568-bcdfe4f20e33.png
+h0223.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13582,https://user-images.githubusercontent.com/47835860/97070086-e1fd5900-15ab-11eb-8276-78fa9b79c9a4.png
+h0224.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/12430,https://user-images.githubusercontent.com/52031664/67137985-e9d73e80-f26f-11e9-9506-13c1cdd245f6.png
+h0225.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13628,https://user-images.githubusercontent.com/25725203/98326498-09462400-1fb7-11eb-95f6-ccf5d3f56e1a.jpg
+h0226.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13517,https://user-images.githubusercontent.com/37503397/95208059-2dc5a980-081b-11eb-81bb-d116bcc991e7.png
+h0227.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/22393,https://github.com/user-attachments/assets/3843dedf-3003-44dd-9ad4-8194791e71a1
+h0228.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/11601,https://user-images.githubusercontent.com/37603562/49021732-37941580-f18b-11e8-89a9-9e9f817ad78a.png
+h0231.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/12188,https://user-images.githubusercontent.com/6118529/61591621-60d83a80-ab8e-11e9-9976-b0d5a90dd87d.png
+h0233.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13697,https://user-images.githubusercontent.com/48179091/99922257-fed7a880-2d72-11eb-860a-aeac26fa0926.png
+h0234.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/11980,https://user-images.githubusercontent.com/16115820/56281558-2d66b980-6122-11e9-83a9-c2b966a428c8.png
+h0235.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/12943,https://user-images.githubusercontent.com/37603562/82584737-7ca1d800-9bc7-11ea-8c4f-4b380aabfdd3.png
+h0236.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13582,https://user-images.githubusercontent.com/47835860/97070093-f6415600-15ab-11eb-939f-3ba656381a84.png
+h0238.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/12851,https://user-images.githubusercontent.com/37603562/80158833-1fccf500-85fc-11ea-853d-4bea9653c122.png
+h0240.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/21699,https://github.com/user-attachments/assets/d38ce0b9-3685-4b77-9343-4c25dea5a677
+h0241.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/22393,https://github.com/user-attachments/assets/320bb465-03b8-45b2-9423-da9e9a75e230
+h0242.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13749,https://user-images.githubusercontent.com/48179091/101361664-9ea04500-38e2-11eb-89f9-91d499a40255.png
+h0243.png,glitch,shapes;discoloration,pink/white garbage smears over title screen,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13782,https://user-images.githubusercontent.com/26355472/102460824-21ab6300-407a-11eb-9a39-b2d1c593c937.jpg
+h0244.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13517,https://user-images.githubusercontent.com/37503397/95207344-58633280-081a-11eb-9ee2-57f16ccd831c.png
+h0245.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13559,https://user-images.githubusercontent.com/37503397/96393158-e95de480-11f0-11eb-81a9-1202916b1f13.png
+h0247.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/10905,https://user-images.githubusercontent.com/16357059/38667765-1c70ffa4-3df7-11e8-97d0-dc04094951b2.jpg
+h0248.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/12943,https://user-images.githubusercontent.com/37603562/82584682-685ddb00-9bc7-11ea-802b-244f7ea7b673.png
+h0249.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13478,https://user-images.githubusercontent.com/48179091/94264261-5aeb9f80-ff71-11ea-99cc-52701ef89ce6.png
+h0250.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/21699,https://github.com/user-attachments/assets/f7ae742e-3351-4545-948d-25ba69795bd7
+h0251.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/11931,https://user-images.githubusercontent.com/26355472/54883767-dc093880-4e9b-11e9-80c8-e0d42f9d25f1.jpg
+h0252.png,glitch,morse_code;line_pixelation,band of coloured noise garbage over black frame,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/11891,https://user-images.githubusercontent.com/31968468/54426232-669abb00-476b-11e9-8657-f5a411896eaf.PNG
+h0253.png,clean,,,luanti-org/luanti,https://github.com/luanti-org/luanti/issues/15384,https://github.com/user-attachments/assets/60d5caef-aa17-4517-9bbd-c0531dc17235
+h0256.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2025,https://github.com/user-attachments/assets/1c54fac7-fc05-4a38-aa8d-df0c8967e47e
+h0257.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2928,https://github.com/user-attachments/assets/16df958b-78f0-4765-8bea-e86df8b750aa
+h0259.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2486,https://github.com/user-attachments/assets/2eacecc9-ed5f-46f8-b1b8-6e24348418d6
+h0262.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2179,https://github.com/user-attachments/assets/3cf8d879-bb19-4ba0-b8ab-a725d0c855a0
+h0264.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1931,https://github.com/user-attachments/assets/2c45b21d-6ffc-4b8f-a5d1-ff7d9e830509
+h0267.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2928,https://github.com/user-attachments/assets/bb98935d-a622-4e77-9ad4-1e5c4201869a
+h0269.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1089,https://github.com/user-attachments/assets/c2b6dc01-d39e-4063-ab73-0b07d19a7487
+h0270.png,glitch,shader;discoloration,flat purple untextured geometry on black,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2474,https://github.com/user-attachments/assets/cb2bb00c-3baf-481d-ba41-a3df61d075dd
+h0271.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1089,https://github.com/user-attachments/assets/b118f7bf-6e07-4be2-8c90-4e759491d4c0
+h0272.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/508,https://user-images.githubusercontent.com/73078011/139146431-4771b03c-34b5-4b3a-970e-c2e331bea669.png
+h0273.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1064,https://user-images.githubusercontent.com/15825466/173957060-b4938860-d6cb-44c3-b4ce-452b6b7dd0bd.png
+h0274.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1931,https://github.com/user-attachments/assets/5ba6c908-8f1e-455f-a3bf-5aaa9da53d50
+h0275.png,glitch,shapes;triangulation,huge flat purple/green/white polygons,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2775,https://github.com/user-attachments/assets/e3dfc328-7612-4073-87fd-ae50f0618e38
+h0276.png,glitch,shader;discoloration,frame flooded with flat purple untextured surfaces,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2474,https://github.com/user-attachments/assets/ba22badb-807c-48f8-8d17-97b60ff642a6
+k0002.png,clean,,,HansKristian-Work/vkd3d-proton,https://github.com/HansKristian-Work/vkd3d-proton/issues/2244,https://github.com/user-attachments/assets/3d62b10b-27b4-4146-a619-3a1fab3d7168
+k0003.png,glitch,morse_code;line_pixelation,heavy multicoloured noise over frame,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/15135,https://github.com/user-attachments/assets/259da8e1-da64-49fc-9e35-1edfa2314b85
+k0004.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/6886,https://user-images.githubusercontent.com/96800307/185787337-8283abe4-9bb1-4875-8f84-94b850917214.PNG
+k0006.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/15118,https://github.com/user-attachments/assets/646ca40e-7512-4a87-8dec-6b5d8ce6e6c0
+k0007.png,glitch,shapes,flat green/yellow polygon wedge over menu,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/1998,https://user-images.githubusercontent.com/16314399/27778237-3558b8d0-5f87-11e7-8290-df3a08531626.png
+k0008.png,glitch,morse_code;shapes,white/colour noise column over right half,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/8559,https://user-images.githubusercontent.com/56938252/229442847-a8bb4ed5-98b1-43cc-9e7c-238d1e17e80a.png
+k0009.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/8538,https://user-images.githubusercontent.com/56807047/229285528-6820413a-aa46-4a73-8a36-732f331da4e3.png
+k0010.png,glitch,line_pixelation,band of garbage pixels along bottom,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/11596,https://github.com/user-attachments/assets/4e1a7d2d-1c58-4ab5-8b42-6709d755a43d
+k0011.png,glitch,morse_code;shapes,whole frame of noise blocks,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/4673,https://user-images.githubusercontent.com/50224630/129777718-15a9d8da-3bda-44a9-a158-2f99f7e51ecc.png
+k0013.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/5591,https://user-images.githubusercontent.com/4227434/156564161-232fb40d-5d80-406b-8731-be683cad0690.png
+k0014.png,glitch,shapes;morse_code,garbage blocks around sprite,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/6958,https://user-images.githubusercontent.com/8558288/187534405-31f061fa-8517-41a4-b964-2cce946fc4b5.png
+k0015.png,glitch,line_pixelation,model rendered as strips of garbage lines,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/8694,https://user-images.githubusercontent.com/57503728/232536894-603eb2cd-3114-4a49-b73c-ace50fdfba3a.png
+k0016.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/13540,https://github.com/user-attachments/assets/6bd10f30-cfcf-4602-9b4e-158eed187d0c
+k0017.png,glitch,discoloration;shader,whole frame in blue noise speckle,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/5211,https://user-images.githubusercontent.com/8851653/147313260-08e4d3a7-2d76-4963-8ab7-982f39f24cea.png
+k0018.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/15050,https://github.com/user-attachments/assets/e91fa0e2-0b95-4990-b722-f77aefa710a7
+k0019.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/5094,https://user-images.githubusercontent.com/50224630/144490112-552e0785-106a-49fd-b930-8d6517fb62f3.png
+k0020.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/8245,https://user-images.githubusercontent.com/25440281/221236007-a9e8703b-d37e-4633-bc91-7e8b4858d5b8.png
+k0022.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/5201,https://user-images.githubusercontent.com/50224630/147038587-bac14391-dbef-4f43-a414-21be25a1ea4b.png
+k0024.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/12245,https://github.com/user-attachments/assets/4dfe1b21-fce6-48e8-843a-43cd69d063db
+k0026.png,glitch,line_pixelation;morse_code,garbage coloured lines and blocks,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/8590,https://user-images.githubusercontent.com/78768499/230550333-f421e1be-8aa8-4c95-8e8e-dbf0c7945b08.png
+k0027.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/2249,https://user-images.githubusercontent.com/16314399/34541921-31370e70-f0a8-11e7-9e63-f0c97b8686ec.png
+k0028.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/3228,https://user-images.githubusercontent.com/58159760/73498898-73200600-4373-11ea-8623-8a5e071183dc.png
+k0029.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/5340,https://user-images.githubusercontent.com/42989949/149619361-9b48a721-9c63-4759-8674-cdb23941f59d.png
+k0030.png,glitch,line_pixelation,horizontal black streaks across sky,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/12122,https://github.com/user-attachments/assets/680df305-4610-48bb-96dd-eb39bac18447
+k0032.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/2396,https://user-images.githubusercontent.com/30066566/39063996-1d053836-44cd-11e8-9ea9-6618578c174e.png
+k0033.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/4031,https://user-images.githubusercontent.com/24227051/102807420-e59c3900-43be-11eb-98d7-c2183895d97c.png
+k0034.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/12629,https://github.com/user-attachments/assets/9c4200d7-97bd-4f6d-a5dc-a42632e8623f
+k0036.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/11803,https://github.com/user-attachments/assets/253abe64-a80f-467e-a119-ec88f836aecb
+k0037.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/3551,https://user-images.githubusercontent.com/4227434/87683096-8cc5d600-c778-11ea-8e5c-1b684247587b.png
+k0038.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/4396,https://user-images.githubusercontent.com/5770076/115974563-b82eea00-a56e-11eb-8c3f-5a09d9a4c3f3.gif
+k0041.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/5177,https://user-images.githubusercontent.com/63495610/146416080-8093acac-fb57-4cde-8ba2-18a8aea847c2.png
+k0043.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/6984,https://user-images.githubusercontent.com/96800307/188055628-1d54b7e3-dfb6-4783-aba5-d46aa2a16ae0.PNG
+k0044.png,glitch,shapes;discoloration,purple garbage blocks over scene,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/8579,https://user-images.githubusercontent.com/12180630/230232639-2c4c5b76-62e2-489f-a4d6-d2a17a7354d2.png
+k0045.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/6966,https://user-images.githubusercontent.com/96800307/187644945-15e96eff-93dd-48f7-bc2e-c28a436ec41a.PNG
+k0046.png,glitch,line_pixelation;morse_code,noisy horizontal stripes across upper half,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/4858,https://user-images.githubusercontent.com/44800819/135687681-a733e41c-d87e-46b1-bdc0-587bd17c5f77.png
+k0047.png,clean,,,PCSX2/pcsx2,https://github.com/PCSX2/pcsx2/issues/12869,https://github.com/user-attachments/assets/d6a45c8b-748a-428e-811e-7f3d37a382e1
+k0049.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/12694,https://user-images.githubusercontent.com/113497507/191684577-dc2a2c15-db18-4441-8281-2f6cb6118360.jpeg
+k0050.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/17722,https://github.com/user-attachments/assets/4baaa895-5442-4953-8161-1d0d42607446
+k0051.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/19603,https://github.com/user-attachments/assets/905c3543-7af1-4bd5-94b6-9d67734c6752
+k0054.png,glitch,shapes;discoloration,solid bright green blobs over scene,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/19407,https://github.com/user-attachments/assets/44b3d984-9c2e-4837-b07b-084f9b356fc0
+k0055.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/19797,https://github.com/user-attachments/assets/6d64aaf9-7251-45ba-9c56-91e942e3b14b
+k0056.png,glitch,shapes,tall black untextured slabs,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/7746,https://user-images.githubusercontent.com/61995650/76266879-4fd45a80-623f-11ea-8905-10da62ef9f91.gif
+k0057.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/8074,https://user-images.githubusercontent.com/14356240/79831791-adc99580-83da-11ea-9ae0-d1daf366ce33.jpg
+k0059.png,glitch,shapes,black squares floating over scene,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/15959,https://github.com/user-attachments/assets/d6bbb91c-9158-4da6-8b45-24b1fcf4fa78
+k0060.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/9970,https://user-images.githubusercontent.com/16805474/111098289-e6f28300-8521-11eb-9ebe-50903b99d094.png
+k0061.png,glitch,shader;discoloration,magenta/black noise textures on props and sky,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/4994,https://user-images.githubusercontent.com/9060436/44231743-0ae95e80-a197-11e8-8181-a6e814f551a2.jpg
+k0063.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/8525,https://user-images.githubusercontent.com/48158481/85988491-145fc680-b9bd-11ea-85ff-6bc5d44ff9b9.png
+k0066.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/8902,https://user-images.githubusercontent.com/1712979/93027852-82a94200-f618-11ea-8c0a-983c7c9a7b91.png
+k0067.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/13486,https://user-images.githubusercontent.com/125112932/222797746-75607c62-135d-463b-a742-a43c9b9d2ac5.PNG
+k0068.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/11889,https://user-images.githubusercontent.com/95056895/165651090-ce6eafdb-9641-487e-a6bb-4bcaf7cd8fd2.png
+k0070.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/19723,https://github.com/user-attachments/assets/e8c23c32-1dac-4e00-abc6-7fe11b000479
+k0071.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/11476,https://user-images.githubusercontent.com/90259918/152236567-263f1e7e-3ff1-4b79-9fee-9b0a859bc7e1.png
+k0072.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/19702,https://github.com/user-attachments/assets/441a5e9d-a0db-4ea0-834f-2782d8112fef
+k0073.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/6990,https://user-images.githubusercontent.com/20690384/68849128-cb7b2c00-06d1-11ea-89ab-0d931a15b0b9.PNG
+k0076.png,glitch,discoloration;shader,neon green/blue flat false colours,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/10978,https://user-images.githubusercontent.com/58268914/136705779-12d51fd4-12f1-41c4-a699-3802284b7790.png
+k0077.png,glitch,discoloration,solid green wash behind menu,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18292,https://github.com/user-attachments/assets/3bf2f54c-5d95-4103-827d-b1b9f9d4e271
+k0079.png,glitch,shapes,black rectangular hole in background,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/12946,https://user-images.githubusercontent.com/71127352/201481898-7b17db6e-c38d-4206-9e2e-c57f5dbb88d0.png
+k0080.png,glitch,dotted_lines,columns of white dots across wall,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/8625,https://user-images.githubusercontent.com/20301499/88450490-e8cbe100-ce81-11ea-8a5b-9f44289a44a9.png
+k0081.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/11136,https://user-images.githubusercontent.com/94079700/141190327-62479e51-6a00-433c-a692-54304f6cca2c.png
+k0082.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/7284,https://user-images.githubusercontent.com/2696404/72677443-890e0b00-3ad7-11ea-8eb1-9de1fe80bdfa.PNG
+k0083.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/10459,https://user-images.githubusercontent.com/61447828/122188262-2c4a8780-ce66-11eb-893d-f12675bb1de5.png
+k0084.png,glitch,shapes;discoloration,large flat teal rectangle of missing texture,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/5025,https://user-images.githubusercontent.com/10705488/44547268-e76f6800-a6f0-11e8-95f1-df5e0360138a.png
+k0085.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/9038,https://user-images.githubusercontent.com/1712979/95137205-462cba00-0770-11eb-8af0-83c44f87352f.png
+k0086.png,glitch,shapes,black square holes at right edge,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/10709,https://user-images.githubusercontent.com/88921486/129438137-e172e21d-eeff-4204-8309-dba4e319bde9.gif
+k0088.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/5012,https://user-images.githubusercontent.com/42360887/44316858-fff82d80-a425-11e8-8894-a06f2452abe7.png
+k0089.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/10826,https://user-images.githubusercontent.com/1712979/132209850-1c4f4456-4656-4296-8727-2eeab60a5bbd.png
+k0090.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/9960,https://user-images.githubusercontent.com/1712979/111031534-b1aa4000-8410-11eb-84eb-39a6a516ce7d.png
+k0092.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/19880,https://github.com/user-attachments/assets/7db71d12-6059-4a79-b29d-b5ce715e71a9
+k0093.png,glitch,morse_code;shapes,noisy garbage texture blocks at left,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/17345,https://github.com/user-attachments/assets/bfdf2f5e-a027-4949-a5d5-ae24925ebf1f
+k0095.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/17403,https://github.com/user-attachments/assets/76fbfde9-ef7a-4516-8f61-e5eb2b1e1f9d
+k0096.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/11207,https://user-images.githubusercontent.com/85455465/143720847-dcdf044f-7e1f-48e4-9040-bce15ad5902d.png
+k0097.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/8805,https://user-images.githubusercontent.com/1712979/91669300-861ed280-eb1c-11ea-9c9a-2386ecb8ace2.png
+k0099.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/8229,https://user-images.githubusercontent.com/65389741/82037383-e3b70e00-9656-11ea-8f53-87bb67a6f881.PNG
+k0100.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/6817,https://user-images.githubusercontent.com/20690384/67183306-6c334000-f3e1-11e9-8b01-50ffe93641fd.png
+k0101.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/8006,https://user-images.githubusercontent.com/16805474/79031704-f2e9fe00-7b76-11ea-934c-168d04c0ea99.png
+k0102.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/4263,https://user-images.githubusercontent.com/18195463/37236592-2c04811c-2401-11e8-8c4f-91b967d58521.png
+k0104.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/12947,https://user-images.githubusercontent.com/71127352/201482663-9f5ead51-d995-4542-8857-58239d82f725.png
+k0105.png,glitch,shapes;discoloration,magenta/blue garbage blocks over UI,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/7265,https://user-images.githubusercontent.com/27007705/72586645-86859880-38c0-11ea-93e8-128a8e08be84.png
+k0106.png,clean,,,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/8141,https://user-images.githubusercontent.com/9294088/80860115-efbdcb80-8c65-11ea-9f7b-9f5027fad997.JPG
+k0107.png,glitch,shapes,large white blocks covering frame,RPCS3/rpcs3,https://github.com/RPCS3/rpcs3/issues/18441,https://github.com/user-attachments/assets/3e512e67-fa41-4314-8320-4931f67f8b26
+k0109.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/6566,https://user-images.githubusercontent.com/104018120/221294483-9ae67ba5-91af-4b56-b5dd-bef85427655d.png
+k0110.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/3902,https://user-images.githubusercontent.com/8356982/82727957-04572600-9d31-11ea-9b4d-d0a4ebd49afa.jpg
+k0111.png,clean,,,ValveSoftware/Proton,https://github.com/ValveSoftware/Proton/issues/9466,https://github.com/user-attachments/assets/3dbba718-18d4-4acb-9c4d-4fa2e3bf3e8a
+k0113.png,clean,,,Vita3K/Vita3K,https://github.com/Vita3K/Vita3K/issues/3848,https://github.com/user-attachments/assets/f1e27c5a-6e42-45ab-a82d-97e4efd0d441
+k0114.png,glitch,discoloration;shader,rainbow corrupted colours around character,azahar-emu/azahar,https://github.com/azahar-emu/azahar/issues/1497,https://github.com/user-attachments/assets/e9b95e02-6d95-4a58-80a3-2fe746466d6f
+k0116.png,clean,,,cemu-project/Cemu,https://github.com/cemu-project/Cemu/issues/579,https://user-images.githubusercontent.com/8373222/207869003-5bb42284-7785-4a04-8ed1-c6e8b03e1db4.png
+k0118.png,glitch,discoloration,neon red/yellow/green false-colour wash,cemu-project/Cemu,https://github.com/cemu-project/Cemu/issues/2043,https://github.com/user-attachments/assets/84c91207-030c-4d88-a639-3ea4a29ef3de
+k0119.png,clean,,,doitsujin/dxvk,https://github.com/doitsujin/dxvk/issues/5830,https://github.com/user-attachments/assets/65468423-db44-44b1-a213-0c41e46cb732
+k0120.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/319,https://user-images.githubusercontent.com/87793814/129487924-29e10fc0-feac-40ef-8ed2-3d8c33d63346.png
+k0121.png,glitch,shapes;discoloration,blocky periwinkle regions where scene is missing,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/897,https://user-images.githubusercontent.com/27839354/214751318-e691053a-5e24-4722-a117-c006effbb7b1.png
+k0122.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/2365,https://github.com/user-attachments/assets/583fe7fe-fa52-4b26-8834-70fcc21b0fe4
+k0123.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/278,https://user-images.githubusercontent.com/18064513/122969622-3b986c00-d363-11eb-929b-9941f6714a2e.png
+k0124.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/1027,https://user-images.githubusercontent.com/14366233/233991198-1ff01d5b-2bfc-41aa-9f59-131a1f51f10b.png
+k0125.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/2144,https://github.com/user-attachments/assets/323110ed-f51b-4d74-8e85-1c64def20802
+k0126.png,glitch,morse_code;shapes,noise garbage blocks over logo,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/2444,https://github.com/user-attachments/assets/a9f7f541-4f80-43e1-a011-6097e9cbf701
+k0127.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/1743,https://github.com/user-attachments/assets/011c9e6e-a944-48e1-ac92-98694e717712
+k0129.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/1054,https://user-images.githubusercontent.com/14366233/235917210-1b3ad8a8-c22c-463a-8f78-357a20bb8824.png
+k0130.png,glitch,discoloration,posterised red/blue high-contrast character,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/559,https://user-images.githubusercontent.com/31816814/157091811-50eccc06-2b59-4d93-8117-5103730859bb.png
+k0131.png,glitch,dotted_lines,dark dotted grid over scene,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/1609,https://github.com/user-attachments/assets/843547a5-78ea-4378-a3d0-abf1e7838b73
+k0133.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/1025,https://user-images.githubusercontent.com/14366233/233977592-d2262a37-67f2-4a55-bb7d-5edc0202c90f.png
+k0134.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/327,https://user-images.githubusercontent.com/89394472/130452630-397e32bb-644c-46df-a6ac-92fb93ce2796.png
+k0136.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/722,https://user-images.githubusercontent.com/95056895/186850992-a08d4218-20fb-4f33-bdf6-ea90d1fa2752.jpg
+k0139.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/117,https://user-images.githubusercontent.com/37603562/93963059-c32e5b80-fd8e-11ea-9f82-17a38463f6e8.png
+k0140.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/1964,https://github.com/user-attachments/assets/899d6e24-19aa-4032-b918-6e9d08aba1f0
+k0141.png,clean,,,flyinghead/flycast,https://github.com/flyinghead/flycast/issues/570,https://user-images.githubusercontent.com/1188012/160105219-0c9a5092-beec-467d-aea5-648f6694486c.png
+k0143.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13830,https://user-images.githubusercontent.com/130929/103236769-04ae4400-4946-11eb-93b0-78736cf6a503.png
+k0145.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/10499,https://user-images.githubusercontent.com/5770076/34488809-4dce0634-eff3-11e7-8394-06e2a826296e.gif
+k0146.png,glitch,discoloration,neon magenta/cyan false colours on buildings,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/15940,https://user-images.githubusercontent.com/130929/187988881-61e95949-47a9-466e-8ffe-bb9f5243b94a.png
+k0147.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/12991,https://user-images.githubusercontent.com/66230819/83369474-7ad7d180-a38a-11ea-9ef5-0c52b08b43b9.png
+k0148.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/10583,https://user-images.githubusercontent.com/31968468/35876758-5e959258-0bc7-11e8-8f23-88c841ab40d0.PNG
+k0149.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/17069,https://user-images.githubusercontent.com/89466031/223395440-39b60135-ad92-42bd-a41c-69ff85771186.png
+k0151.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13012,https://user-images.githubusercontent.com/37503397/84007460-0a8d0980-a9a3-11ea-9eba-051e3badb257.jpg
+k0152.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/15832,https://user-images.githubusercontent.com/37603562/184165244-0383485d-e63b-4828-9367-44a64ba6253a.jpg
+k0153.png,glitch,parallel_lines,horizontal scanline stripes across frame,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/10036,https://user-images.githubusercontent.com/5770076/32135771-a43c3e4e-bc15-11e7-8557-c0985277b95f.gif
+k0154.png,glitch,screen_tearing,horizontally displaced repeated bands at left,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13644,https://user-images.githubusercontent.com/32078304/98535497-f8bad580-2264-11eb-8102-71da3433a1ec.jpg
+k0155.png,glitch,shapes,black region cut out of centre,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/15828,https://user-images.githubusercontent.com/2696404/183920334-6975b888-3fc5-4b53-9915-774ef244a66c.png
+k0156.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13854,https://user-images.githubusercontent.com/68873449/103459528-366b4480-4d64-11eb-9531-d235b4c494fa.PNG
+k0157.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13887,https://user-images.githubusercontent.com/37503397/103845648-6eadb280-50d7-11eb-9d86-5c7c4fb6c85f.jpg
+k0158.png,glitch,shapes,large white blob covering scene,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/11527,https://user-images.githubusercontent.com/37603562/47959024-51e63380-dfd1-11e8-8ca1-8a74e3da31e2.png
+k0159.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13001,https://user-images.githubusercontent.com/66511360/83939490-a2ee8700-a807-11ea-8a16-f925d273d2f8.png
+k0160.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/10528,https://user-images.githubusercontent.com/5770076/34906541-f5d47b36-f888-11e7-9be7-ebfa09104433.gif
+k0161.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/11587,https://user-images.githubusercontent.com/2696404/48975154-b1ea6a00-f0a5-11e8-987a-311083ec9ed8.PNG
+k0162.png,glitch,discoloration;shader,flat blue untextured surfaces,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/17169,https://user-images.githubusercontent.com/130929/227259436-c6bc3442-68bb-4b52-b7c8-e00fb3837196.png
+k0163.png,glitch,shader;morse_code,rainbow noise texture on cube,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/19435,https://github.com/user-attachments/assets/ff57060e-b694-4d1e-a2ee-3a574fc2eaa7
+k0165.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/7295,https://user-images.githubusercontent.com/29165096/33081118-6c219b32-cf14-11e7-89f6-49411027067e.png
+k0167.png,glitch,shapes;triangulation,black jagged hole cutting terrain,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/11908,https://user-images.githubusercontent.com/48698628/54569107-0b0d3f00-49b0-11e9-9cc6-82959590828b.jpg
+k0168.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/15449,https://user-images.githubusercontent.com/101798197/158799894-f2ed446e-1ef7-434a-8d14-e694c6d82735.jpg
+k0169.png,clean,,,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/13357,https://user-images.githubusercontent.com/37503397/91647677-e287e080-ea8f-11ea-8cc6-afc7527b7221.gif
+k0170.png,glitch,dotted_lines,checkered noise band at top right,hrydgard/ppsspp,https://github.com/hrydgard/ppsspp/issues/11937,https://user-images.githubusercontent.com/130929/62550027-d2400a80-b869-11e9-9b99-e3b1af387f24.jpg
+k0171.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/1314,https://user-images.githubusercontent.com/94656803/147399946-0920d580-01ed-4693-b772-454d6bb2e753.PNG
+k0173.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/1310,https://user-images.githubusercontent.com/94656803/147302894-8d5c28c2-2616-4d68-9d5a-81aaaa111f30.PNG
+k0174.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/846,https://user-images.githubusercontent.com/68873449/101970586-533dbc00-3c7f-11eb-9214-5e03c35e917e.PNG
+k0175.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/1301,https://user-images.githubusercontent.com/94656803/146841050-3a8757d9-8302-42cf-a17a-9ad18304b05d.PNG
+k0176.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/1514,https://user-images.githubusercontent.com/63332428/189453396-22645ad4-1aa8-406a-9a04-5328a38ef70a.png
+k0177.png,glitch,shapes;morse_code,whole frame of dark grey garbage tiles,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/1035,https://user-images.githubusercontent.com/4565863/111259426-3bb2fe00-85f5-11eb-9b77-9f90f051c618.png
+k0178.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/914,https://user-images.githubusercontent.com/68873449/103287371-782f7e80-4a36-11eb-869f-cdf1c8cc9ac7.PNG
+k0179.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/604,https://user-images.githubusercontent.com/20385116/80007327-64ef0b00-84c6-11ea-9005-9552347c7e34.png
+k0180.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/80,https://user-images.githubusercontent.com/24215969/27503907-c6de7a6a-583e-11e7-99a6-c5466d33101a.PNG
+k0182.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/294,https://user-images.githubusercontent.com/31968468/49619642-88b8ca80-fa11-11e8-82bc-f2aba2b440ec.PNG
+k0184.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/1260,https://user-images.githubusercontent.com/94656803/142904865-d06821da-540b-4d83-9c39-0bc1e5460e3b.PNG
+k0186.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/716,https://user-images.githubusercontent.com/16591467/90342658-48915400-e00a-11ea-93a0-8637d0f03caa.png
+k0188.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/1275,https://user-images.githubusercontent.com/94656803/144115320-dd68fbb5-f6a1-45f9-8d25-470b08bdb820.PNG
+k0189.png,glitch,morse_code;discoloration,noise-speckled garbage texture on right half,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/2442,https://github.com/user-attachments/assets/6a6d4f08-e7e2-4d8d-877d-e048f710379d
+k0190.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/316,https://user-images.githubusercontent.com/2696404/50287677-71142400-049e-11e9-9ea4-3c0688593e25.PNG
+k0191.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/1530,https://user-images.githubusercontent.com/115562324/195109781-8748bdba-55af-49e0-9eb4-d7a0f1a5c921.png
+k0192.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/976,https://user-images.githubusercontent.com/1114906/106387437-02725600-63da-11eb-93fe-088185f4499e.png
+k0193.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/424,https://user-images.githubusercontent.com/31968468/58750368-dbf96a80-84d4-11e9-9702-bf91cb0f66af.PNG
+k0194.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/1316,https://user-images.githubusercontent.com/94656803/147444854-ccb326ac-0da7-4d92-af9d-a075b6ea7086.PNG
+k0195.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/1578,https://user-images.githubusercontent.com/119843170/205581831-10710ef6-69a1-4ebc-bb96-dc5fceb93838.PNG
+k0196.png,clean,,,melonDS-emu/melonDS,https://github.com/melonDS-emu/melonDS/issues/273,https://user-images.githubusercontent.com/31968468/48179579-fa9ae700-e373-11e8-985b-e119d202a4de.PNG
+k0198.png,clean,,,shadps4-emu/shadPS4,https://github.com/shadps4-emu/shadPS4/issues/5067,https://github.com/user-attachments/assets/77b57828-e681-4364-8da1-8ad2e59c3f49
+k0199.png,clean,,,shadps4-emu/shadPS4,https://github.com/shadps4-emu/shadPS4/issues/5374,https://github.com/user-attachments/assets/96cc9358-d306-4301-99ae-bc669525745d
+k0201.png,clean,,,shadps4-emu/shadPS4,https://github.com/shadps4-emu/shadPS4/issues/3796,https://github.com/user-attachments/assets/a7b68ff0-cd1c-4e26-8bfa-50ccf3af72cd
+k0202.png,glitch,discoloration;shader,flat rainbow gradient arcs over scene,shadps4-emu/shadPS4,https://github.com/shadps4-emu/shadPS4/issues/950,https://github.com/user-attachments/assets/e65aa5db-df29-4872-9460-974cf284c182
+k0204.png,clean,,,shadps4-emu/shadPS4,https://github.com/shadps4-emu/shadPS4/issues/4208,https://github.com/user-attachments/assets/fc5c630b-2a54-478c-9fee-e8a63de0c2eb
+k0205.png,glitch,discoloration;shapes,cyan wash with black jagged region,shadps4-emu/shadPS4,https://github.com/shadps4-emu/shadPS4/issues/1075,https://github.com/user-attachments/assets/0644758d-ca76-4167-9f96-dda7ded613b4
+k0207.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2387,https://github.com/user-attachments/assets/9ea798a1-eee9-413d-b14f-5c3131b85ce6
+k0208.png,glitch,shapes,large white rectangle over loading screen,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2110,https://github.com/user-attachments/assets/94841096-6eba-43e5-ad6b-35b679fcc7db
+k0211.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1265,https://user-images.githubusercontent.com/15071652/191637287-fb7638c0-2636-491a-83d7-935cd2d0aaf5.png
+k0212.png,glitch,dotted_lines;discoloration,yellow dither dot pattern over screen,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2508,https://github.com/user-attachments/assets/5a5f455a-2780-447f-a350-932f849e2a44
+k0213.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/972,https://user-images.githubusercontent.com/106228270/170201753-5663159c-4afe-43ea-b989-b0b12ebfb945.png
+k0214.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2570,https://github.com/user-attachments/assets/3633a794-a157-40c7-b5f2-fd57053c56e3
+k0215.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1025,https://user-images.githubusercontent.com/44263219/172019880-b8636644-ba9c-4d16-bd59-00df5015d294.png
+k0217.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1409,https://user-images.githubusercontent.com/12475371/226146544-5f801132-feee-4824-ad26-5095fe4051fe.png
+k0218.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2335,https://github.com/user-attachments/assets/74804160-c7f3-4f22-9d53-560e5aed5a73
+k0219.png,glitch,morse_code;discoloration,green noise garbage behind menu,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1236,https://user-images.githubusercontent.com/10354852/184788351-10e0b0ef-38d0-495b-95c1-aa083a086338.png
+k0225.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2614,https://github.com/user-attachments/assets/0f14f74f-0362-4081-8780-17f79ebaf26b
+k0226.png,glitch,line_pixelation;morse_code,white noise garbage band across middle,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2571,https://github.com/user-attachments/assets/cd0be99a-9479-4ff2-a111-5ad54495e22d
+k0227.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1097,https://user-images.githubusercontent.com/71127352/175772437-5824bc42-d4e0-4c28-8508-c695e36d6b9f.png
+k0228.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/57,https://user-images.githubusercontent.com/8210/97759782-ef8c7480-1abe-11eb-8bef-b4aae4572681.png
+k0229.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2538,https://github.com/user-attachments/assets/64446248-10f2-4d06-ba3c-e22c00085425
+k0230.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2644,https://github.com/user-attachments/assets/cbb4b4a0-ab0b-4dda-bd55-b9ee31dee944
+k0231.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2362,https://github.com/user-attachments/assets/c6944f10-fc6a-41c4-a415-0e646087b189
+k0232.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/2098,https://github.com/user-attachments/assets/feaa4711-d800-422e-9736-b918c1aca9dd
+k0233.png,clean,,,xemu-project/xemu,https://github.com/xemu-project/xemu/issues/1771,https://github.com/user-attachments/assets/95e002b1-6b13-4115-b487-f4fe357e6312

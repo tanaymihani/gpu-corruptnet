@@ -61,13 +61,35 @@ def fp16_storage(model: onnx.ModelProto, min_size: int = 1024) -> onnx.ModelProt
     return model
 
 
+def write_ood_reference(ref_npz: str, out_dir: Path, k: int = 64) -> None:
+    """mean + top-k PCA basis of the training reference embeddings; threshold = 99th pct of
+    seen-content test scores. Same maths as evaluation.EmbeddingOOD."""
+    from gpu_corruptnet.evaluation import EmbeddingOOD
+
+    z = np.load(ref_npz)
+    det = EmbeddingOOD(k=k).fit(z["train_ref_feats"])
+    thr = float(np.percentile(det.score(z["seen_test_feats"]), 99))
+    b64 = lambda a: base64.b64encode(np.asarray(a, np.float32).tobytes()).decode()  # noqa: E731
+    (out_dir / "ood_reference.json").write_text(json.dumps({
+        "dim": int(det.mean.shape[0]), "k": k, "threshold": thr,
+        "mean_b64": b64(det.mean), "components_b64": b64(det.comps), "variance_b64": b64(det.var),
+        "note": "PCA-Mahalanobis on penultimate embeddings; threshold = 99th pct of "
+                "seen-content test scores",
+    }))
+    print(f"OOD threshold {thr:.2f} (k={k})")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("ckpt")
     ap.add_argument("--out", default="web/model.onnx")
     ap.add_argument("--ref", default=None, help="preds npz with train_ref_feats + test feats")
     ap.add_argument("--n-parity", type=int, default=64)
+    ap.add_argument("--ref-only", action="store_true", help="only write ood_reference.json")
     args = ap.parse_args()
+    if args.ref_only:
+        write_ood_reference(args.ref, Path(args.out).parent)
+        return
 
     net, ckpt = load_classifier(args.ckpt)
     size = int(ckpt["img_size"])
@@ -105,26 +127,7 @@ def main() -> None:
     print(json.dumps(parity))
 
     if args.ref:
-        z = np.load(args.ref)
-        ref = z["train_ref_feats"].astype(np.float64)
-        mean = ref.mean(0)
-        u, s, vt = np.linalg.svd(ref - mean, full_matrices=False)
-        k = 64
-        comps, var = vt[:k], (s[:k] ** 2) / (len(ref) - 1)
-
-        def score(f: np.ndarray) -> np.ndarray:
-            p = (f.astype(np.float64) - mean) @ comps.T
-            return np.sqrt(((p**2) / var).sum(1))
-
-        thr = float(np.percentile(score(z["seen_test_feats"]), 99))
-        b64 = lambda a: base64.b64encode(np.asarray(a, np.float32).tobytes()).decode()  # noqa: E731
-        (out.parent / "ood_reference.json").write_text(json.dumps({
-            "dim": int(ref.shape[1]), "k": k, "threshold": thr,
-            "mean_b64": b64(mean), "components_b64": b64(comps), "variance_b64": b64(var),
-            "note": "PCA-Mahalanobis on penultimate embeddings; threshold = 99th pct of "
-                    "seen-content test scores",
-        }))
-        print(f"OOD threshold {thr:.2f} (k={k})")
+        write_ood_reference(args.ref, out.parent)
 
 
 if __name__ == "__main__":

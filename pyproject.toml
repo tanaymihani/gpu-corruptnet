@@ -41,3 +41,6 @@ select = ["E", "F", "I", "UP", "B"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/aggregate_results.py" = ["E501"]  # markdown table rows read better unwrapped
