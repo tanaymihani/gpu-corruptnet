@@ -124,6 +124,20 @@ class EmbeddingOOD:
         p = (np.asarray(x, np.float64) - self.mean) @ self.comps.T
         return np.sqrt(((p**2) / self.var).sum(1))
 
+    @classmethod
+    def from_reference_json(cls, path: str) -> tuple[EmbeddingOOD, float]:
+        """Load the reference written by scripts/export_web.py; returns (scorer, threshold)."""
+        import base64
+        import json
+
+        r = json.loads(open(path).read())
+        f32 = lambda key: np.frombuffer(base64.b64decode(r[key]), np.float32)  # noqa: E731
+        det = cls(k=r["k"])
+        det.mean = f32("mean_b64").astype(np.float64)
+        det.comps = f32("components_b64").astype(np.float64).reshape(r["k"], r["dim"])
+        det.var = f32("variance_b64").astype(np.float64)
+        return det, float(r["threshold"])
+
 
 def auroc(neg_scores: np.ndarray, pos_scores: np.ndarray) -> float:
     y = np.r_[np.zeros(len(neg_scores)), np.ones(len(pos_scores))]

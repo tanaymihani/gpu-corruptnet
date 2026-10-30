@@ -28,3 +28,26 @@ def test_inspector_with_model_gives_full_prediction(tmp_path):
     assert "latency_ms" in res
     assert "conformal_set" in res
     assert 0.0 <= res["corrupted_prob"] <= 1.0
+
+
+def test_inspector_uses_embedding_ood_when_reference_given(tmp_path):
+    import base64
+    import json
+
+    import numpy as np
+
+    net = build_classifier("resnet50", num_classes=len(ARTIFACT_CLASSES), pretrained=False)
+    ckpt = tmp_path / "m.pt"
+    torch.save(
+        {"arch": "resnet50", "num_classes": 10, "img_size": 64, "state_dict": net.state_dict()},
+        str(ckpt),
+    )
+    k, dim = 4, 2048
+    b64 = lambda a: base64.b64encode(np.asarray(a, np.float32).tobytes()).decode()  # noqa: E731
+    ref = tmp_path / "ref.json"
+    ref.write_text(json.dumps({
+        "dim": dim, "k": k, "threshold": 1e9, "mean_b64": b64(np.zeros(dim)),
+        "components_b64": b64(np.eye(k, dim)), "variance_b64": b64(np.ones(k)),
+    }))
+    res = CorruptionInspector(str(ckpt), ood_reference=str(ref)).predict(make_demo_frame(rng=3))
+    assert res["ood_method"] == "embedding" and res["ood_flag"] is False

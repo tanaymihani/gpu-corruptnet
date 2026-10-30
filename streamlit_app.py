@@ -42,7 +42,9 @@ def load_inspector() -> CorruptionInspector:
     cal = json.load(open(cal_path))
     temperature = float(cal.get("temperature", 1.0))
     tau = cal.get("splits", {}).get("seen_test", {}).get("conformal", {}).get("tau")
-    return CorruptionInspector(model_path, temperature=temperature, conformal_tau=tau)
+    ref = "web/ood_reference.json"  # embedding OOD reference for the released checkpoint
+    return CorruptionInspector(model_path, temperature=temperature, conformal_tau=tau,
+                               ood_reference=ref if os.path.exists(ref) else None)
 
 
 with st.spinner("Loading model…"):

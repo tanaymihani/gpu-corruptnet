@@ -3,7 +3,9 @@
 Wraps the trained classifier + M5 calibration + M9 OOD score behind one call.
 Model-optional: without a checkpoint it still returns the OOD/drift score (so the
 generator + drift story is demoable), and with one it adds detection + calibrated
-confidence + conformal set + latency. Streamlit UI sits on top of this.
+confidence + conformal set + latency. Given an embedding reference (web/ood_reference.json)
+the OOD score comes from the model's own penultimate embedding instead of image
+descriptors. Streamlit UI sits on top of this.
 """
 
 from __future__ import annotations
@@ -26,6 +28,7 @@ class CorruptionInspector:
         temperature: float = 1.0,
         conformal_tau: float | None = None,
         device: str = "cpu",
+        ood_reference: str | None = None,
     ) -> None:
         self.class_names = list(ARTIFACT_CLASSES)
         self.temperature = temperature
@@ -39,6 +42,11 @@ class CorruptionInspector:
             self.net, ckpt = load_classifier(model_path, map_location=device)
             self.net.to(device)
             self.img_size = int(ckpt.get("img_size", 224))
+        self.embed_ood = None
+        if self.net is not None and ood_reference:
+            from gpu_corruptnet.evaluation import EmbeddingOOD
+
+            self.embed_ood = EmbeddingOOD.from_reference_json(ood_reference)
 
         # Small clean reference so we can report a per-frame OOD score with no model.
         ref = np.stack([make_demo_frame(rng=s) for s in range(64)])
@@ -66,10 +74,18 @@ class CorruptionInspector:
         import torch
 
         x = self._preprocess(img)
+        emb = []
+        head = [m for m in self.net.modules() if isinstance(m, torch.nn.Linear)][-1]
+        hook = head.register_forward_hook(lambda _m, i, _o: emb.append(i[0].cpu().numpy()))
         t0 = time.perf_counter()
         with torch.no_grad():
             logits = self.net(x).cpu().numpy()[0]
         out["latency_ms"] = (time.perf_counter() - t0) * 1000.0
+        hook.remove()
+        if self.embed_ood is not None:
+            det, thr = self.embed_ood
+            score = float(det.score(emb[0])[0])
+            out.update(ood_score=score, ood_flag=score > thr, ood_method="embedding")
 
         cal = sigmoid(logits / self.temperature)
         out["probs"] = {c: float(p) for c, p in zip(self.class_names, cal, strict=True)}
