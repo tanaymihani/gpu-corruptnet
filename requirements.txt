@@ -1,7 +1,12 @@
 # For Streamlit Community Cloud (share.streamlit.io). Streamlit itself is provided
-# by the platform; these are the extra runtime deps. CPU torch wheels.
+# by the platform; these are the extra runtime deps, pinned to the versions the tests
+# and the published numbers were produced with. CPU torch wheels.
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch
-torchvision
-opencv-python-headless
+torch==2.13.0
+torchvision==0.28.0
+opencv-python-headless==5.0.0.93
+numpy==2.4.6
+pillow==12.3.0
+pyyaml==6.0.3
+scikit-learn==1.9.0
 .

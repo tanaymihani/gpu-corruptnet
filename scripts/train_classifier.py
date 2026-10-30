@@ -3,6 +3,8 @@
 Examples:
     python scripts/train_classifier.py --smoke                # fast local sanity run
     python scripts/train_classifier.py --arch resnet50 --epochs 8 --img-size 224
+    python scripts/train_classifier.py --exclude shader --tag loto-shader ...  # leave one out
+    python scripts/train_classifier.py --substrate real --init-ckpt model.pt ...  # real
 """
 
 from __future__ import annotations
@@ -14,7 +16,9 @@ from gpu_corruptnet.train import TrainConfig, run
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--arch", default="resnet50", choices=["resnet50", "efficientnet_b4"])
+    ap.add_argument(
+        "--arch", default="resnet50", choices=["resnet50", "efficientnet_b4", "small_cnn"]
+    )
     ap.add_argument("--epochs", type=int, default=5)
     ap.add_argument("--batch-size", type=int, default=64)
     ap.add_argument("--lr", type=float, default=1e-3)
@@ -27,6 +31,18 @@ def main() -> None:
     ap.add_argument("--out-dir", default="runs")
     ap.add_argument("--db-url", default=None, help="optional SQLAlchemy URL to log run + metrics")
     ap.add_argument("--seed", type=int, default=1337)
+    ap.add_argument("--split-seed", type=int, default=1337, help="clean split; keep fixed")
+    ap.add_argument("--tag", default="", help="suffix for output file names")
+    ap.add_argument("--exclude", nargs="*", default=[], help="corruptions withheld from training")
+    ap.add_argument("--max-train-minutes", type=float, default=None)
+    ap.add_argument("--substrate", default="stl10", choices=["stl10", "real"])
+    ap.add_argument("--real-manifest", default="realdata/clean_frames.csv")
+    ap.add_argument("--real-root", default="data/real_frames")
+    ap.add_argument("--real-repeats", type=int, default=8)
+    ap.add_argument("--resize-first", action="store_true",
+                    help="ablation: inject artifacts after resizing to the model input")
+    ap.add_argument("--init-ckpt", default=None, help="warm-start weights")
+    ap.add_argument("--save-feats", action="store_true", help="dump penultimate embeddings")
     ap.add_argument("--smoke", action="store_true", help="tiny fast run to validate the pipeline")
     args = ap.parse_args()
 
@@ -44,6 +60,17 @@ def main() -> None:
         out_dir=args.out_dir,
         db_url=args.db_url,
         seed=args.seed,
+        split_seed=args.split_seed,
+        tag=args.tag,
+        exclude=args.exclude,
+        max_train_minutes=args.max_train_minutes,
+        substrate=args.substrate,
+        real_manifest=args.real_manifest,
+        real_root=args.real_root,
+        real_repeats=args.real_repeats,
+        resize_first=args.resize_first,
+        init_ckpt=args.init_ckpt,
+        save_feats=args.save_feats,
     )
     if args.smoke:
         cfg.epochs = 2

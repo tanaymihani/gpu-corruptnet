@@ -25,6 +25,8 @@ demo = ["streamlit>=1.30"]  # M10: interactive upload-a-frame demo
 cv = ["opencv-python>=4.9"]            # M1: triangulation / shader / shapes injectors
 train = ["torch>=2.2", "torchvision>=0.17", "scikit-learn>=1.3"]  # M3: classifiers
 common = ["imagenet-c"]               # M1b: ImageNet-C common-corruption wrapper
+# Everything the test suite imports (CI installs CPU torch first, then this).
+test = ["gpu-corruptnet[dev,cv,train,export,db]"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
