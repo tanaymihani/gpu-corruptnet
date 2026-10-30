@@ -1,0 +1,15 @@
+{
+  "checkpoint": "GitHub Release real-model/model.pt (real-native: STL-10 model fine-tuned on real game frames)",
+  "temperature": 1.0570963975248477,
+  "conformal_tau": 0.0484275184571743,
+  "alpha": 0.1,
+  "fitted_on": "real-frame calibration split (144 corrupted/clean draws of 36 frames)",
+  "seen_test": {
+    "coverage_corrupted_frames": 0.8666666666666667,
+    "avg_set_size_corrupted": 3.977777777777778
+  },
+  "unseen_test": {
+    "coverage_corrupted_frames": 0.8728813559322034,
+    "avg_set_size_corrupted": 3.7457627118644066
+  }
+}
