@@ -11,8 +11,8 @@
     "screen_stuttering",
     "screen_tearing"
   ],
-  "temperature": 1.5646949856130867,
-  "conformal_tau": 0.04931242763996124,
+  "temperature": 1.0570963975248477,
+  "conformal_tau": 0.0484275184571743,
   "img_size": 224,
   "samples": [
     {

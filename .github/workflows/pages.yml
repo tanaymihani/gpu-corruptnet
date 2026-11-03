@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  MODEL_TAG: demo-model
+  MODEL_TAG: real-model
 
 jobs:
   build:
