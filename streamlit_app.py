@@ -19,8 +19,8 @@ from gpu_corruptnet.corruptions import apply, available
 from gpu_corruptnet.data import make_demo_frame
 from gpu_corruptnet.serve import CorruptionInspector
 
-RELEASE = "https://github.com/tanaymihani/gpu-corruptnet/releases/download/demo-model"
-CACHE = "/tmp/corruptnet"
+RELEASE = "https://github.com/tanaymihani/gpu-corruptnet/releases/download/real-model"
+CACHE = "/tmp/corruptnet-real-model"  # new path: a warm container must not reuse the old weights
 
 st.set_page_config(page_title="GPU-CorruptNet", layout="wide")
 st.title("GPU-CorruptNet — GPU rendering-corruption detection")
@@ -41,7 +41,8 @@ def load_inspector() -> CorruptionInspector:
         urllib.request.urlretrieve(f"{RELEASE}/calibration.json", cal_path)
     cal = json.load(open(cal_path))
     temperature = float(cal.get("temperature", 1.0))
-    tau = cal.get("splits", {}).get("seen_test", {}).get("conformal", {}).get("tau")
+    tau = cal.get("conformal_tau",
+                  cal.get("splits", {}).get("seen_test", {}).get("conformal", {}).get("tau"))
     ref = "web/ood_reference.json"  # embedding OOD reference for the released checkpoint
     return CorruptionInspector(model_path, temperature=temperature, conformal_tau=tau,
                                ood_reference=ref if os.path.exists(ref) else None)
