@@ -57,6 +57,7 @@ class TrainConfig:
     resize_first: bool = False  # ablation: paint artifacts at model resolution, not native
     init_ckpt: str | None = None  # warm start (e.g. the STL-10 model before real frames)
     save_feats: bool = False  # also dump penultimate embeddings per split
+    epoch_val: bool = True  # score val after every epoch (logging only); False = once at the end
 
 
 def pick_device() -> torch.device:
@@ -183,18 +184,20 @@ def run(cfg: TrainConfig) -> dict:
             opt.step()
             running += loss.item()
             nb += 1
-        val_m = evaluate(net, eval_dl["val"], device)
+        if cfg.epoch_val:
+            val_m = evaluate(net, eval_dl["val"], device)
         history.append(
             {
                 "epoch": epoch,
                 "train_loss": running / max(1, nb),
-                "val_macro_f1": val_m["macro_f1"],
+                "val_macro_f1": val_m["macro_f1"] if cfg.epoch_val else None,
                 "seconds": time.time() - t0,
             }
         )
+        val_txt = f"val_macroF1={val_m['macro_f1']:.3f}  " if cfg.epoch_val else ""
         print(
             f"epoch {epoch}/{cfg.epochs}  loss={running / max(1, nb):.4f}  "
-            f"val_macroF1={val_m['macro_f1']:.3f}  ({time.time() - t0:.1f}s)",
+            f"{val_txt}({time.time() - t0:.1f}s)",
             flush=True,
         )
         elapsed = (time.time() - t_start) / 60
@@ -204,6 +207,9 @@ def run(cfg: TrainConfig) -> dict:
                 print(f"stopping after epoch {epoch}: time budget {cfg.max_train_minutes} min")
                 stopped_early = True
                 break
+
+    if not cfg.epoch_val:  # val is only for logging, so one score at the end is enough
+        val_m = evaluate(net, eval_dl["val"], device)
 
     # Collect raw logits once per split: drives both metrics and the M5 calibration step.
     preds = {

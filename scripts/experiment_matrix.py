@@ -1,6 +1,7 @@
 """Print the GitHub Actions job matrix for one experiment suite (used by experiments.yml).
 
     python scripts/experiment_matrix.py core     # 5 seeds + baselines + deployed re-eval
+    python scripts/experiment_matrix.py core12   # 5 seeds + EfficientNet-B4, full 12 epochs
     python scripts/experiment_matrix.py loto     # leave-one-corruption-type-out
     python scripts/experiment_matrix.py real     # real game frames, native-resolution artifacts
     python scripts/experiment_matrix.py smoke    # minutes-long pipeline check
@@ -57,6 +58,21 @@ def suite(name: str) -> list[dict]:
              "cmd": "python scripts/eval_checkpoint.py model.pt --tag deployed"},
             {"name": "anomaly-per-type", "keep_model": False,
              "cmd": "python scripts/anomaly_eval.py --per-type --out runs/anomaly_per_type.json"},
+        ]
+    if name == "core12":
+        # The full 12-epoch recipe inside one 6-hour runner job: val is scored once at the end
+        # (it only feeds logging), which saves ~1.6 min per epoch.
+        ft12 = FT.replace("--max-train-minutes 200", "--max-train-minutes 330 --no-epoch-val")
+        runs = [
+            {"name": f"r50-s{s}-e12", "keep_model": s == 1337,
+             "cmd": f"{ft12} --seed {s} --tag s{s}-e12" + (" --save-feats" if s == 1337 else "")}
+            for s in (1337, 1, 2, 3, 4)
+        ]
+        return runs + [
+            {"name": "effb4-e12", "keep_model": False,
+             "cmd": f"{TRAIN} --arch efficientnet_b4 --epochs 12 --img-size 224 --batch-size 32 "
+                    "--lr 1e-4 --no-freeze --num-workers 2 --max-train-minutes 330 --no-epoch-val "
+                    "--tag effb4-e12"},
         ]
     if name == "loto":
         ep6 = FT.replace("--epochs 12", "--epochs 6").replace("minutes 200", "minutes 140")

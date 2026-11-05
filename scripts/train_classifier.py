@@ -43,6 +43,8 @@ def main() -> None:
                     help="ablation: inject artifacts after resizing to the model input")
     ap.add_argument("--init-ckpt", default=None, help="warm-start weights")
     ap.add_argument("--save-feats", action="store_true", help="dump penultimate embeddings")
+    ap.add_argument("--no-epoch-val", action="store_true",
+                    help="score val once at the end instead of after every epoch (saves time)")
     ap.add_argument("--smoke", action="store_true", help="tiny fast run to validate the pipeline")
     args = ap.parse_args()
 
@@ -71,6 +73,7 @@ def main() -> None:
         resize_first=args.resize_first,
         init_ckpt=args.init_ckpt,
         save_feats=args.save_feats,
+        epoch_val=not args.no_epoch_val,
     )
     if args.smoke:
         cfg.epochs = 2
