@@ -1,0 +1,127 @@
+g0002 | clean |  | Speedstorm garage menu; car and Mickey render normally
+g0008 | glitch | shader | dark jagged silhouette lines and black speckles across night sky
+g0018 | clean |  | Tsushima path scene; no visible fault
+g0030 | clean |  | mpv anime playback with stats overlay; picture looks normal
+g0037 | clean |  | splat-style tree render in engine window; edge blur normal, no fault
+g0046 | clean |  | GoW2 temple, Kratos in Cod of War costume; no fault
+g0049 | clean |  | soccer cage; dark tiles/sawtooth read as dirt and fence shadows
+g0052 | drop |  | translucent green blocky panels: hologram monitors or glitch, cannot tell
+g0055 | clean |  | in-game victim list menu over 3D background; no visible fault
+g0060 | glitch | parallel_lines | faint thin grid lines across ground background
+g0068 | glitch | shapes | hard-edged dark noisy rectangle drawn over ground and crater
+g0074 | clean |  | GT5 Suzuka menu screen; scene and UI render normally
+g0078 | clean |  | PES replay; pitch, players, crowd render normally
+g0081 | glitch | shader | black blocky squares around flowers in field (broken alpha)
+g0086 | clean |  | Injustice main menu over FMV background; no visible fault
+g0090 | glitch | line_pixelation; shader | rainbow garbage pixel block around bottom-right HUD skill icon
+g0102 | clean |  | SCP lit corridor; no visible fault
+g0133 | clean |  | Amalur forest; ground textures plausible, no clear fault
+g0137 | glitch | triangulation; shapes | player model missing waist, arms stretched into flat brown planks
+g0141 | glitch | triangulation | terrain patch raised with stretched vertical seam wall across ground
+g0146 | glitch | shader | green speckle noise outlining armor and background everywhere
+g0150 | drop |  | regular 1-in-3 scanlines over whole frame: retro filter or artifact, unclear
+g0158 | clean |  | Godot editor camera preview; thin lines are preview frame guides
+g0189 | clean |  | PPSSPP FOXHOUND emblem screen with touch controls; no visible fault
+g0194 | clean |  | PPSSPP God Eater cutscene; no visible fault
+g0199 | clean |  | PPSSPP Sengoku Basara field with touch controls; no visible fault
+g0213 | clean |  | intentional untextured clay render of voxel scene in renderer
+g0218 | glitch | shapes | stray sprite fragments bleeding into logo letter G borders
+g0226 | glitch | shader | race in progress renders only sky; track and kart models missing
+g0229 | clean |  | SuperTuxKart main menu; no visible fault
+g0233 | clean |  | SuperTuxKart tunnel race; lines read as texture seams
+g0245 | clean |  | emulated cutscene with overscan black borders; no fault
+g0248 | drop |  | pale smeared streaks on wrestler outfit: costume design or wrong texture, unclear
+g0254 | clean |  | Burnout 2 car select menu; no visible fault
+g0259 | clean |  | NFL coin toss scene; field and players render normally
+g0263 | clean |  | Fable cliffside path; no visible fault
+h0003 | clean |  | NTE loading screen art with perf overlay; no visible fault
+h0011 | clean |  | Metro Exodus flooded vista; no visible water corruption
+h0017 | glitch | triangulation | long thin triangular spike shards across street and pedestrians
+h0025 | glitch | shader | water surface rendered as dark blotchy holes; black chunks around Spider-Man
+h0029 | clean |  | Valhalla snowy stone wall; no black blocks visible
+h0038 | glitch | parallel_lines | band of horizontal line garbage across bottom of screen
+h0041 | glitch | discoloration | translucent red band across full screen width
+h0045 | glitch | discoloration; shader | red translucent band; character drawn through wall pillar
+h0051 | clean |  | Kaena roots scene; bottom band renders normally, no garbage
+h0054 | clean |  | YouTube capture of Shrek ship deck; game frame looks normal
+h0062 | drop |  | translucent green blocky panels: hologram monitors or glitch, cannot tell
+h0067 | glitch | dotted_lines | faint stray seam line fragments over table and floor
+h0076 | clean |  | Avatar courtyard fight; waterbending effect intentional, no fault
+h0079 | drop |  | flat saturated blue on claws/spikes: costume colour or blue-texture bug, unclear
+h0082 | glitch | shader; dotted_lines | missing letters in prompt text; stippled noisy textures on walls
+h0085 | clean |  | FFXIII Lightning close-up; hair renders normally
+h0091 | glitch | shapes | top-left HUD panel garbled: overlapping glyph columns, grey blocks
+h0095 | glitch | dotted_lines | white stipple speckle pattern over all scene surfaces
+h0102 | clean |  | LBP intro title scene; no visible fault
+h0105 | glitch | shapes | battle HUD corrupted: empty portrait frames, black bars, stray lines
+h0114 | clean |  | AC Odyssey world map screen; no visible fault
+h0122 | clean |  | NieR Automata camp scene in Wine window; no visible fault
+h0128 | glitch | shader | car model rendered dark, unlit and untextured despite orange paint
+h0131 | drop |  | menu background is full-screen red blur: broken car geometry or bokeh, unclear
+h0137 | glitch | shader | concentric moire ring pattern across road surface
+h0149 | clean |  | Ixion top-down station view with Mesa overlay; no visible fault
+h0152 | clean |  | BFME2 forest; hard shadow blobs plausible, no clear fault
+h0161 | glitch | triangulation | thin dark triangle seam lines across wall and floor
+h0167 | clean |  | Guild 3 town map panel over scene; map renders normally
+h0170 | clean |  | Far Cry 3 waterfall and river; no visible corruption
+h0173 | clean |  | Far Cry 3 waterfall and river; no visible corruption
+h0179 | clean |  | Guild Wars skill/inventory UI over normal town scene
+h0183 | clean |  | Gal Guardians title screen; no visible fault
+h0187 | glitch | shapes; line_pixelation | minimap broken into mismatched blocks with black squares
+h0193 | clean |  | Source flatgrass with crowbar; materials look normal
+h0196 | glitch | line_pixelation; shader | black blocky pixel holes in trees, stair-stepped cliff edges
+h0219 | glitch | parallel_lines | thin vertical line streaks splitting sprites, hearts and floor tiles
+h0223 | glitch | shapes | rows of stray dark ovals across field; jagged shadow mass
+h0226 | clean |  | PPSSPP DBZ battle with touch controls; clouds and models normal
+h0231 | glitch | shapes | opaque orange boxes behind fourth menu entry text
+h0235 | clean |  | blurry video capture of fire cutscene; flames look smooth
+h0240 | clean |  | Hot Shots clay court; white burst is shot impact effect
+h0244 | glitch | line_pixelation; shapes | clouds drawn as hard grey outlines instead of soft sprites
+h0248 | glitch | parallel_lines; shapes | flames as hard polygon shards with orange line streaks
+h0251 | glitch | shader | flat untextured dark-green polygon covering lower ground
+h0257 | glitch | shapes | hard-edged translucent dark rectangles overlaid on left side
+h0264 | clean |  | Far Cry island with mirror-like sky reflection on water; plausible
+h0271 | clean |  | Tiger Woods 2004 main menu; no visible fault
+h0274 | glitch | shader; discoloration | water noisy white contour pattern; hard cyan shoreline bands
+k0006 | glitch | shapes; line_pixelation | holed blocky green ring; stray teal slivers across seafloor
+k0016 | glitch | shapes | faint coloured garbage rectangles across black space background
+k0020 | clean |  | Poinie's Poin shop scene; textures present, text shadow style
+k0027 | clean |  | Syphon Filter snowy airfield at night; no visible fault
+k0032 | clean |  | Armored Core corridor with HUD; no visible fault
+k0036 | glitch | shapes | font atlas glyph sheet drawn over scene at bottom left
+k0041 | clean |  | GuitarFreaks stage screen; UI and video panel look normal
+k0047 | glitch | line_pixelation; shader | rainbow garbage pixel patch on water; stray magenta blobs
+k0051 | glitch | shapes | fire particles as blocky striped textures; stray white blocks on ground
+k0060 | glitch | line_pixelation | checkerboard pixelated planets; black blocky fringe around kart
+k0067 | glitch | shapes | light square patches scattered over car body
+k0071 | clean |  | dark GoW3 pool chamber; water pattern plausible, no clear fault
+k0081 | glitch | shapes; discoloration | Etna sprite broken into white and blue blotchy patches
+k0085 | clean |  | GTA V street scene with RPCS3 overlay; no visible fault
+k0090 | glitch | shapes | repeating brick-shaped block pattern overlaid on window and pillar
+k0096 | glitch | shapes; parallel_lines | blocky rectangular patches across sky; striped garbage blocks along top
+k0100 | clean |  | Dead Nation top-down street with gore; no visible fault
+k0104 | clean |  | Lost Planet demo title screen; no visible corruption
+k0110 | glitch | dotted_lines; shapes | rectangular green dither-noise blocks around distant trees
+k0116 | glitch | parallel_lines; shapes | horizontal blocky texture strips corrupting character's face
+k0122 | drop |  | near-black frame; only HUD and tiny character, cannot judge
+k0125 | clean |  | Crazy Taxi arcade menu; no visible fault
+k0133 | drop |  | wavy panel borders, doubled text: match-end effect or glitch, unclear
+k0139 | glitch | shapes | Rogue sprite drawn on opaque beige rectangles (broken transparency)
+k0143 | clean |  | NASCAR pause menu over race; car present, checker is menu art
+k0148 | clean |  | Ys Felghana dialogue scene in PPSSPP window; no clear fault
+k0152 | glitch | parallel_lines | regular vertical stripe lines across entire frame
+k0159 | glitch | parallel_lines | dark translucent horizontal bars crossing whole frame, sky and car
+k0165 | clean |  | Juiced 2 Russian main menu; no visible fault
+k0171 | clean |  | DS cutscene photo and text screen; no visible garbage
+k0175 | clean |  | DS title screen; red bar is glowing title art
+k0179 | glitch | morse_code; dotted_lines | stray black vertical dashes scattered across road and town
+k0184 | clean |  | DS plane minigame screens; no clear fault
+k0190 | glitch | discoloration | hard-edged red wash over top third, tinting ship sails
+k0193 | clean |  | Garfield DS castle level and number menu; no visible fault
+k0196 | clean |  | NSMB DS world map screens; no visible fault
+k0201 | glitch | shader; shapes | checkerboard of dark squares across grass, shadow corruption
+k0211 | glitch | line_pixelation; shader | rainbow garbage pixel blocks on alien head and UFO rim
+k0215 | glitch | triangulation | long stray straight lines across sky to frame edges
+k0225 | drop |  | coloured territory overlays spill past tower: game mechanic or glitch, unclear
+k0229 | glitch | shapes; shader | smoke clipped by hard straight edge; floating dark geometry, streaky sky
+k0232 | glitch | dotted_lines; shapes | stepped grid of concentric squares around the sun

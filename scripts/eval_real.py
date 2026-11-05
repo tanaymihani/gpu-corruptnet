@@ -55,8 +55,9 @@ def main() -> None:
 
     frames = [r for r in read_manifest(args.frames)
               if (Path(args.frames_root) / r["file"]).exists()]
-    shots = [r for r in read_manifest(args.glitches)
-             if (Path(args.glitches_root) / r["file"]).exists()]
+    shots = [r for r in read_manifest(args.glitches)  # "excluded" rows are not scored
+             if r["label"] in ("glitch", "clean")
+             and (Path(args.glitches_root) / r["file"]).exists()]
     paths = [Path(args.frames_root) / r["file"] for r in frames] + \
             [Path(args.glitches_root) / r["file"] for r in shots]
     source = np.array(["commons"] * len(frames) + ["bugreport"] * len(shots))

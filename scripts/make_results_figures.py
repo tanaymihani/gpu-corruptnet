@@ -94,7 +94,8 @@ def fig_per_class(summary: dict) -> None:
     ax.set_xlabel("F1 (95% bootstrap CI)")
     ax.grid(axis="y", visible=False)
     ax.legend(loc="upper left")
-    ax.set_title("Per-class F1, ResNet-50" + (" (seed 1337)" if tag == "s1337" else " (deployed)"),
+    which = " (seed 1337)" if tag == "s1337" else " (demo-model checkpoint)"
+    ax.set_title("Per-class F1, ResNet-50" + which,
                  loc="left", fontsize=11)
     save(fig, "per_class_f1.png")
 
@@ -126,7 +127,7 @@ def fig_seeds_baselines(summary: dict) -> None:
     rows = []
     for k, v in summary.get("seeds", {}).get("runs", {}).items():
         rows.append((f"ResNet-50 {k.removeprefix('r50-')}", v["unseen_test"], BLUE))
-    names = {"deployed-eval": "ResNet-50 deployed (Colab T4)", "effb4": "EfficientNet-B4",
+    names = {"deployed-eval": "ResNet-50, demo-model (Colab T4)", "effb4": "EfficientNet-B4",
              "probe": "ResNet-50 linear probe", "smallcnn": "Small CNN (scratch)",
              "classical": "DFT/HOG + logistic reg."}
     for k, label in names.items():
@@ -155,8 +156,8 @@ def fig_sim_to_real(summary: dict) -> None:
     seeds = summary.get("baselines", {}).get("deployed-eval")
     if not rg:
         return
-    models = [("deployed", "real-deployed-eval", "STL-10 model (deployed)", ORANGE),
-              ("native", "real-native", "+ real frames, native-res artifacts", BLUE),
+    models = [("deployed", "real-deployed-eval", "STL-10 only (demo-model)", ORANGE),
+              ("native", "real-native", "+ real frames, native-res artifacts (live demo)", BLUE),
               ("resize_first", "real-resize-first", "+ real frames, artifacts after resize", AQUA)]
     models = [m for m in models if m[0] in rg]
     panels = [("Synthetic artifacts,\nSTL-10 unseen content", "macro-F1"),

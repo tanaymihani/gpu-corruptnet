@@ -9,7 +9,7 @@ GPU-CorruptNet detects GPU rendering artifacts in a frame (shader errors, stuck-
 "morse code", tearing, corrupted geometry and textures) and says how sure it is: calibrated
 probabilities, a conformal set of plausible artifact types, and an out-of-distribution check.
 It is trained on procedurally injected artifacts and then tested, honestly, on real game frames
-and on 117 real glitch screenshots from public bug reports.
+and on 200 real glitch screenshots from public bug reports (each label reviewed twice).
 
 **[Try it in the browser](https://tanaymihani.github.io/gpu-corruptnet/)**: a ResNet-50 runs
 locally through ONNX Runtime Web, so the page never sleeps and your image never leaves it.
@@ -25,7 +25,7 @@ The longer write-up is [docs/writeup.md](docs/writeup.md); every table is in
 | Synthetic artifacts, STL-10 photos (5 seeds) | macro-F1 0.935 ± 0.004 seen content, 0.907 ± 0.010 unseen content |
 | Calibration (deployed model, T = 1.565) | pooled ECE 1.06% → 0.26%; classwise ECE 1.37% → 1.18% |
 | Conformal set, α = 0.1 | 0.905 / 0.895 coverage on corrupted frames (seen / unseen content); per-class (Mondrian) worst class 0.84 / 0.88 |
-| Real glitches vs clean bug-report screenshots | AUROC 0.52 → 0.73–0.77 after fine-tuning on real game frames; false alarms on clean frames 78% → 14% |
+| Real glitches vs clean bug-report screenshots (200 vs 176) | AUROC 0.53 → 0.67 after fine-tuning on real game frames (the live demo's model); false alarms on clean game frames 78% → 14% |
 | Serving, one run on an M2 | 1.8 ms (ONNX Runtime + CoreML) vs 18.2 ms (PyTorch MPS), label sets identical |
 
 What the numbers mean, and what they don't:
@@ -34,7 +34,12 @@ What the numbers mean, and what they don't:
   not new artifact types. New artifact types are tested separately (leave-one-type-out, below).
 - The model trained only on synthetic STL-10 data does not transfer to real frames: it flags
   78% of clean game screenshots and separates real glitches from clean screenshots at
-  AUROC 0.52 [0.46, 0.57], which is chance. Fine-tuning on 132 real game frames with injected artifacts lifts that to 0.73 [0.68, 0.78] and cuts false alarms on clean Commons frames to 14%, at the cost of recall (0.92 → 0.68 at the 0.5 threshold). Painting artifacts at native resolution versus after the resize made no significant difference on this set (0.73 vs 0.77, overlapping CIs). The VISAPP 2022 detector, trained on real corruption from 50+ games, reports precision 0.989 and recall 0.888, so real captured faults are still what's missing.
+  AUROC 0.53 [0.47, 0.58], which is chance. Fine-tuning on 132 real game frames with injected
+  artifacts lifts that to 0.67 [0.62, 0.73] and cuts false alarms on clean game frames to 14%,
+  at the cost of recall (0.89 → 0.50 at the 0.5 threshold). Painting artifacts at native
+  resolution versus after the resize made no significant difference (0.67 vs 0.69, overlapping
+  CIs). The VISAPP 2022 detector, trained on real corruption from 50+ games, reports precision
+  0.989 and recall 0.888, so real captured faults are still what's missing.
 - Coverage is reported on corrupted frames only. Clean frames have no true artifacts and are
   covered automatically, which is how an earlier version of this README reported 0.935.
 
@@ -62,10 +67,12 @@ the corruption is re-drawn every epoch. Clean substrates:
   Four titles are held out. Artifacts are painted at the frame's native resolution, then the
   frame is resized to the model input.
 
-**Real glitches.** 117 glitch and 382 clean screenshots from public issues of 19 graphics
+**Real glitches.** 200 glitch and 176 clean screenshots from public issues of 19 graphics
 projects (DXVK, vkd3d-proton, Proton, RPCS3, PCSX2, PPSSPP, xemu, Flycast, melonDS, Godot, …),
-labelled by visual review with a best-fit artifact class and a one-line description. Only URLs
-and labels are in the repo (`realdata/real_glitches.csv`); `realdata/fetch.py` downloads them.
+each labelled by visual review with a best-fit artifact class and a one-line description, then
+re-checked in a second pass (123 disputed or unusable screenshots are excluded; see
+[realdata/README.md](realdata/README.md)). Only URLs and labels are in the repo
+(`realdata/real_glitches.csv`); `realdata/fetch.py` downloads them.
 
 ## Experiments on free CI runners
 
@@ -93,6 +100,13 @@ Five seeds of the fine-tuned ResNet-50 on identical test frames: macro-F1 **0.93
 Bootstrap 95% CIs over test frames. Screen tearing on unseen content is the weak spot.
 
 ![Per-class F1](assets/per_class_f1.png)
+
+### Where the real-frame model looks
+
+Grad-CAM of the injected class on free-licence game frames
+([`make_gradcam_real.py`](scripts/make_gradcam_real.py)); dimmed regions did not drive the score.
+
+![Grad-CAM on real frames](assets/gradcam_real.png)
 
 ### Calibration and conformal sets
 

@@ -1,0 +1,199 @@
+g0004 | drop | | whole frame blurred; may be depth of field, cannot tell
+g0053 | glitch | shader;discoloration | car shadow rendered as a bright white/blue glow patch
+g0057 | drop | | helper saw green garbage polygons; not discernible to me at 700 px
+g0063 | drop | | faint reddish blocky overlay; too faint to confirm
+g0071 | glitch | triangulation | character mesh stretched into a long spike toward the horizon
+g0076 | glitch | parallel_lines | thin vertical blue stripes across the sky
+g0079 | drop | | helper saw chopped flower sprites; not discernible to me
+g0088 | drop | | missing-glyph boxes after menu text: a font bug, not GPU corruption
+g0100 | drop | | helper saw parallel bands on a shadow edge; not discernible to me
+g0134 | glitch | shader;shapes | cars rendered as flat black silhouettes
+g0139 | glitch | shapes | flat sky-blue holes where distant terrain should be
+g0142 | drop | | white blob over the fighters may be an in-game effect; cannot tell
+g0181 | drop | | possible hollow car body / blur block; cannot tell
+g0016 | drop | | helper saw skin streaks at the elbow; not discernible to me
+g0044 | drop | | purple bars over the window may be blinds; cannot tell
+g0048 | drop | | thin stray line is real but the reporter drew circles/arrows on the image
+g0066 | glitch | morse_code | rows of red/cyan dash garbage in the black top band
+g0108 | glitch | discoloration | posterised yellow-green false colours, flat yellow skin
+g0144 | drop | | helper saw dash rows in floor reflections; not discernible to me
+g0008 | drop | | possible jagged lines/speckles in the night sky; cannot confirm
+g0052 | drop | | translucent green panels: hologram monitors or glitch, cannot tell
+g0068 | glitch | shapes | hard-edged dark rectangle drawn over the ground
+g0081 | glitch | shapes | black blocks around the flowers (broken alpha)
+g0090 | drop | | possible garbage pixels around a small HUD icon; cannot confirm
+g0137 | drop | | helper saw a stretched player model; not clear to me
+g0141 | drop | | possible raised terrain seam; cannot confirm
+g0146 | glitch | shader;dotted_lines | green speckle noise outlining the armour and background
+g0150 | drop | | regular scanlines: retro filter or artifact, cannot tell
+g0218 | drop | | tiny stray fragments near the logo; too small to confirm
+g0226 | glitch | shapes;shader | race renders only the sky; track and karts missing
+g0256 | drop | | flat orange sea with seams; may be broken water, cannot tell
+h0005 | glitch | shapes;shader | band of black jagged blotches across the water surface
+h0014 | drop | | odd chrome/purple cape; cannot tell
+h0021 | glitch | morse_code | rows of black horizontal dashes along the bottom of the frame
+h0035 | glitch | shader;morse_code | walls and floor covered in white/brown noise garbage textures
+h0039 | drop | | thin stray dashed rows near portraits; too small to confirm
+h0047 | glitch | dotted_lines;shapes | small dark corner marks and blocks scattered over the frame
+h0058 | glitch | shader;morse_code | left pillar textured with black/white garbage noise
+h0063 | glitch | screen_stuttering | ghost copy of the subtitle text smeared across the sea
+h0077 | drop | | faint rectangular overlay seams; cannot confirm
+h0083 | drop | | possible ghosted red lines by the lamp; cannot confirm
+h0097 | drop | | reporter's red annotation; fault not visible
+h0103 | glitch | line_pixelation;shapes | magenta/orange stair-step fragments along the hill edge
+h0107 | glitch | shapes;discoloration | sky solid black, characters rendered as grey ghosts
+h0116 | drop | | white blob over the fighters may be an in-game effect (same as g0142)
+h0129 | drop | | faint dotted contours may be part of the design
+h0142 | drop | | small stray dashes inside a reporter-drawn box; annotated image
+h0150 | drop | | possible black hatching spikes in the scene; cannot confirm
+h0153 | drop | | possible scattered pixel blocks; cannot confirm
+h0164 | drop | | possible noise speckle on a dress; cannot confirm
+h0168 | drop | | garbled dialog text: font fault, not GPU corruption
+h0171 | glitch | morse_code;parallel_lines | map terrain covered in multicoloured noise in vertical stripes
+h0175 | drop | | uniform scanlines: CRT filter or fault, cannot tell
+h0180 | glitch | shapes | square holes punched through the character model in a checkerboard
+h0185 | drop | | dark garage behind menu UI; mostly UI, cannot tell
+h0189 | glitch | triangulation;parallel_lines | cliff face texture stretched into vertical streaks
+h0194 | drop | | possible noise speckle on a dress; cannot confirm (same scene as h0164)
+h0198 | glitch | triangulation | racket geometry stretched into long beams across the court
+h0227 | drop | | possible stair-stepped dark patch on the wall; cannot confirm
+h0233 | glitch | parallel_lines | thin vertical lines across the movie frame
+h0236 | drop | | dark blob chains may be the stadium's shadows (cf. h0223 marked clean); cannot tell
+h0241 | drop | | possible faint vertical banding; cannot confirm
+h0245 | drop | | small stray strips around the level card; cannot confirm
+h0249 | glitch | shapes | sun drawn as an opaque orange square block at the top
+h0253 | drop | | faint seams in menu text; too subtle, menu only
+h0267 | drop | | possible light band with a hard edge; cannot confirm
+g0251 | drop | | reporter drew on the image (pink annotation)
+h0002 | drop | | possible speckle noise on the armour; cannot confirm
+h0027 | drop | | reporter's red box; fault too small to see
+h0040 | drop | | possible dotted row under dialog text; too small, UI only
+h0066 | glitch | shapes | painting area replaced by scattered dark block fragments
+h0078 | glitch | line_pixelation | blocky stair-stepped white streaks in the clouds
+h0081 | drop | | possible speckled eyes / stray bar; cannot confirm
+h0084 | drop | | reporter's red circle on the scoreboard; annotated image
+h0094 | glitch | shapes | black blotches strung along the mountain ridges
+h0104 | glitch | discoloration | bright blue patches on both fighters' clothing and belts
+h0112 | drop | | possible small noise particles on the floor; cannot confirm
+h0120 | drop | | possible blocky tiles in the waterfall spray; cannot confirm
+h0127 | glitch | shapes;shader | flat grey untextured blob in the sky with white speckle
+h0130 | drop | | possible red speckles on the ground; cannot confirm
+h0135 | glitch | shader;morse_code | black pixel-noise speckle over the entire ground texture
+h0151 | glitch | dotted_lines;shader | bright white/yellow speckles scattered over the frame
+h0169 | drop | | possible faint banding on UI panels; cannot confirm
+h0172 | drop | | dark quads around the fire may be the effect; cannot tell
+h0177 | glitch | shader;shapes | character flat untextured white, scene in black silhouettes
+h0182 | drop | | lighting seam on the face; plausibly normal lighting
+h0186 | glitch | parallel_lines | thin green horizontal line across the full frame width
+h0234 | drop | | possible misplaced skin patch on a small portrait; cannot confirm
+h0238 | glitch | triangulation;shapes | tank shadow broken into jagged spiky dark polygons
+h0256 | drop | | overbright light blob may be the headlight effect; cannot tell
+h0262 | drop | | reporter drew on the image (pink annotation)
+k0013 | drop | | stray coloured dots on the portraits; too small to confirm
+k0019 | glitch | morse_code | row of coloured garbage dashes along the bottom and right edges
+k0029 | drop | | faint vertical dotted lines; cannot confirm
+k0034 | drop | | possible fine line pattern over a blurry frame; cannot confirm
+k0038 | glitch | discoloration;shader | gun and hands in noisy green/purple false colours
+g0248 | drop | | pale streaks on the outfit may be the costume design
+h0017 | drop | | possible thin spike shards; not visible to me
+h0025 | glitch | shapes;shader | water rendered as dark blotchy holes, black chunks around the character
+h0038 | glitch | parallel_lines;line_pixelation | band of horizontal line garbage across the bottom
+h0041 | glitch | discoloration | translucent red band across the full screen width
+h0045 | glitch | discoloration | same translucent red band (second screenshot of h0041's scene)
+h0062 | drop | | translucent green panels: hologram monitors or glitch, cannot tell (same scene as g0052)
+h0067 | drop | | faint stray seam fragments; cannot confirm
+h0079 | drop | | saturated blue on claws: costume colour or bug, cannot tell
+h0082 | glitch | dotted_lines;shader | stippled noisy textures on the walls, missing letters in the prompt
+h0091 | drop | | garbled small HUD panel; too small, UI only
+h0095 | glitch | dotted_lines | white stipple speckle pattern over the scene surfaces
+h0105 | drop | | HUD clutter with possible stray bars; cannot confirm
+h0128 | glitch | shader | car model rendered dark and unlit/untextured
+h0137 | drop | | possible moire rings on the road; cannot confirm
+h0161 | drop | | possible thin seam lines; cannot confirm
+h0196 | drop | | possible pixel holes in the trees; cannot confirm
+h0244 | glitch | line_pixelation;shapes | clouds drawn as hard grey pixel outlines instead of soft sprites
+h0248 | drop | | flames as hard polygons may be the old game's art; cannot tell
+h0251 | glitch | shader | flat untextured dark-green polygon covering the lower ground
+h0274 | glitch | shader;discoloration | water in a noisy white contour pattern, hard cyan shoreline bands
+k0006 | glitch | shapes;line_pixelation | blocky green ring with holes, stray slivers on the seafloor
+k0016 | drop | | possible faint garbage rectangles on black; cannot confirm
+k0036 | glitch | shapes | font-atlas glyph sheet drawn over the scene at bottom left
+k0047 | drop | | possible small garbage patch on the water; cannot confirm
+k0051 | glitch | shapes;parallel_lines | fire drawn as blocky striped textures, stray white blocks
+k0067 | glitch | shapes | light square patches scattered over the car body
+k0081 | drop | | sprite patchiness may be the character's design; cannot tell
+k0090 | glitch | shapes | repeating brick-shaped block pattern over the window and pillar
+k0096 | glitch | shapes;parallel_lines | blocky rectangles across the sky, striped garbage blocks along the top
+k0110 | glitch | dotted_lines;shapes | rectangular green dither-noise block around a distant tree
+k0002 | glitch | morse_code;parallel_lines | green vertical columns of garbage pixels over the whole frame
+k0018 | drop | | diagonal streaks in the sky; cannot confirm
+k0028 | drop | | clipped logo box behind the menu; cannot tell
+k0033 | drop | | flat grey ground; could be the game's terrain, cannot tell
+k0055 | drop | | solid red bar along the bottom edge: UI or fault, cannot tell
+k0063 | drop | | stray green line segments; too small to confirm
+k0068 | drop | | doubled sprites; cannot tell
+k0072 | drop | | faint jagged cloud outlines; cannot confirm
+k0088 | drop | | possible missing limbs in a dark frame; cannot confirm
+k0092 | glitch | shapes;discoloration | hard-edged blown-out white patches cut into the sky
+k0097 | drop | | small minimap boxes; too small to confirm
+k0101 | glitch | shapes | large black stair-stepped regions over the menu background
+k0106 | glitch | parallel_lines | white grid and diagonal line pattern over the whole scene
+k0123 | drop | | possible pixel dashes on the platform; cannot confirm
+k0127 | glitch | morse_code | horizontal band of dark garbage pixels across the title screen
+k0134 | glitch | shapes;parallel_lines | floor texture in misaligned stair-step patches with streaks
+k0145 | drop | | tiny dithered GIF of a menu; cannot judge
+k0050 | drop | | possible hatch stripes on fur; cannot confirm
+k0070 | drop | | possible blocky band over the crowd; cannot confirm
+k0083 | glitch | shader;line_pixelation | black speckled streak blotches smeared across the road
+k0095 | glitch | line_pixelation;parallel_lines | stair-step pixel edges, diagonal stripe patterns on the walls
+k0102 | drop | | small coloured fragments on fingers; cannot confirm
+k0109 | drop | | dark clothing and NPCs may be lighting; cannot tell
+k0120 | glitch | shapes | logo boxes over the portraits, KO letters with black wedges
+k0129 | drop | | stray geometry fragments on the fairway; cannot confirm
+k0136 | glitch | screen_stuttering;shapes | background mountains, clouds and sprites drawn over the portrait grid
+k0141 | glitch | parallel_lines;line_pixelation | floor shredded into horizontal stripes and noisy speckle
+k0161 | drop | | stray thin lines around the fire; cannot confirm
+k0174 | drop | | dotted line on the path may be a guide marker; cannot tell
+k0188 | glitch | parallel_lines | thin black horizontal line across the top screen through the faces
+k0116 | glitch | parallel_lines;shapes | horizontal blocky texture strips across the character's face
+k0122 | drop | | near-black frame; cannot judge
+k0133 | drop | | wavy borders and doubled text: match-end effect or glitch, cannot tell
+k0139 | glitch | shapes | sprite drawn on opaque beige rectangles (broken transparency)
+k0159 | glitch | parallel_lines | dark translucent horizontal bars across the whole frame
+k0179 | glitch | morse_code;dotted_lines | stray black vertical dashes across the road and town
+k0190 | glitch | discoloration | hard-edged red wash over the top third
+k0201 | glitch | shapes | checkerboard of dark squares across the grass (shadow corruption)
+k0211 | glitch | line_pixelation;shader | rainbow garbage pixel blocks on the alien's head
+k0225 | drop | | coloured overlays may be the game mechanic; cannot tell
+k0229 | drop | | possible hard-edged smoke / floating geometry; cannot confirm
+k0232 | drop | | grid around the sun may be a lens-flare effect; cannot tell
+k0176 | drop | | purple wash over the map screen; cannot tell
+k0198 | glitch | line_pixelation | orange stair-stepped outlines around the carriage, character and sandbags
+k0204 | drop | | DoF blur with a hard edge; borderline, cannot confirm
+k0213 | glitch | shapes;discoloration | blocky blown-out white fog patches around the car and road
+k0195 | glitch | shapes | room geometry missing: black void with floating polygon fragments
+k0199 | drop | | possible black line bands; cannot confirm
+k0207 | glitch | shader;morse_code | rainbow noise texture square on the lit patch
+k0214 | drop | | truncated label glyphs: font issue, not GPU corruption
+k0227 | drop | | pause menu over smeared streaks; effect or fault, cannot tell
+k0233 | drop | | possible stipple of dark dashes; cannot confirm
+k0218 | drop | | pause-menu scene clipped to a rectangle; cannot tell
+k0228 | drop | | faint yellow strip along the margins; cannot confirm
+g0242 | drop | | garbled name text: font fault, not GPU corruption
+h0026 | drop | | possible sparkle pixels on the emblem; cannot confirm
+h0061 | glitch | shapes | flat grey untextured blocks where the health-bar frame should be
+h0187 | glitch | shapes;line_pixelation | minimap broken into mismatched blocks
+h0191 | drop | | skills window frame may be missing; UI only, cannot confirm
+h0219 | drop | | thin vertical streaks in pixel art; cannot confirm
+h0223 | drop | | rows of dark ovals across the field may be crowd/stadium shadows; cannot tell
+h0231 | glitch | shapes | opaque orange boxes behind the fourth menu entry's text
+h0257 | drop | | possible translucent dark rectangles; cannot confirm
+h0259 | drop | | black map areas may be normal fog-of-war
+k0082 | drop | | possible dark streak lines on the art; cannot confirm
+k0113 | glitch | shader | flat untextured tan surface fills the left half where the character should be
+k0147 | glitch | shapes;discoloration | washed-out white rectangle on the sand left of the character
+k0149 | drop | | possible dark translucent band down the left edge; cannot confirm
+k0152 | drop | | possible vertical stripes; looks like the PSP display grid, cannot tell
+k0168 | drop | | possible stray dotted pixels on the logo; cannot confirm
+k0180 | drop | | glyphs missing pixel columns: font/text fault, not GPU corruption
+k0186 | drop | | purple tint may be night lighting

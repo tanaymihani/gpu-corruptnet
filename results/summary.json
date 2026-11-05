@@ -863,7 +863,7 @@
       "real_bugreport": 0.0
     },
     "auroc_seen_vs_real_commons": 0.4746794871794872,
-    "auroc_seen_vs_real_bugreport": 0.5172267612147372
+    "auroc_seen_vs_real_bugreport": 0.5180339607201309
   },
   "real_synthetic": {
     "real-deployed-eval": {
@@ -929,46 +929,46 @@
   },
   "real_glitches": {
     "deployed": {
-      "n_glitch": 117,
-      "n_bugreport_clean": 382,
+      "n_glitch": 200,
+      "n_bugreport_clean": 176,
       "n_commons": 326,
-      "glitch_recall": 0.9230769230769231,
-      "fpr_bugreport_clean": 0.8010471204188482,
+      "glitch_recall": 0.89,
+      "fpr_bugreport_clean": 0.7670454545454546,
       "fpr_commons_clean": 0.7791411042944786,
-      "auroc_glitch_vs_bugreport_clean": 0.5188615921600215,
+      "auroc_glitch_vs_bugreport_clean": 0.5270170454545454,
       "auroc_ci": [
-        0.46112677316865797,
-        0.5738231082471921
+        0.46983522727272725,
+        0.5826711647727273
       ],
-      "auroc_glitch_vs_commons": 0.6185045356824499
+      "auroc_glitch_vs_commons": 0.602361963190184
     },
     "native": {
-      "n_glitch": 117,
-      "n_bugreport_clean": 382,
+      "n_glitch": 200,
+      "n_bugreport_clean": 176,
       "n_commons": 326,
-      "glitch_recall": 0.6752136752136753,
-      "fpr_bugreport_clean": 0.2696335078534031,
+      "glitch_recall": 0.5,
+      "fpr_bugreport_clean": 0.24431818181818182,
       "fpr_commons_clean": 0.13803680981595093,
-      "auroc_glitch_vs_bugreport_clean": 0.727457824316463,
+      "auroc_glitch_vs_bugreport_clean": 0.6696022727272728,
       "auroc_ci": [
-        0.6761276681433749,
-        0.7765964111513849
+        0.6162940340909091,
+        0.7272237215909091
       ],
-      "auroc_glitch_vs_commons": 0.8076660898746788
+      "auroc_glitch_vs_commons": 0.7329907975460123
     },
     "resize_first": {
-      "n_glitch": 117,
-      "n_bugreport_clean": 382,
+      "n_glitch": 200,
+      "n_bugreport_clean": 176,
       "n_commons": 326,
-      "glitch_recall": 0.4358974358974359,
-      "fpr_bugreport_clean": 0.1099476439790576,
+      "glitch_recall": 0.28,
+      "fpr_bugreport_clean": 0.07954545454545454,
       "fpr_commons_clean": 0.05521472392638037,
-      "auroc_glitch_vs_bugreport_clean": 0.7717590728061932,
+      "auroc_glitch_vs_bugreport_clean": 0.6867613636363638,
       "auroc_ci": [
-        0.7211885264241285,
-        0.8183441849017764
+        0.6350276988636363,
+        0.744745028409091
       ],
-      "auroc_glitch_vs_commons": 0.8295055319595197
+      "auroc_glitch_vs_commons": 0.7356288343558283
     }
   }
 }

@@ -1,0 +1,60 @@
+k0022 | clean | |
+h0023 | clean | |
+k0180 | clean | |
+k0024 | clean | |
+k0152 | clean | | faint scanlines possible but not clearly visible
+h0199 | clean | |
+h0228 | glitch | shapes;triangulation | black polygon wedges on the ground
+h0132 | clean | |
+g0151 | clean | |
+g0262 | clean | |
+h0088 | glitch | parallel_lines | thin blue vertical stripes across the sky, blue band at left edge
+g0133 | clean | |
+g0247 | clean | | flat orange water, not clearly broken
+k0215 | drop | | stray white lines in the sky may be targeting UI; cannot tell
+k0100 | clean | |
+k0168 | clean | |
+h0187 | clean | | minimap corruption (per issue) not discernible at this size
+h0259 | clean | | map dark but plausibly undiscovered regions
+h0191 | clean | |
+k0193 | clean | |
+k0082 | clean | |
+h0011 | clean | |
+k0143 | clean | |
+k0113 | clean | |
+k0071 | clean | |
+g0073 | clean | |
+g0135 | clean | |
+k0151 | clean | |
+k0060 | glitch | shapes;dotted_lines | dithered dark blobs over the background planets
+h0223 | clean | |
+g0228 | drop | | menu screen only; no rendered scene
+h0257 | clean | |
+g0243 | clean | |
+g0242 | clean | | garbled name text at the bottom is a font bug, not rendering
+h0219 | clean | | pixel-art game; scaling shimmer at most
+g0083 | clean | |
+g0060 | glitch | parallel_lines | thin horizontal garbage lines across the frame (matches issue)
+h0086 | glitch | dotted_lines;shapes | stipple/dither pattern over both side windows and floor
+g0190 | clean | |
+g0225 | clean | |
+h0250 | clean | |
+k0043 | clean | |
+k0032 | clean | |
+h0235 | clean | | YouTube-style frame, artifacts not discernible
+k0147 | clean | |
+h0122 | clean | |
+h0131 | drop | | menu UI over a dark background, no rendered scene to judge
+g0232 | clean | |
+h0061 | clean | | grey HUD box top-left may be a missing texture; minor, keep clean
+h0026 | clean | |
+h0231 | clean | |
+g0055 | clean | |
+k0149 | clean | |
+k0186 | clean | |
+g0002 | clean | |
+g0078 | clean | |
+h0222 | clean | |
+h0049 | clean | |
+g0229 | clean | |
+h0269 | clean | |

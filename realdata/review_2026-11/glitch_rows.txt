@@ -1,0 +1,120 @@
+# id | verdict (ok / classes / clean / drop) | classes (if changed) | note
+g0003 | classes | screen_stuttering;screen_tearing | logo top cut into displaced, repeated blocks
+g0007 | ok | | horizontal scanlines over the dark frame
+g0013 | classes | shapes;shader | most of frame unrendered (black), top-left smeared
+g0022 | ok | | black stair-stepped missing region
+g0024 | ok | | green stair-stepped lines (video renderer, MoltenVK sync bug)
+g0025 | classes | morse_code;line_pixelation | rows of multicoloured garbage pixels
+g0029 | classes | triangulation | rainbow grid is the scene's UV-debug texture; the fault is the black spikes on the house
+g0039 | clean | | expected render of the g0029 scene: UV-debug texture is intentional, no spikes
+g0045 | classes | parallel_lines;line_pixelation | faint scanlines plus broken black streaks along the bottom
+g0065 | ok | | band of multicoloured noise over the top of the frame
+g0067 | classes | discoloration;shapes | solid yellow fill with a black blob over most of the frame
+g0069 | ok | | black rectangle on the back wall; matches the issue ("black texture"); lower confidence
+g0084 | ok | | whole view washed out to pale yellow/pink
+g0085 | ok | | green/white/magenta blocks left, black squares right
+g0091 | ok | | frame replaced by a vertical line pattern
+g0093 | ok | | magenta wash with red/blue blobs on the wall
+g0095 | ok | | bright sparkle artifacts over the face; moderate confidence
+g0097 | CHECK | | looks like a phone photo of a monitor (bezel, webcam) -> drop if so
+g0099 | ok | | only the top-left corner rendered (garbled), rest black
+g0106 | ok | | smeared, stretched geometry over the whole view
+g0120 | classes | triangulation;dotted_lines | black triangular shards plus dither dots on the terrain
+g0132 | ok | | dark diagonal wedge across the sky (shadow bug)
+g0136 | CHECK | | possibly a photo of a screen -> drop if so
+g0143 | ok | | black dithered blocks over the spell effect
+g0149 | ok | | title screen buried in multicoloured garbage pixels
+g0152 | classes | discoloration;morse_code | blown-out particles with black dash rows
+g0155 | ok | | app window filled with garbage memory blocks (OpenGL corruption)
+g0171 | ok | | multicoloured garbage texture on the mesh
+g0179 | ok | | neon edge colouring over the whole dark scene
+g0184 | ok | | magenta wash with garbled blocks
+g0187 | ok | | washed-out, overexposed frame
+g0211 | ok | | terrain blocks rendered as spiky pyramids
+g0214 | ok | | black squares where the plant's transparent pixels should be
+g0217 | ok | | large flat grey wedge over the sky, black overlay panel
+g0237 | ok | | karts and figures rendered as flat untextured silhouettes
+g0253 | drop | | yellow edge fringe may be the game's own vignette; the reported water bug is not clearly visible
+h0000 | ok | | huge stretched brown polygon across the sky (geometry to infinity)
+h0006 | ok | | bright green blocky shapes over the frame
+h0009 | ok | | multicoloured noise speckle and stripes over the frame
+h0010 | ok | | black square particles scattered over the scene
+h0012 | ok | | greyscale buffer with black holes instead of the scene
+h0019 | ok | | whole frame posterised to red and white
+h0034 | ok | | smeared, stretched geometry streak
+h0050 | ok | | large vertical smeared streak over the track
+h0072 | ok | | black frame with scattered garbage colour blocks
+h0098 | ok | | white/green and blue blocky tiles on the side windows
+h0100 | ok | | solid blue rectangles covering the scene
+h0110 | classes | dotted_lines | dashed black lines running across the scene (not geometry spikes)
+h0115 | ok | | orange/yellow smeared texture streak along the road
+h0117 | ok | | psychedelic false colours over the whole scene
+h0118 | ok | | garbage texture tiles filling both side bars
+h0125 | ok | | noisy partial render, large black region, dotted band below
+h0126 | ok | | black hexagonal blobs floating over the terrain
+h0133 | ok | | menu replaced by streaked geometry garbage
+h0138 | ok | | black dash rows on the dashboard surface (corruption in the captured frame)
+h0144 | ok | | dark diagonal wedge across the sky (same bug as g0132, different screenshot)
+h0159 | ok | | map regions rendered in wrong purple/gold
+h0160 | ok | | rainbow noise texture on the palm tree
+h0162 | ok | | scene mostly black with blue-tinted silhouettes and a black wedge
+h0165 | ok | | whole frame in psychedelic false-colour noise
+h0178 | classes | parallel_lines;triangulation | dark wireframe-like grid lines over the whole frame
+h0181 | ok | | huge flat yellow/green/purple polygons cover the scene
+h0202 | ok | | rows of coloured noise garbage
+h0213 | classes | dotted_lines | black stipple/dither dots over the whole scene (description corrected)
+h0243 | ok | | pink/white garbage smears over the title screen
+h0252 | ok | | band of coloured noise garbage over a black loading screen
+h0270 | ok | | flat purple untextured geometry on black (fog-register bug)
+h0275 | ok | | vertex explosion: huge flat purple/green/white polygons
+h0276 | ok | | same bug as h0270, second screenshot (near-duplicate scene)
+k0003 | ok | | heavy rainbow noise over the whole battle screen
+k0007 | ok | | flat green/yellow polygon wedge over the pause menu
+k0008 | ok | | white/colour noise column over the right half
+k0010 | ok | | band of rainbow garbage pixels along the bottom-left
+k0011 | ok | | whole frame of noise blocks
+k0014 | ok | | garbage blocks tiled around the sprite
+k0015 | ok | | car model rendered as strips of garbage lines
+k0017 | ok | | whole frame in blue noise speckle
+k0026 | ok | | garbage coloured lines and blocks over the menu
+k0030 | ok | | horizontal black streaks across the sky
+k0044 | ok | | purple garbage blocks and lines over the scene
+k0046 | ok | | noisy horizontal stripes over the upper half (mirror garbage)
+k0054 | ok | | solid bright green blobs along the top (corruption bar)
+k0056 | ok | | tall black slabs (shadow artifacts)
+k0059 | ok | | black squares floating around the effects
+k0061 | ok | | magenta/cyan/black noise textures on lanterns and props
+k0076 | ok | | neon green/blue flat false colours, black blobs
+k0077 | ok | | green wash over the right half behind the menu
+k0079 | ok | | black rectangular hole in the menu background
+k0080 | ok | | columns of white dots plus a garbled block region over the classroom
+k0084 | ok | | large flat teal rectangle of missing texture
+k0086 | ok | | black square holes at the right edge
+k0093 | ok | | noisy garbage texture blocks on the left panel
+k0105 | ok | | magenta/blue/red garbage blocks over the UI
+k0107 | ok | | large white blocks covering the frame
+k0114 | ok | | rainbow corrupted colours across the middle of the scene
+k0118 | ok | | neon red/yellow/green false-colour wash
+k0121 | ok | | flat periwinkle regions where the scene is missing
+k0126 | ok | | noise garbage blocks over the logo screen
+k0130 | ok | | posterised red/blue wrong colours on the character art
+k0131 | ok | | dark grid of coloured dots over the whole scene
+k0146 | ok | | neon magenta/cyan false colours and line noise on buildings
+k0153 | ok | | horizontal scanline stripes over the top band
+k0154 | ok | | horizontally displaced, repeated bands over the left HUD
+k0155 | ok | | black region cut out of the play area
+k0158 | ok | | large white blob covering the scene
+k0162 | ok | | flat blue untextured surfaces (missing textures); moderate confidence
+k0163 | ok | | rainbow noise texture on the cube (garbage texture)
+k0167 | ok | | black jagged bar cutting through the terrain
+k0170 | classes | shapes;dotted_lines | black/white checkered triangles over the sky
+k0177 | ok | | dark grey garbage tiles over the whole (fading) frame
+k0189 | ok | | noise-speckled garbage texture on the right screen
+k0202 | ok | | flat salmon untextured surfaces and wrong shading arcs
+k0205 | ok | | cyan wash with a black jagged block region
+k0208 | ok | | large white rectangle over the loading screen
+k0212 | ok | | yellow dither dot pattern over the menu
+k0219 | ok | | green noise garbage behind the menu
+k0226 | ok | | white noise garbage band where the saved photo should be
+g0097 | drop | | phone photo of a TV (bezel, webcam, reflections): screen photos were excluded in the first pass
+g0136 | drop | | phone photo of a screen (pixel grid, glare)

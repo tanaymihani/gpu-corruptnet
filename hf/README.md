@@ -11,18 +11,19 @@ tags:
   - conformal-prediction
 metrics:
   - f1
+  - roc_auc
 datasets:
   - tanganke/stl10
 ---
 
-# GPU-CorruptNet ResNet-50
+# GPU-CorruptNet ResNet-50 (real-frame fine-tune)
 
 Multi-label detector for 10 GPU rendering-artifact types (the
 [Glitchify](https://arxiv.org/abs/2011.15103) taxonomy): shader, shapes, discoloration,
 morse code, dotted lines, parallel lines, triangulation, line pixelation, screen stuttering,
-screen tearing. An all-negative output means "clean". Code, data manifests and every
-number below: [github.com/tanaymihani/gpu-corruptnet](https://github.com/tanaymihani/gpu-corruptnet).
-Try it in the browser: [tanaymihani.github.io/gpu-corruptnet](https://tanaymihani.github.io/gpu-corruptnet/).
+screen tearing. An all-negative output means "clean". This is the checkpoint the always-on
+browser demo serves: [tanaymihani.github.io/gpu-corruptnet](https://tanaymihani.github.io/gpu-corruptnet/).
+Code, data manifests and every number below: [github.com/tanaymihani/gpu-corruptnet](https://github.com/tanaymihani/gpu-corruptnet).
 
 ## Files
 
@@ -41,40 +42,47 @@ net.eval()
 # x: (N, 3, 224, 224) after a bilinear squash-resize and ImageNet normalisation
 probs = torch.sigmoid(net(x) / cfg["temperature"])          # calibrated per-class probabilities
 flagged = probs >= cfg["decision_threshold"]                # predicted artifact types
-conformal_set = probs >= cfg["conformal_tau"]               # ~90% full-inclusion set
+conformal_set = probs >= cfg["conformal_tau"]               # conformal set of plausible types
 ```
 
 ## Training
 
-ImageNet-pretrained ResNet-50 fine-tuned 12 epochs at 224 px (Adam, lr 1e-4, BCE) on
-STL-10 photos corrupted on the fly by a re-implementation of the Glitchify injectors
-(30% clean, else 1–2 artifacts at severity 1–5). Ship and truck images are held out as
-unseen content. Free Colab T4.
+1. ImageNet-pretrained ResNet-50, fine-tuned 12 epochs at 224 px (Adam, lr 1e-4, BCE) on STL-10
+   photos corrupted on the fly by a re-implementation of the Glitchify injectors (30% clean,
+   else 1–2 artifacts at severity 1–5).
+2. Then fine-tuned 8 epochs (lr 5e-5) on 132 free-licence screenshots of 16 open-source games
+   from Wikimedia Commons, with artifacts injected at the frame's native resolution (random
+   crops, 8 corruption draws per frame per epoch). Four further titles are held out.
 
-## Evaluation (identical held-out frames, 95% bootstrap CIs)
+## Evaluation
 
-| split | macro-F1 | binary F1 (corrupted vs clean) |
-|---|---|---|
-| seen content (1,560 frames) | 0.911 [0.899, 0.922] | 0.991 |
-| unseen content (2,600 frames) | 0.876 [0.866, 0.884] | 0.971 |
+| test set | metric | this model | STL-10-only checkpoint |
+|---|---|---|---|
+| Real glitch screenshots vs clean screenshots from public bug reports (200 vs 176) | AUROC | **0.67 [0.62, 0.73]** | 0.53 [0.47, 0.58] |
+| Clean free-licence game frames (326) | false-alarm rate | **14%** | 78% |
+| Synthetic artifacts on 4 held-out game titles (344 draws) | macro-F1 | **0.694** | 0.335 |
+| Synthetic artifacts on STL-10 photos, unseen content (2,600) | macro-F1 | 0.711 [0.698, 0.723] | **0.876** [0.866, 0.884] |
 
-Calibration (T = 1.5647, fitted on a disjoint 1,560-frame split): pooled ECE 1.06% → 0.26%
-(seen) and 1.42% → 0.17% (unseen); classwise ECE 1.37% → 1.18% and 1.67% → 1.39%.
-Conformal threshold τ = 0.0493 (α = 0.1): full-inclusion coverage on corrupted frames
-0.905 seen / 0.895 unseen. Weakest classes on unseen content: screen tearing (F1 0.63) and shapes (0.75).
+Fine-tuning on real frames trades synthetic STL-10 accuracy for far fewer false alarms on real
+frames. The STL-10-only checkpoint (GitHub release `demo-model`) flags most clean real frames
+as corrupted. The real-glitch labels come from a two-pass visual review of public bug-report
+screenshots (`realdata/real_glitches.csv`, 123 disputed rows excluded); only the URLs are
+distributed. At the 0.5 threshold this model catches 50% of the real glitches; it is a triage
+aid, not a replacement for a tester.
 
-## Limitations (read before use)
+Calibration: temperature T = 1.057 and conformal threshold τ = 0.0484 (α = 0.1), both fitted on a
+real-frame calibration split. Coverage on corrupted held-out frames is 0.87, below the 0.90
+target: the calibration split is small (36 frames × 4 draws).
 
-- **Synthetic training data only.** On real game screenshots this checkpoint flags 78% of
-  clean Commons frames and 80% of clean bug-report screenshots as corrupted. It separates
-  117 real glitch screenshots from 382 clean ones at AUROC 0.52, i.e. chance. Do not use it
-  on real frames without fine-tuning on them; see the repository's real-frame experiments.
-- Its embedding-based OOD check does not flag real frames either (they embed near the
-  corrupted training frames), so it cannot warn you about this shift.
-- Inputs are squashed to 224 × 224; fine artifacts at native resolution (1–2 px dashes)
-  may disappear in the resize.
+## Limitations
+
+- Most real driver faults (missing geometry, garbage textures, wrong buffers) map only loosely
+  onto the ten procedural types. On real screenshots, trust the binary "corrupted" score more
+  than the per-class labels.
+- Inputs are squashed to 224 × 224, so artifacts 1–2 px wide at native resolution can vanish.
+- Trained on 16 games; content far from those (2D sprites, video, desktop UI) is out of scope.
 
 ## Citation
 
-If you use this model, please cite the Glitchify taxonomy (Davarmanesh et al., 2020) and
-the repository above.
+If you use this model, please cite the Glitchify taxonomy (Davarmanesh et al., 2020) and the
+repository above.

@@ -11,10 +11,12 @@ unseen image content (5 seeds). Temperature scaling fixes the pooled calibration
 (ECE 1.06% → 0.26%) but barely moves classwise ECE (1.37% → 1.18%), and a marginal
 conformal set that reports 93.5% coverage covers only 90.5% of the frames that actually
 contain an artifact, with two classes near 80%. A per-class (Mondrian) conformal set lifts
-every class to ≥ 0.84. The largest gap is sim-to-real: on 117 real glitch screenshots
-from public bug reports the deployed model separates glitches from clean screenshots at
-AUROC 0.52 [0.46, 0.57], i.e. chance, because it flags 78–80% of all real frames;
-fine-tuning on 132 real game frames with injected artifacts lifts this to 0.73 [0.68, 0.78] and cuts false alarms on clean game frames from 78% to 14%, but real captured faults (as in VISAPP 2022) are still needed to close the gap.
+every class to ≥ 0.84. The largest gap is sim-to-real: on 200 real glitch screenshots
+from public bug reports (labels reviewed twice) the STL-10-only model separates glitches from
+176 clean screenshots at AUROC 0.53 [0.47, 0.58], i.e. chance, because it flags about 78% of
+all real frames. Fine-tuning on 132 real game frames with injected artifacts lifts this to
+0.67 [0.62, 0.73] and cuts false alarms on clean game frames from 78% to 14%, but real
+captured faults (as in VISAPP 2022) are still needed to close the gap.
 
 ## 1. Problem and prior work
 
@@ -66,11 +68,16 @@ Artifacts are injected at the frame's native resolution and the result is resize
 
 **Real glitches.** Screenshots attached to public issues of 19 graphics projects (DXVK,
 vkd3d-proton, Proton, MoltenVK, RPCS3, PCSX2, PPSSPP, xemu, Flycast, melonDS, shadPS4,
-Cemu, Godot, Luanti, SuperTuxKart, Bevy, wgpu, Vita3K, Azahar). Of 679 reviewed images,
-117 show a visible rendering glitch and 382 are clean in-game frames from the same
-reports (expected-vs-actual pairs, other scenes); 180 were UI, logs, photos of monitors
-or unclear and were dropped. Each glitch also has a best-fit Glitchify class and a short
-description. Only URLs and labels are committed (`realdata/real_glitches.csv`).
+Cemu, Godot, Luanti, SuperTuxKart, Bevy, wgpu, Vita3K, Azahar). In a first pass over 679
+images, 117 were marked glitch, 382 clean (expected-vs-actual pairs, other scenes), and 180
+dropped (UI, logs, photos of monitors, unclear). A second pass re-checked every kept row at
+higher resolution, with three further reviewers on the clean rows: it found visible faults in
+87 screenshots the first pass had called clean, corrected 12 class labels, and excluded 123
+disputed or unusable rows. The scored set is **200 glitch and 176 clean** screenshots.
+Each glitch has a best-fit Glitchify class and a short description. Only URLs and labels are
+committed (`realdata/real_glitches.csv`; the review is documented in `realdata/README.md`).
+The first-pass labels gave AUROC 0.52 / 0.73 / 0.77 for the three models in §7; the
+re-checked set is harder (it adds subtle faults) and gives 0.53 / 0.67 / 0.69.
 
 ## 3. Classification
 
@@ -175,20 +182,21 @@ Three detectors, three test sets of increasing realism:
 
 | model | synthetic, STL-10 unseen content | synthetic on held-out game titles | real glitches vs clean bug-report screenshots (AUROC) | false alarms on clean Commons frames |
 |---|---|---|---|---|
-| deployed (STL-10 only) | 0.876 | 0.335 | 0.52 [0.46, 0.57] | 78% |
-| + real frames, artifacts at native resolution | - | 0.694 | 0.73 [0.68, 0.78] | 14% |
-| + real frames, artifacts painted after resize | - | 0.879* | 0.77 [0.72, 0.82] | 6% |
+| STL-10 only (release `demo-model`) | 0.876 | 0.335 | 0.53 [0.47, 0.58] | 78% |
+| + real frames, artifacts at native resolution (release `real-model`, live demo) | 0.711 | 0.694 | 0.67 [0.62, 0.73] | 14% |
+| + real frames, artifacts painted after resize | - | 0.879* | 0.69 [0.64, 0.75] | 6% |
 
 *Scored on its own resize-first test pipeline, so not comparable with the row above; the
 real-glitch column is the fair comparison.
 
 Fine-tuning from the STL-10 checkpoint on 132 real game frames (8 epochs, random crops, 8
-corruption draws per frame) recovers 21–25 AUROC points on real glitches and removes most false
-alarms. At the 0.5 threshold, recall on real glitches falls from 0.92 (the deployed model flags
-almost everything) to 0.68 (native) and 0.44 (resize-first); bug-report F1 rises from 0.41 to
-0.53 and 0.49. Whether artifacts are painted at native resolution or after the resize made no
-significant difference in ranking (CIs overlap); native keeps more recall at the default
-threshold. The remaining gap is the one VISAPP 2022 closed with real captured corruption:
+corruption draws per frame) recovers 14–16 AUROC points on real glitches and removes most false
+alarms. At the 0.5 threshold, recall on real glitches falls from 0.89 (the STL-10 model flags
+almost everything) to 0.50 (native) and 0.28 (resize-first), while precision on bug-report
+screenshots rises from 0.57 to 0.70 and 0.80. Whether artifacts are painted at native
+resolution or after the resize made no significant difference in ranking (CIs overlap);
+native keeps more recall at the default threshold. The fine-tune costs synthetic STL-10
+accuracy (macro-F1 0.876 → 0.711 on unseen content): it trades the benchmark for the real frames. The remaining gap is the one VISAPP 2022 closed with real captured corruption:
 procedural injectors do not look like most real driver faults (missing geometry, garbage
 textures, wrong buffers), which my labels mostly map to *shapes* and *discoloration*, the two
 types the synthetic model also generalises to worst.
@@ -212,9 +220,9 @@ notebook has the cell.
 
 ## 9. Limitations
 
-- The real-glitch labels come from one reviewer looking at screenshots at reduced size;
-  subtle glitches (a wrong shadow) are likely labelled clean, so recall on real glitches is
-  measured on the *visible* ones. Labels are in the CSV for anyone to audit.
+- The real-glitch labels come from visual review of screenshots (two passes, four reviewers,
+  disputed rows excluded), not from the bug fixes. Subtle faults are probably still labelled
+  clean, so recall is measured on visible faults; the excluded rows are listed in the CSV.
 - Bug-report screenshots are a convenience sample (emulators and translation layers
   dominate) and include UI overlays; they are not a capture campaign like VISAPP 2022's.
 - The cross-generator test against AMD's original Glitchify code was not run: that

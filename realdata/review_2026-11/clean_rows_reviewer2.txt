@@ -1,0 +1,128 @@
+g0000 | clean |  | ray-traced station scene, reflections look plausible
+g0004 | drop |  | whole frame blurred incl. focal faces; likely broken DoF but cannot tell
+g0009 | clean |  | letterboxed night cutscene, no fault seen
+g0019 | clean |  | menu with kart and Mickey, no black artifacts visible
+g0035 | clean |  | combat scene with HUD, no fault seen
+g0043 | clean |  | Sponza demo, shadows and textures look correct
+g0047 | clean |  | dark hangar with HUD, no garbage visible
+g0050 | clean |  | map menu; frame-post textures streaky but plausibly intended
+g0053 | glitch | shader;discoloration | car shadow drawn as white/blue glow patch on road
+g0057 | glitch | shapes;shader | bright green blocky garbage polygons around Snake's feet
+g0063 | glitch | discoloration;shapes | translucent reddish blocky ghost overlay across whole frame
+g0071 | glitch | triangulation | character mesh stretched into long spike toward horizon
+g0076 | glitch | parallel_lines | thin vertical blue stripes across left of sky
+g0079 | glitch | shapes | flower sprites chopped into hard rectangular fragments
+g0082 | clean |  | combat scene; faded enemies look like intended death fade
+g0088 | glitch | shapes | missing-glyph boxes after every menu string (font fault; borderline)
+g0100 | glitch | parallel_lines | repeated thin parallel light bands along shadow edge on ground
+g0107 | clean |  | sparse train-sim terrain, no fault seen
+g0134 | glitch | shapes | cars rendered as solid black silhouettes and outlines
+g0139 | glitch | shapes | distant terrain missing; flat sky-blue holes under buildings
+g0142 | glitch | discoloration | fighters engulfed in opaque blown-out white blob with dithered edges
+g0147 | clean |  | menu over space scene with DXVK HUD; no visible banding
+g0151 | clean |  | space scene with HUD, no fault seen
+g0181 | drop |  | car body looks hollow and hard-edged blur block at right; cannot tell
+g0190 | clean |  | PSP hunt scene with touch controls, geometry looks normal
+g0196 | clean |  | stadium VS screen with touch controls, no fault seen
+g0200 | clean |  | dialogue scene, characters render correctly
+g0215 | clean |  | voxel scene; only IME window position bug and user red circle
+g0221 | clean |  | brick voxel terrain; only distance aliasing, no fault
+g0227 | clean |  | kart race frame, input bug only, render looks fine
+g0231 | clean |  | kart in walled lane; speckled wall base looks like texture (borderline)
+g0242 | glitch | dotted_lines | garbled name text and vertical dotted glyph column (text fault; borderline)
+g0246 | clean |  | cel-shaded title screen, no fault seen
+g0250 | clean |  | fight scene on wooden stage, low-res but no fault
+g0256 | drop |  | flat orange sea with straight seam lines; may be broken water, cannot tell
+g0261 | clean |  | corridor scene; tiny distant figure at doorway not clearly a fault
+g0265 | clean |  | headlight glow and xemu controller overlay; no clear fault
+h0005 | glitch | shader;shapes | band of black jagged blotches across water surface
+h0014 | drop |  | cape looks chrome-like with odd purple patches; cannot tell if corrupt
+h0021 | glitch | morse_code | rows of black horizontal dashes across lower frame and top right
+h0026 | glitch | shader | purple sparkle pixels along suit's spider emblem
+h0035 | glitch | shader | walls and floor covered in white/brown noise garbage textures
+h0039 | glitch | morse_code | thin stray orange/black dashed pixel rows beside portraits
+h0042 | clean |  | dark interior in SW renderer, no fault seen
+h0047 | glitch | dotted_lines;shapes | grid of small dark corner marks and blocks over entire frame
+h0052 | clean |  | DMC gate cutscene with textured sea, looks correct
+h0058 | glitch | shader | left pillar textured with black/white garbage noise blocks
+h0063 | glitch | shader;discoloration | sea flat grey with ghost subtitle text smeared onto it
+h0068 | clean |  | ship deck minigame in SW renderer, no fault seen
+h0077 | glitch | shapes | hard rectangular seams of vignette/blur overlay in frame
+h0080 | clean |  | batter with crowd; edge colour marks are outside game frame
+h0083 | glitch | parallel_lines | ghosted duplicate red lines beside lamp pole, boxy bloom halo
+h0086 | glitch | discoloration;parallel_lines | pod posterised to dithered white blocks, diagonal stripes on right wall
+h0093 | clean |  | baseball pitch view; strike-zone box is game UI
+h0097 | drop |  | user red circle on black scoreboard; fault not clearly visible
+h0103 | glitch | line_pixelation;shapes | blocky magenta/orange stair-step fragments along hill and sun edges
+h0107 | glitch | shapes;discoloration | sky rendered solid black, foreground characters washed-out grey ghosts
+h0116 | glitch | discoloration | fighters engulfed in opaque blown-out white blob with dithered edges
+h0124 | clean |  | Witcher 2 night forest with overlay, no fault seen
+h0129 | drop |  | menu over water; faint red dotted contours could be design or artifact
+h0132 | clean |  | waterfall and reeds; white particles read as foam, no fault
+h0142 | glitch | morse_code | stray bright white dashes on stream (user-boxed region)
+h0150 | glitch | triangulation;parallel_lines | black streaked hatching spikes smeared across scene centre
+h0153 | glitch | shapes | scattered solid multicoloured pixel blocks over dark background
+h0164 | glitch | shader | black/white noise speckle over right character's dress
+h0168 | glitch | shapes | dialog text under title garbled into clipped glyph fragments
+h0171 | glitch | morse_code;parallel_lines | map terrain covered in multicoloured noise in vertical stripes
+h0175 | drop |  | uniform scanlines over whole frame; reported fault or CRT filter, unclear
+h0180 | glitch | shapes | square holes punched in character model, checkerboard pattern
+h0185 | glitch | shapes | garage scene near-black with large black wedge cutting over car
+h0189 | glitch | triangulation;parallel_lines | cliff face texture stretched into vertical streaks
+h0194 | glitch | shader | black/white noise speckle over woman's dress
+h0198 | glitch | triangulation | player's racket geometry stretched into long beams across court
+h0221 | clean |  | Digimon evolution menu; reported tiny glitch not discernible
+h0224 | clean |  | dark retry menu over character, no clear fault
+h0227 | drop |  | black stair-stepped patch on wall top; fault or dark geometry, unclear
+h0233 | glitch | parallel_lines | three thin vertical lines across movie frame
+h0236 | glitch | shapes | chains of dark blob shadows scattered over field and wall
+h0241 | glitch | parallel_lines | faint vertical stripe banding over whole frame
+h0245 | glitch | parallel_lines | stray coloured texture-bleed strips above and below level card
+h0249 | glitch | shapes | sun drawn as opaque orange square block at top
+h0253 | glitch | parallel_lines | faint dark seam lines along glyph tile borders in menu text (subtle)
+h0259 | drop |  | local map UI; black areas may be normal fog-of-war
+h0267 | glitch | discoloration;shapes | translucent light band with hard vertical edge down left side
+h0272 | clean |  | Xbox dashboard; top pixel rows look normal
+k0002 | glitch | morse_code;parallel_lines | green vertical columns of garbage pixels over whole frame
+k0009 | clean |  | Tomb Raider in SW renderer, no fault visible
+k0018 | glitch | triangulation;parallel_lines | sky filled with diagonal grey/salmon stretched streaks
+k0022 | clean |  | ship deck dialogue scene, no fault seen
+k0028 | drop |  | FINISH logo clipped to hard box behind menu; possible fault, unclear
+k0033 | glitch | shader | ground flat streaky grey instead of grass (minimap shows grass)
+k0037 | clean |  | boss scene with sprites, no visible corruption
+k0043 | clean |  | street soccer frame, no garbage visible
+k0049 | clean |  | GoW temple room (video capture), no fault seen
+k0055 | drop |  | corridor fine; solid red bar at bottom edge, UI or fault unclear
+k0063 | glitch | parallel_lines | stray green parallel line segments across endzone lettering
+k0068 | drop |  | enemy sprites appear doubled/stacked; possible fault, unclear
+k0072 | glitch | line_pixelation;dotted_lines | purple jagged outline traces of clouds across sky
+k0082 | glitch | parallel_lines | dark horizontal streak lines across wizard character, left side
+k0088 | glitch | shapes | Drake's upper arms and legs missing, forearms float detached
+k0092 | glitch | shapes;discoloration | hard-edged blown-out white patches cut into storm sky
+k0097 | glitch | shapes | minimap drawn as misaligned translucent boxes, map texture missing
+k0101 | glitch | shapes | large black blocky stair-stepped regions over menu background
+k0106 | glitch | parallel_lines;dotted_lines | white grid and diagonal line pattern over whole scene
+k0111 | clean |  | Rogue Trader main menu, no corruption visible
+k0119 | clean |  | snowy MMO scene; black box above head likely name redaction
+k0123 | glitch | morse_code;shapes | jagged shadow blob with stray light pixel dashes on platform
+k0127 | glitch | morse_code | horizontal band of dark garbage pixels across title screen
+k0134 | glitch | shapes;parallel_lines | floor texture in misaligned stair-step patches with horizontal streaks
+k0140 | clean |  | TrickStyle hub; cyan lines are HUD, low-res textures normal
+k0145 | drop |  | tiny dithered GIF frame of pause menu; cannot judge
+k0149 | glitch | shapes;discoloration | dark hard-edged translucent band down left edge of battle scene
+k0156 | clean |  | PSP save-complete screen, no garbage visible
+k0160 | clean |  | castle hall scene; only GIF dithering, no render fault
+k0168 | glitch | dotted_lines | stray light-blue dotted pixels along top edges of logo letters
+k0173 | clean |  | DS publisher logo screens, no fault seen
+k0176 | glitch | discoloration | hard-edged purple translucent wash over room background
+k0180 | glitch | shapes | legal text glyphs missing pixel columns (l, i dropped)
+k0186 | drop |  | small frame with uniform purple tint; night lighting or fault unclear
+k0191 | clean |  | upscaled cave map; blocky textures normal, no fault
+k0194 | clean |  | DS logo and press-button screens, no fault seen
+k0198 | glitch | line_pixelation | orange stair-stepped outlines around carriage, character and sandbags
+k0204 | glitch | shader | DoF blur on helmet cut off along hard diagonal edge (borderline)
+k0213 | glitch | discoloration;shapes | blocky blown-out white fog patches around car and road
+k0217 | clean |  | KOTOR load-game menu renders cleanly; save damage is not visual
+k0227 | drop |  | pause menu over horizontal smeared streaks; effect or fault unclear
+k0230 | clean |  | temple scene; blocky wall texture looks like low-res asset
+k0233 | glitch | dotted_lines | stipple of short vertical dark dashes over cars and buildings

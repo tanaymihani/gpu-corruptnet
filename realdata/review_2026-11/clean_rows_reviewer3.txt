@@ -1,0 +1,127 @@
+g0001 | clean |  | foggy title-screen landscape, no visible fault
+g0006 | clean |  | character select, face and suit render normally
+g0016 | glitch | shapes | skin geometry streaks down from Michael's elbow
+g0021 | clean |  | dark forest main menu, nothing broken visible
+g0036 | clean |  | Doom 3 main menu with perf overlay, no visible fault
+g0044 | glitch | shapes; parallel_lines | misaligned purple blocky bars over window, hatching on figures
+g0048 | glitch | parallel_lines | stray thin vertical lines (user-circled) on menu art
+g0051 | clean |  | Tekken 5 stage, no pink square visible
+g0054 | clean |  | soft software-render frame, no clear fault
+g0059 | clean |  | mode-select screen; scanline screen effect looks intentional
+g0066 | glitch | morse_code | rows of red/cyan dash garbage on black top band
+g0073 | clean |  | hospital lobby, top area renders normally
+g0077 | clean |  | race track view, nothing broken visible
+g0080 | clean |  | lamp bloom smooth, no checkerboard visible
+g0083 | clean |  | dialogue over fire backdrop, no visible fault
+g0089 | clean |  | dark trail below jet ambiguous (smoke), otherwise normal
+g0101 | clean |  | video menu over castle art; scaling/taskbar not a render fault
+g0108 | glitch | discoloration | posterised yellow-green false colours, flat yellow skin, black blocks
+g0135 | clean |  | FFXII town street, renders normally
+g0140 | clean |  | tennis court, no visible fault
+g0144 | glitch | morse_code | rows of dark dashes corrupting floor reflections
+g0148 | clean |  | snowy terrain with title menu, distant terrain looks normal
+g0153 | clean |  | Anno town view, no vertical banding visible
+g0186 | clean |  | Daxter title screen with touch controls, no fault
+g0192 | clean |  | save menu; stacked Ys icons look like slot list, no clear fault
+g0197 | clean |  | mission-clear stats over game scene, renders normally
+g0203 | clean |  | murky underwater view; faint block faces not a clear render fault
+g0216 | clean |  | voxel scene with hanging lantern, renders normally
+g0225 | clean |  | pale overbright locked chest, not clearly a fault
+g0228 | clean |  | kart-select UI; empty model area not clearly a render fault
+g0232 | clean |  | kart on track, blocky low-res shadow only
+g0243 | clean |  | perf-test results over blurred track, no fault
+g0247 | clean |  | sunset over water through rig, no clear fault
+g0251 | glitch | line_pixelation | green garbage streaks in strip along left edge (user-circled)
+g0257 | clean |  | captured Xbox frame, headlight glow looks normal
+g0262 | clean |  | racing frame with fire and smoke, no visible corruption
+h0002 | glitch | shader | black speckle-noise textures on armor, cape and racked weapons
+h0008 | clean |  | character select, model renders normally
+h0016 | clean |  | arcology walkway, reflections plausible, no clear fault
+h0023 | clean |  | city vista renders fully (not black), overlays only
+h0027 | glitch | shader | faint yellow speckle dots on water inside user's red box
+h0036 | clean |  | plane on runway; edge streaks look like intended speed blur
+h0040 | glitch | dotted_lines | dotted garbage pixel row under dialog text, fragments below box
+h0044 | clean |  | hardware-render frame of same room, renders normally
+h0049 | clean |  | hangar wall with HUD, no garbage visible
+h0053 | clean |  | Monopoly room, painting renders without diagonal lines
+h0061 | glitch | shapes | flat grey untextured blocks in place of health-bar HUD frame
+h0066 | glitch | shapes | painting replaced by scattered dark block fragments; frame blocks
+h0075 | clean |  | Avatar fight scene, renders normally
+h0078 | glitch | line_pixelation | blocky stair-stepped white streaks in clouds left of jet
+h0081 | glitch | shader | eyes broken into blue/black speckles; stray bar across bottom UI
+h0084 | glitch | shapes | scoreboard region black and missing (user-circled)
+h0088 | glitch | parallel_lines | thin vertical blue stripes across sky, thick band at left
+h0094 | glitch | shapes | black blotch artifacts strung along mountain ridges
+h0099 | clean |  | hair renders, only faint dither at edges; no clear fault
+h0104 | glitch | discoloration | bright blue patches on clothing and belts of both fighters
+h0112 | glitch | shader | jagged rainbow pixel-noise particles scattered over floor
+h0120 | glitch | shapes | blocky square tiles corrupting waterfall spray
+h0127 | glitch | shapes; shader | flat grey untextured blob in sky, white speckle noise
+h0130 | glitch | shader | dense red pixel speckles across ground textures
+h0135 | glitch | shader | black pixel-noise speckle over entire ground texture
+h0143 | clean |  | flare/smoke puffs look plausible, no clear fault
+h0151 | glitch | shader | bright white/yellow pixel speckles scattered over whole frame
+h0158 | clean |  | 2D pixel-art forest, renders normally
+h0166 | clean |  | equipment menu, character model renders normally
+h0169 | glitch | parallel_lines | regular thin vertical banding lines across UI panels
+h0172 | glitch | shapes | dark square quads and black specks around fire effect
+h0177 | glitch | shader | character flat untextured white, scene black silhouettes
+h0182 | glitch | discoloration | hard vertical lighting seam splits face into two tones
+h0186 | glitch | parallel_lines | thin green horizontal line across full frame width
+h0191 | glitch | shapes | skills window background/frame missing, title tab truncated
+h0195 | clean |  | dark underpass racing view, nothing broken visible
+h0199 | clean |  | night forest with perf overlay, renders normally
+h0222 | clean |  | level-select menu; dots are touch-joystick overlay
+h0225 | clean |  | snowy street; blue horizontal streaks plausibly lamp lens flares
+h0228 | glitch | triangulation | black and white stray triangles over ground and rocks
+h0234 | glitch | shapes | dark rectangle with misplaced skin patch over portrait's mouth
+h0238 | glitch | triangulation | tank shadow broken into jagged spiky dark polygons
+h0242 | clean |  | mission-clear stats screen with emulator OSD text, no clear fault
+h0247 | clean |  | dialogue box and portrait over plain backdrop, nothing pointable
+h0250 | clean |  | tennis court replay, renders normally
+h0256 | glitch | shader | overbright white light blob engulfs jeep instead of headlight beam
+h0262 | glitch | line_pixelation | faint green garbage streaks in strip along left edge (user-circled)
+h0269 | clean |  | title screen; only offset black borders, no render fault
+h0273 | clean |  | pause menu over dimmed race scene plus emulator debug overlay
+k0004 | clean |  | title screen, no garbage visible incl. edges
+k0013 | glitch | dotted_lines | columns of stray coloured dots on left side of portraits
+k0019 | glitch | morse_code | row of coloured garbage dashes along bottom and right edges
+k0024 | clean |  | jungle third-person view, renders normally
+k0029 | glitch | dotted_lines | faint vertical dotted white lines across upper half of room
+k0034 | glitch | parallel_lines | fine dark horizontal line pattern over entire frame
+k0038 | glitch | discoloration; shader | gun and hands in noisy green/purple false colours
+k0045 | clean |  | night forest dialogue scene, no garbage visible
+k0050 | glitch | dotted_lines; shader | black hatch stripes on white fur, black dots in sky
+k0057 | clean |  | mech battle scene, renders normally
+k0066 | clean |  | city street; pink bottom strip is cropped log text outside game
+k0070 | glitch | shapes | jagged band of blocky blue striped quads over crowd heads
+k0073 | clean |  | profile menu with teal-lit Shepard, no clear fault
+k0083 | glitch | shader; line_pixelation | black speckled streak blotches smeared across road
+k0089 | clean |  | dark jungle scene with perf overlay, nothing pointable
+k0095 | glitch | line_pixelation; parallel_lines | blocky stair-step pixel edges everywhere, diagonal stripe patterns on walls
+k0099 | clean |  | buggy at gas station, renders normally
+k0102 | glitch | discoloration; shapes | bright red/pink/yellow fragments on Sora's fingers and hair
+k0109 | glitch | triangulation; discoloration | black clothing with grey shard triangles; NPCs blacked out
+k0113 | glitch | shader | flat untextured tan surface fills left half; character model missing
+k0120 | glitch | shapes | logo texture boxes drawn over P1 portraits; KO letters with black wedges
+k0124 | clean |  | batting view and baserunner windows look normal
+k0129 | glitch | shapes | stray yellow geometry fragments with jagged comb edges on fairway
+k0136 | glitch | shapes | background mountains, clouds, sprites drawn over portrait grid
+k0141 | glitch | parallel_lines; line_pixelation | floor shredded into horizontal stripes and noisy speckle
+k0147 | glitch | shapes; discoloration | washed-out white rectangle patch on sand left of Snake
+k0151 | clean |  | vehicle select screen renders normally
+k0157 | clean |  | Gradius stage with touch controls and FPS overlay, no fault
+k0161 | glitch | triangulation | stray thin yellow polygon edge lines around fire at left
+k0169 | clean |  | menu graph-paper grid looks intentional; nothing clearly broken
+k0174 | glitch | dotted_lines | stray green dotted line arcing across the path
+k0178 | clean |  | DS race track, no garbage lines visible
+k0182 | clean |  | level-up screen, sprites and UI render normally
+k0188 | glitch | parallel_lines | thin black horizontal line across top screen through faces
+k0192 | clean |  | Layton dialogue screens, nothing pointable
+k0195 | glitch | shapes | room geometry missing: black void with scattered floating polygon fragments
+k0199 | glitch | parallel_lines | horizontal black line bands across road and Aku Aku mask
+k0207 | glitch | shader | rainbow noise texture square on lit patch right of hammer
+k0214 | glitch | shapes | label glyphs truncated ("Slave" missing S) in floating text
+k0218 | glitch | shapes; dotted_lines | scene clipped to hard-edged rectangle with stray blocks on its edge
+k0228 | glitch | discoloration; parallel_lines | yellow-olive strip along top and left screen margins
+k0231 | clean |  | city drive view, no stretched or broken meshes visible

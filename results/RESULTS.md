@@ -76,7 +76,7 @@ Classifier retrained without type k (6 epochs); recall = share of frames whose o
 | seen vs unseen content | 0.598 |
 | clean vs corrupted seen | 0.844 |
 | seen vs real commons | 0.475 |
-| seen vs real bugreport | 0.517 |
+| seen vs real bugreport | 0.518 |
 
 Flag rate at the 99th-percentile threshold: seen_test 1.0%, unseen_test 1.0%, real_commons 0.0%, real_bugreport 0.0%
 
@@ -92,9 +92,9 @@ Flag rate at the 99th-percentile threshold: seen_test 1.0%, unseen_test 1.0%, re
 
 | model | glitch recall | false alarms: bug-report clean / Commons clean | AUROC glitch vs bug-report clean [95% CI] |
 |---|---|---|---|
-| deployed | 0.923 | 0.801 / 0.779 | 0.519 [0.461, 0.574] |
-| native | 0.675 | 0.270 / 0.138 | 0.727 [0.676, 0.777] |
-| resize_first | 0.436 | 0.110 / 0.055 | 0.772 [0.721, 0.818] |
+| deployed | 0.890 | 0.767 / 0.779 | 0.527 [0.470, 0.583] |
+| native | 0.500 | 0.244 / 0.138 | 0.670 [0.616, 0.727] |
+| resize_first | 0.280 | 0.080 / 0.055 | 0.687 [0.635, 0.745] |
 
-117 glitch screenshots, 382 clean bug-report screenshots, 326 clean Commons frames.
+200 glitch screenshots, 176 clean bug-report screenshots, 326 clean Commons frames.
 
