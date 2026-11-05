@@ -6,7 +6,7 @@
 ## Summary
 
 A ResNet-50 trained on procedurally corrupted frames detects ten GPU-artifact types
-(the Glitchify taxonomy) at macro-F1 0.935 ± 0.004 on seen content and 0.907 ± 0.010 on
+(the Glitchify taxonomy) at macro-F1 0.949 ± 0.002 on seen content and 0.929 ± 0.006 on
 unseen image content (5 seeds). Temperature scaling fixes the pooled calibration error
 (ECE 1.06% → 0.26%) but barely moves classwise ECE (1.37% → 1.18%), and a marginal
 conformal set that reports 93.5% coverage covers only 90.5% of the frames that actually
@@ -86,20 +86,23 @@ frame-level bootstrap CIs.
 
 | model | epochs | seen macro-F1 | unseen macro-F1 |
 |---|---|---|---|
-| ResNet-50 fine-tuned, 5 seeds (mean ± std) | 7–8 | 0.935 ± 0.004 | 0.907 ± 0.010 |
-| ResNet-50, deployed checkpoint (before the per-epoch fix) | 12 | 0.911 [0.899, 0.921] | 0.876 [0.866, 0.884] |
-| EfficientNet-B4 fine-tuned | 10 | 0.926 [0.916, 0.934] | 0.909 [0.901, 0.917] |
+| ResNet-50 fine-tuned, 5 seeds (mean ± std) | 12 | 0.949 ± 0.002 | 0.929 ± 0.006 |
+| ResNet-50, demo-model checkpoint (before the per-epoch fix) | 12 | 0.911 [0.899, 0.921] | 0.876 [0.866, 0.884] |
+| EfficientNet-B4 fine-tuned | 12 | 0.933 [0.923, 0.941] | 0.915 [0.907, 0.922] |
 | ResNet-50 linear probe (frozen backbone) | 12 | 0.742 [0.722, 0.757] | 0.671 [0.658, 0.684] |
 | Small CNN from scratch (4 conv blocks) | 12 | 0.631 [0.616, 0.646] | 0.604 [0.592, 0.616] |
 | DFT + HOG + colour features, logistic regression | - | 0.526 [0.509, 0.542] | 0.497 [0.484, 0.510] |
 
-Training ran on free CPU runners with a 200-minute budget per job, which stopped the seed runs
-after 7–8 of 12 epochs; the numbers are therefore conservative for the recipe. The seeds beat
-the deployed checkpoint even so, which I attribute to re-drawing corruptions every epoch
-(the deployed model saw each frame with the same corruption 12 times).
+Training ran on free CPU runners (about 25 minutes per epoch); to fit 12 epochs into one
+6-hour job, validation is scored once at the end rather than every epoch. A first run capped at
+200 minutes stopped after 7–8 epochs at 0.935 ± 0.004 / 0.907 ± 0.010. The seeds beat the
+demo-model checkpoint by 3.8 / 5.3 points with the same recipe, which I attribute to
+re-drawing corruptions every epoch (the demo-model saw each frame with the same corruption
+12 times).
 
 Per-class F1 with bootstrap CIs (unseen content, seed 1337) shows where the model is weak:
-screen stuttering 0.70, shapes 0.82, screen tearing 0.83 and discoloration 0.83 are the weak classes; line, dot and triangulation artifacts are all ≥ 0.96. Screen tearing on unseen content is the weakest class.
+shapes 0.84, screen tearing 0.84 and screen stuttering 0.86 are the weak classes; line, dot
+and triangulation artifacts are all ≥ 0.97.
 
 ## 4. Uncertainty
 
@@ -150,7 +153,7 @@ artifact is the held-out type (127–165 frames per type). Recall = share still 
 | discoloration | 0.550 | 0.954 | 0.658 |
 | screen stuttering | 0.446 | 0.993 | 0.917 |
 | shapes | 0.142 | 0.929 | 0.571 |
-| screen tearing | 0.014 | 0.993 | 0.701 |
+| screen tearing | 0.014 | 0.980 | 0.701 |
 
 High-frequency structured artifacts transfer: a model that never saw triangulation still flags
 all of it. Region and displacement artifacts do not: a novel tearing or shapes fault is almost

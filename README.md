@@ -22,7 +22,7 @@ The longer write-up is [docs/writeup.md](docs/writeup.md); every table is in
 
 | | |
 |---|---|
-| Synthetic artifacts, STL-10 photos (5 seeds) | macro-F1 0.935 ± 0.004 seen content, 0.907 ± 0.010 unseen content |
+| Synthetic artifacts, STL-10 photos (5 seeds, 12 epochs) | macro-F1 0.949 ± 0.002 seen content, 0.929 ± 0.006 unseen content |
 | Calibration (deployed model, T = 1.565) | pooled ECE 1.06% → 0.26%; classwise ECE 1.37% → 1.18% |
 | Conformal set, α = 0.1 | 0.905 / 0.895 coverage on corrupted frames (seen / unseen content); per-class (Mondrian) worst class 0.84 / 0.88 |
 | Real glitches vs clean bug-report screenshots (200 vs 176) | AUROC 0.53 → 0.67 after fine-tuning on real game frames (the live demo's model); false alarms on clean game frames 78% → 14% |
@@ -91,13 +91,13 @@ python scripts/aggregate_results.py && python scripts/make_results_figures.py
 
 ### Seeds and baselines
 
-Five seeds of the fine-tuned ResNet-50 on identical test frames: macro-F1 **0.935 ± 0.004** on seen content and **0.907 ± 0.010** on unseen content (binary corrupted-vs-clean F1 0.994 / 0.972). The CPU runners hit a 200-minute budget after 7–8 of the planned 12 epochs, and the seeds still beat the deployed 12-epoch checkpoint (0.911 / 0.876), which was trained before the fix that re-draws corruptions every epoch. Baselines on the same frames (unseen content): EfficientNet-B4 0.909 (10 epochs), frozen-backbone linear probe 0.671, a small CNN from scratch 0.604, and Glitchify-style DFT/HOG/colour features with logistic regression 0.497.
+Five seeds of the fine-tuned ResNet-50 (12 epochs) on identical test frames: macro-F1 **0.949 ± 0.002** on seen content and **0.929 ± 0.006** on unseen content (binary corrupted-vs-clean F1 0.995 / 0.986). They beat the demo-model checkpoint (0.911 / 0.876), which was trained with the same recipe before the fix that re-draws corruptions every epoch. Baselines on the same frames (unseen content): EfficientNet-B4 0.915 (12 epochs), frozen-backbone linear probe 0.671, a small CNN from scratch 0.604, and Glitchify-style DFT/HOG/colour features with logistic regression 0.497. A first run capped at 200 minutes per job stopped after 7–8 epochs (0.935 / 0.907); to fit 12 epochs in one free runner job, the `core12` suite scores validation once at the end instead of every epoch.
 
 ![Seeds and baselines](assets/seeds_baselines.png)
 
 ### Per-class F1
 
-Bootstrap 95% CIs over test frames. Screen tearing on unseen content is the weak spot.
+Bootstrap 95% CIs over test frames. Shapes and screen tearing (0.84 on unseen content) are the weak spots.
 
 ![Per-class F1](assets/per_class_f1.png)
 
